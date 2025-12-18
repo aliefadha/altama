@@ -147,7 +147,7 @@ export default function LifeAtAltamaPage() {
 
                                 {/* Subtitle */}
                                 <p className="font-['Inter'] text-[18px] text-[#e4e4e4] tracking-[-0.72px] max-w-[480px]">
-                                    Your partner in progress, empowering every step toward Indonesia's success.
+                                    Your partner in progress, empowering every step toward Indonesia&apos;s success.
                                 </p>
 
                                 {/* Brand Logos */}

@@ -34,9 +34,12 @@ function Text({ text }: { text: string }) {
     );
 }
 
-function VisiMisiMilestoneHelper() {
+type WrapperProps = {
+    additionalClassNames?: string;
+};
+function VisiMisiMilestoneHelper({ additionalClassNames = "" }: React.PropsWithChildren<WrapperProps>) {
     return (
-        <div className="flex-none rotate-[180deg]">
+        <div className={cn("flex-none rotate-[180deg]", additionalClassNames)}>
             <div className="h-[269px] relative w-[153px]">
                 <Wrapper2>
                     <path d="M0.5 269.5V24.5C0.5 11.2452 11.2452 0.5 24.5 0.5H153.5" id="Vector 15" stroke="url(#paint0_linear_1_587)" strokeLinecap="round" />
