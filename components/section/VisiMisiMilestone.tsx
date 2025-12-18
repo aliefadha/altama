@@ -581,7 +581,7 @@ export default function VisiMisiMilestone() {
                 </div>
                 <div className="absolute content-stretch flex items-start justify-between left-[calc(8.33%+74px)] top-[91px] w-[1452px]">
                     <Text text="VISI" />
-                    <p className="font-['Inter:Medium',sans-serif] font-['Inter:Regular',sans-serif] font-medium font-normal leading-[1.251] not-italic relative shrink-0 text-[#353185] text-[0px] text-[32px] tracking-[-1.28px] w-[853px]">
+                    <p className="font-['Inter:Medium',sans-serif] font-medium leading-[1.251] not-italic relative shrink-0 text-[#353185] text-[0px] text-[32px] tracking-[-1.28px] w-[853px]">
                         <span>{`Menjadi distributor terpercaya di Indonesia untuk peralatan teknik, otomotif, dan industri, dengan produk berkualitas tinggi `}</span>
                         <span className="text-[#9d9bb9]">y</span>
                         <span className="text-[#9d9bb9]">ang mendukung profesional, pelaku usaha, hingga pengguna rumahan.</span>
