@@ -38,7 +38,7 @@ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
                     <path d="M12 5C7 5 2.73 8.11 1 12.5C2.73 16.89 7 20 12 20C17 20 21.27 16.89 23 12.5C21.27 8.11 17 5 12 5Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <circle cx="12" cy="12.5" r="3" stroke="white" strokeWidth="2" />
                 </svg>
-                <p className="font-['Inter'] font-medium text-[13px] lg:text-[14px] text-white tracking-tight">
+                <p className="font-inter font-medium text-[13px] lg:text-[14px] text-white tracking-tight">
                     {views}
                 </p>
             </div>
@@ -51,7 +51,7 @@ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
                     rel="noopener noreferrer"
                     className={`absolute bg-[#353185] flex items-center justify-center left-1/2 px-6 lg:px-8 py-3 lg:py-4 rounded-full top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 hover:bg-[#605bc3] ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                 >
-                    <p className="font-['Inter'] font-semibold text-[15px] lg:text-[24px] text-white tracking-tight whitespace-nowrap">
+                    <p className="font-inter font-semibold text-[15px] lg:text-[24px] text-white tracking-tight whitespace-nowrap">
                         View on Instagram
                     </p>
                 </a>
@@ -89,34 +89,34 @@ export default function GalleryPage() {
             <div className="pt-[55px] bg-[#353185] min-h-screen">
                 {/* Hero Section */}
                 <div className="flex flex-col gap-[8px] sm:gap-[6px] items-center text-center pt-[80px] sm:pt-[60px] pb-[48px] sm:pb-[32px] px-[24px]">
-                    <h1 className="font-['League_Spartan'] font-bold text-[56px] sm:text-[32px] leading-[1.292] text-white tracking-[-2.24px] sm:tracking-[-1.28px]">
+                    <h1 className="font-league-spartan font-bold md:text-[56px] text-[32px] leading-[1.292] text-white tracking-[-2.24px] sm:tracking-[-1.28px]">
                         <span>Moments from </span>
                         <span className="text-[#f4c41c]">Altama</span>
                     </h1>
-                    <p className="font-['Inter'] text-[24px] sm:text-[16px] text-[#e4e4e4] tracking-[-0.96px] sm:tracking-[-0.64px]">
+                    <p className="font-inter md:text-[24px] text-[16px] text-[#e4e4e4] tracking-[-0.96px] sm:tracking-[-0.64px]">
                         Dokumentasi kegiatan, budaya kerja, dan perjalanan Altama.
                     </p>
                 </div>
 
                 {/* Tab Buttons */}
-                <div className="flex items-center justify-center pb-[72px] sm:pb-[48px] px-[24px]">
-                    <div className="bg-[#eee] flex sm:flex-col gap-[16px] sm:gap-[12px] items-center px-[12px] py-[8px] rounded-[131px] sm:rounded-[24px] sm:w-full sm:max-w-[400px]">
+                <div className="flex items-center justify-center pb-[72px] sm:pb-[48px] px-[16px] sm:px-[24px]">
+                    <div className="bg-[#eee] flex md:flex-row flex-col gap-[16px] sm:gap-[12px] justify-center items-center px-[12px] w-full md:w-fit py-[8px] rounded-[24px]">
                         <button
                             onClick={() => setActiveTab('instagram')}
-                            className={`flex items-center justify-center px-[24px] sm:px-[20px] py-[12px] sm:py-[10px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 sm:w-full ${activeTab === 'instagram' ? 'bg-[#353185]' : 'bg-[#d4d4d4]'
+                            className={`flex items-center justify-center px-[20px] sm:px-[16px] md:px-[24px] py-[10px] sm:py-[8px] md:py-[12px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 w-full md:w-auto min-w-0 sm:min-w-[140px] ${activeTab === 'instagram' ? 'bg-[#353185] shadow-md' : 'bg-[#d4d4d4] hover:bg-[#c9c9c9]'
                                 }`}
                         >
-                            <p className={`font-['Inter'] font-semibold text-[18px] sm:text-[16px] tracking-[-0.72px] sm:tracking-[-0.64px] whitespace-nowrap ${activeTab === 'instagram' ? 'text-white' : 'text-[#414141]'
+                            <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'instagram' ? 'text-white' : 'text-[#414141]'
                                 }`}>
                                 Instagram Gallery
                             </p>
                         </button>
                         <button
                             onClick={() => setActiveTab('web')}
-                            className={`flex items-center justify-center px-[24px] sm:px-[20px] py-[12px] sm:py-[10px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 sm:w-full ${activeTab === 'web' ? 'bg-[#353185]' : 'bg-[#d4d4d4]'
+                            className={`flex items-center justify-center px-[20px] sm:px-[16px] md:px-[24px] py-[10px] sm:py-[8px] md:py-[12px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 w-full md:w-auto min-w-0 sm:min-w-[140px] ${activeTab === 'web' ? 'bg-[#353185] shadow-md' : 'bg-[#d4d4d4] hover:bg-[#c9c9c9]'
                                 }`}
                         >
-                            <p className={`font-['Inter'] font-semibold text-[18px] sm:text-[16px] tracking-[-0.72px] sm:tracking-[-0.64px] whitespace-nowrap ${activeTab === 'web' ? 'text-white' : 'text-[#414141]'
+                            <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'web' ? 'text-white' : 'text-[#414141]'
                                 }`}>
                                 Web Gallery
                             </p>
@@ -127,7 +127,7 @@ export default function GalleryPage() {
                 {/* Gallery Grid */}
                 {activeTab === 'instagram' && (
                     <>
-                        <div className="max-w-[1440px] mx-auto px-[115px] sm:px-[24px]">
+                        <div className="max-w-[1440px] mx-auto px-[24px] md:px-[40px]">
                             {/* First Row */}
                             <div className="flex lg:flex-row flex-col gap-[24px] sm:gap-[16px] items-start mb-[48px] sm:mb-[24px]">
                                 {instagramGallery.slice(0, 4).map((item, index) => (
@@ -162,7 +162,7 @@ export default function GalleryPage() {
                                 className="relative bg-white flex gap-[8px] items-center justify-center px-[32px] sm:px-[24px] py-[16px] sm:py-[12px] rounded-[72px] hover:bg-[#f4c41c] transition-all duration-300 group"
                             >
                                 <div aria-hidden="true" className="absolute border-4 border-[#9795bd] inset-[-4px] pointer-events-none rounded-[76px] group-hover:border-[#353185] transition-colors duration-300" />
-                                <p className="font-['Inter'] font-semibold text-[24px] sm:text-[16px] text-[#29266e] tracking-[-0.96px] sm:tracking-[-0.64px] whitespace-nowrap">
+                                <p className="font-inter font-semibold text-[16px] text-[#29266e] tracking-[-0.96px] sm:tracking-[-0.64px] whitespace-nowrap">
                                     See Our Instagram
                                 </p>
                                 <div className="size-[24px] sm:size-[20px] rotate-90">
@@ -176,7 +176,7 @@ export default function GalleryPage() {
                 )}
 
                 {activeTab === 'web' && (
-                    <div className="max-w-[1440px] mx-auto px-[115px] sm:px-[24px] pb-[120px] sm:pb-[80px]">
+                    <div className="max-w-[1440px] mx-auto px-[24px] md:px-[40px] pb-[120px] sm:pb-[80px]">
                         {/* Clean Grid Layout - 3 Columns for desktop, 1 for mobile */}
                         <div className="grid lg:grid-cols-3 grid-cols-1 gap-[24px] sm:gap-[16px] lg:auto-rows-[280px] auto-rows-[240px]">
                             {/* Left Column - Tall Portrait */}
@@ -273,7 +273,7 @@ export default function GalleryPage() {
 
             {/* Insights, Innovation, and Progress Section */}
             <div className="relative w-full bg-white py-16 sm:py-12">
-                <div className="max-w-[1440px] mx-auto px-[80px] sm:px-[24px] relative">
+                <div className="max-w-[1440px] mx-auto px-[24px] relative">
                     {/* Left Top Decorative SVG - Hidden on mobile */}
                     <div className="hidden lg:block absolute h-[358px] left-[80px] top-[-21px] w-[600px]">
                         <div className="h-[358px] relative w-[600px] scale-y-[-100%]">
@@ -341,18 +341,18 @@ export default function GalleryPage() {
                     </div>
 
                     {/* Content */}
-                    <div className="relative max-w-[721px] sm:max-w-full mx-auto flex flex-col gap-[56px] sm:gap-[32px] items-center">
+                    <div className="relative max-w-[721px] sm:max-w-full mx-auto flex flex-col gap-[32px] items-center">
                         <div className="flex flex-col gap-[16px] sm:gap-[12px] items-center text-center w-full">
-                            <h2 className="text-[#353185] text-[40px] sm:text-[28px] font-['League_Spartan'] font-medium leading-[1.292] tracking-[-2.24px] sm:tracking-[-1.12px]">
+                            <h2 className="text-[#353185] text-[28px] lg:text-[40px] font-league-spartan font-medium leading-[1.292] tracking-[-2.24px] sm:tracking-[-1.12px]">
                                 Insights, Innovation, and Progress
                             </h2>
-                            <p className="text-[#414141] text-[18px] sm:text-[14px] font-['Inter'] font-medium leading-[1.292] sm:leading-[1.4] tracking-[-0.96px] sm:tracking-[-0.48px] w-[487px] sm:w-full">
+                            <p className="text-[#414141] text-[18px] sm:text-[14px] font-inter font-medium leading-[1.292] sm:leading-[1.4] tracking-[-0.96px] sm:tracking-[-0.48px] md:w-[487px] w-full">
                                 Temukan solusi terbaik untuk kebutuhan teknik, otomotif, dan industri Anda.
                             </p>
                         </div>
 
                         <div className="relative">
-                            <button className="bg-[#353185] text-white rounded-[72px] px-[24px] py-[12px] text-[18px] sm:text-[16px] font-['Inter'] font-semibold tracking-[-0.96px] sm:tracking-[-0.64px] hover:bg-[#605bc3] transition-colors duration-300">
+                            <button className="bg-[#353185] text-white rounded-[72px] px-[24px] py-[12px] text-[16px] md:text-[18px] font-inter font-semibold tracking-[-0.96px] sm:tracking-[-0.64px] hover:bg-[#605bc3] transition-colors duration-300">
                                 Explore News
                             </button>
                             <div className="absolute border-4 border-[rgba(53,49,133,0.24)] border-solid inset-[-4px] pointer-events-none rounded-[76px]" />

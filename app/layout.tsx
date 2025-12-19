@@ -32,7 +32,9 @@ export default function RootLayout({
         className={`${inter.className} ${leagueSpartan.variable} antialiased`}
       >
         <Header />
-        {children}
+        <div className="w-full h-full">
+          {children}
+        </div>
         <AlvaChat />
         <Footer />
       </body>

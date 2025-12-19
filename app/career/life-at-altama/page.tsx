@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 const imgFoto61 = "/images/3eb02941f1230bfd31b9afd1bd7a1d713d85c2df.webp";
 const imgAsa35161 = "/images/30bfbd6b040edf9d92ae59b3472e07444f3834c4.webp";
@@ -89,6 +89,7 @@ const testimonialData = [
 export default function LifeAtAltamaPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const startX = useRef<number>(0);
 
     const handlePrev = () => {
         if (currentIndex > 0) {
@@ -106,13 +107,60 @@ export default function LifeAtAltamaPage() {
 
     const scrollToIndex = (index: number) => {
         if (scrollContainerRef.current) {
-            const cardWidth = 540; // width of card + gap
+            const containerWidth = scrollContainerRef.current.offsetWidth;
+            const cardWidth = containerWidth < 768 ? containerWidth - 40 : containerWidth < 1024 ? 460 : 560; // Responsive card width
+            const gap = containerWidth < 768 ? 16 : 40; // Responsive gap
             scrollContainerRef.current.scrollTo({
-                left: index * cardWidth,
+                left: index * (cardWidth + gap),
                 behavior: "smooth",
             });
         }
     };
+
+    // Touch handlers for swipe functionality
+    const handleTouchStart = (e: React.TouchEvent) => {
+        startX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: React.TouchEvent) => {
+        if (!scrollContainerRef.current) return;
+
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX.current - endX;
+
+        if (Math.abs(diff) > 50) { // Minimum swipe distance
+            if (diff > 0 && currentIndex < testimonialData.length - 1) {
+                handleNext();
+            } else if (diff < 0 && currentIndex > 0) {
+                handlePrev();
+            }
+        }
+    };
+
+    // Update currentIndex based on scroll position
+    const handleScroll = () => {
+        if (!scrollContainerRef.current) return;
+
+        const containerWidth = scrollContainerRef.current.offsetWidth;
+        const cardWidth = containerWidth < 768 ? containerWidth - 40 : containerWidth < 1024 ? 460 : 560;
+        const gap = containerWidth < 768 ? 16 : 40;
+        const scrollLeft = scrollContainerRef.current.scrollLeft;
+
+        const newIndex = Math.round(scrollLeft / (cardWidth + gap));
+        if (newIndex !== currentIndex) {
+            setCurrentIndex(newIndex);
+        }
+    };
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll, { passive: true });
+            return () => {
+                container.removeEventListener('scroll', handleScroll);
+            };
+        }
+    }, [currentIndex, testimonialData.length, handleScroll]);
 
     return (
         <>
@@ -126,7 +174,7 @@ export default function LifeAtAltamaPage() {
                             <div className="flex flex-col gap-[32px]">
                                 {/* Badge */}
                                 <div className="bg-[rgba(53,49,133,0.6)] border border-[rgba(255,255,255,0.2)] flex items-center justify-center px-[20px] py-[8px] rounded-[65px] w-fit">
-                                    <p className="font-['Inter'] text-[16px] text-white tracking-[-0.64px]">
+                                    <p className="font-inter text-[16px] text-white tracking-[-0.64px]">
                                         #AltamaGueBanget
                                     </p>
                                 </div>
@@ -135,23 +183,23 @@ export default function LifeAtAltamaPage() {
                                 <div className="flex flex-col gap-[8px]">
                                     <div className="inline-block w-fit">
                                         <div className="bg-[#f4c41c] px-[16px] py-[8px] rounded-[8px] inline-block">
-                                            <h1 className="font-['League_Spartan'] font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
+                                            <h1 className="font-league-spartan font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
                                                 JOIN US HERE!
                                             </h1>
                                         </div>
                                     </div>
-                                    <h2 className="font-['League_Spartan'] font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
+                                    <h2 className="font-league-spartan font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
                                         GROW TOGETHER
                                     </h2>
                                 </div>
 
                                 {/* Subtitle */}
-                                <p className="font-['Inter'] text-[18px] text-[#e4e4e4] tracking-[-0.72px] max-w-[480px]">
+                                <p className="font-inter text-[18px] text-[#e4e4e4] tracking-[-0.72px] max-w-[480px]">
                                     Your partner in progress, empowering every step toward Indonesia&apos;s success.
                                 </p>
 
                                 {/* Brand Logos */}
-                                <div className="flex gap-[12px] items-center">
+                                <div className="flex flex-row gap-[12px] flex-wrap items-center">
                                     {/* Tekiro */}
                                     <div className="relative">
                                         <div className="backdrop-blur-[2px] bg-gradient-to-b border border-[#403c90] from-[rgba(151,149,189,0.38)] to-[rgba(94,90,168,0.38)] h-[56px] rounded-[8px] w-[120px]" />
@@ -180,7 +228,7 @@ export default function LifeAtAltamaPage() {
                                 {/* CTA Button */}
                                 <div className="relative bg-white flex gap-[8px] items-center justify-center px-[24px] py-[12px] rounded-[72px] w-fit">
                                     <div className="absolute border-4 border-[rgba(151,149,189,0.4)] inset-[-4px] pointer-events-none rounded-[76px]" />
-                                    <p className="font-['Inter'] font-semibold text-[18px] text-[#353185] tracking-[-0.72px]">
+                                    <p className="font-inter font-semibold text-[18px] text-[#353185] tracking-[-0.72px]">
                                         Cari karir impian mu sekarang!
                                     </p>
                                     <div className="flex items-center justify-center size-[20px] rotate-90">
@@ -213,7 +261,7 @@ export default function LifeAtAltamaPage() {
                                     </div>
 
                                     {/* Text */}
-                                    <p className="font-['League_Spartan'] text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
+                                    <p className="font-league-spartan text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
                                         <span className="font-medium">Where people grow,</span>{" "}
                                         <span className="text-[rgba(25,24,68,0.72)]">collaborate, and make an impact.</span>
                                     </p>
@@ -230,7 +278,7 @@ export default function LifeAtAltamaPage() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <p className="font-['League_Spartan'] font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
+                                        <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
                                             Mechanic Staff
                                         </p>
                                     </div>
@@ -244,7 +292,7 @@ export default function LifeAtAltamaPage() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <p className="font-['League_Spartan'] font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
+                                        <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
                                             Coordinator Staff
                                         </p>
                                     </div>
@@ -258,7 +306,7 @@ export default function LifeAtAltamaPage() {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <p className="font-['League_Spartan'] font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
+                                        <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
                                             Distribution Supervisor
                                         </p>
                                     </div>
@@ -270,27 +318,27 @@ export default function LifeAtAltamaPage() {
 
                 {/* Testimonials Section */}
                 <div className="relative bg-white py-[80px] overflow-hidden">
-                    <div className="max-w-[1440px] mx-auto px-[80px]">
+                    <div className="max-w-[1440px] mx-auto px-[20px] lg:px-[80px]">
                         {/* Header */}
-                        <div className="flex items-end justify-between mb-[60px]">
-                            <div className="flex flex-col gap-[20px]">
-                                <p className="font-['Inter'] text-[20px] text-[#353185] tracking-[-0.8px]">Testimonials</p>
-                                <h2 className="font-['League_Spartan'] font-semibold text-[48px] leading-[1.1] text-[#121212] tracking-[-1.92px] max-w-[600px]">
+                        <div className="flex flex-col gap-[20px] md:flex-row md:items-end md:justify-between mb-[40px] md:mb-[60px]">
+                            <div className="flex flex-col gap-[16px] md:gap-[20px]">
+                                <p className="font-inter text-[18px] md:text-[20px] text-[#353185] tracking-[-0.8px]">Testimonials</p>
+                                <h2 className="font-league-spartan font-semibold text-[32px] md:text-[48px] leading-[1.1] text-[#121212] tracking-[-1.92px] max-w-[600px]">
                                     What our partners say about Altama
                                 </h2>
                             </div>
 
                             {/* Navigation Buttons */}
-                            <div className="flex gap-[16px] items-center">
-                                <button className="border-2 border-[#353185] flex items-center justify-center p-[8px] rounded-[72px] hover:bg-[#f8f7f7] transition-colors" onClick={handlePrev}>
-                                    <div className="flex items-center justify-center size-[28px] rotate-[-90deg]">
+                            <div className="flex gap-[12px] md:gap-[16px] items-center self-start md:self-auto">
+                                <button className="border-2 border-[#353185] flex items-center justify-center p-[8px] rounded-[72px] hover:bg-[#f8f7f7] transition-colors" onClick={handlePrev} aria-label="Previous testimonial">
+                                    <div className="flex items-center justify-center size-[24px] md:size-[28px] rotate-[-90deg]">
                                         <svg className="block size-full" fill="none" viewBox="0 0 44 44">
                                             <path d='M31.1673 25.6667L22.0007 16.5L12.834 25.6667' stroke="#353185" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
                                         </svg>
                                     </div>
                                 </button>
-                                <button className="bg-[#353185] flex items-center justify-center p-[8px] rounded-[72px] hover:bg-[#4a46a0] transition-colors" onClick={handleNext}>
-                                    <div className="flex items-center justify-center size-[28px] rotate-[90deg]">
+                                <button className="bg-[#353185] flex items-center justify-center p-[8px] rounded-[72px] hover:bg-[#4a46a0] transition-colors" onClick={handleNext} aria-label="Next testimonial">
+                                    <div className="flex items-center justify-center size-[24px] md:size-[28px] rotate-[90deg]">
                                         <svg className="block size-full" fill="none" viewBox="0 0 44 44">
                                             <path d='M31.1673 25.6667L22.0007 16.5L12.834 25.6667' stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
                                         </svg>
@@ -300,11 +348,11 @@ export default function LifeAtAltamaPage() {
                         </div>
 
                         {/* Testimonials Carousel */}
-                        <div className="flex gap-[40px] overflow-x-auto pb-[20px]" style={{ scrollbarWidth: 'none' }} ref={scrollContainerRef}>
+                        <div className="flex gap-[16px] md:gap-[20px] lg:gap-[40px] overflow-x-auto pb-[20px] snap-x snap-mandatory" style={{ scrollbarWidth: 'none', WebkitScrollbar: 'none' } as React.CSSProperties} ref={scrollContainerRef}>
                             {testimonialData.map((testimonial) => (
                                 testimonial.type === "video" ? (
                                     // Video Testimonial
-                                    <div key={testimonial.id} className="relative h-[320px] overflow-hidden rounded-[20px] min-w-[560px]">
+                                    <div key={testimonial.id} className="relative h-[280px] md:h-[320px] overflow-hidden rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[400px] lg:min-w-[560px] snap-start">
                                         {testimonial.videoImage && (
                                             <Image alt={`Video testimonial from ${testimonial.name}`} className="absolute inset-0 w-full h-full object-cover" src={testimonial.videoImage} fill />
                                         )}
@@ -322,14 +370,14 @@ export default function LifeAtAltamaPage() {
                                         <div className="absolute bottom-[28px] left-[32px] flex gap-[16px] items-center">
                                             <Image alt={`Photo of ${testimonial.name}, ${testimonial.position}`} className="rounded-full size-[52px]" src={testimonial.image} width={52} height={52} />
                                             <div className="flex flex-col gap-[4px]">
-                                                <p className="font-['Inter'] text-[20px] text-white tracking-[-0.8px]">{testimonial.name}</p>
-                                                <p className="font-['Inter'] text-[14px] text-white opacity-60 tracking-[-0.56px]">{testimonial.position}</p>
+                                                <p className="font-inter text-[20px] text-white tracking-[-0.8px]">{testimonial.name}</p>
+                                                <p className="font-inter text-[14px] text-white opacity-60 tracking-[-0.56px]">{testimonial.position}</p>
                                             </div>
                                         </div>
                                     </div>
                                 ) : (
                                     // Card Testimonial
-                                    <div key={testimonial.id} className="bg-[#f8f7f7] flex flex-col gap-[24px] px-[24px] py-[24px] rounded-[20px] min-w-[460px]">
+                                    <div key={testimonial.id} className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] snap-start">
                                         <div className="flex flex-col gap-[16px]">
                                             {/* Stars */}
                                             <div className="flex gap-[6px] items-center">
@@ -342,7 +390,7 @@ export default function LifeAtAltamaPage() {
                                                 ))}
                                             </div>
                                             {/* Quote */}
-                                            <p className="font-['Inter'] text-[18px] leading-[1.4] text-[#414141] tracking-[-0.72px]">
+                                            <p className="font-inter text-[18px] leading-[1.4] text-[#414141] tracking-[-0.72px]">
                                                 {testimonial.quote}
                                             </p>
                                         </div>
@@ -354,8 +402,8 @@ export default function LifeAtAltamaPage() {
                                         <div className="flex gap-[12px] items-center">
                                             <Image alt={`Photo of ${testimonial.name}, ${testimonial.position}`} className="rounded-full size-[44px]" src={testimonial.image} width={44} height={44} />
                                             <div className="flex flex-col gap-[2px]">
-                                                <p className="font-['Inter'] text-[18px] text-[#121212] tracking-[-0.72px]">{testimonial.name}</p>
-                                                <p className="font-['Inter'] text-[13px] text-[#353185] tracking-[-0.52px]">{testimonial.position}</p>
+                                                <p className="font-inter text-[18px] text-[#121212] tracking-[-0.72px]">{testimonial.name}</p>
+                                                <p className="font-inter text-[13px] text-[#353185] tracking-[-0.52px]">{testimonial.position}</p>
                                             </div>
                                         </div>
                                     </div>

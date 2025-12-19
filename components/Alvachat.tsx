@@ -10,7 +10,7 @@ export default function AlvaChat() {
             {/* Chat Button - Sticky di kanan bawah */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed right-8 bottom-8 z-40 w-[100px] h-[200px] hover:scale-105 transition-transform duration-300"
+                className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[70px] h-[140px] md:w-[100px] md:h-[200px] hover:scale-105 transition-transform duration-300"
             >
                 <Image
                     fill
@@ -30,37 +30,37 @@ export default function AlvaChat() {
                     />
 
                     {/* Chat Widget */}
-                    <div className="fixed right-8 bottom-[220px] z-[50] w-[367px] bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div className="fixed right-4 bottom-[160px] md:right-8 md:bottom-[220px] z-[50] w-[calc(100vw-32px)] max-w-[367px] md:w-[367px] bg-white rounded-2xl shadow-2xl overflow-hidden">
                         {/* Header Purple */}
-                        <div className="bg-[#353185] px-6 py-5">
+                        <div className="bg-[#353185] px-4 py-4 md:px-6 md:py-5">
                             <div className="flex items-center gap-3 mb-3">
                                 {/* Chat Icon Circle */}
-                                <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/20 flex items-center justify-center">
+                                    <svg className="w-4 h-4 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                                     </svg>
                                 </div>
 
                                 <div className="flex-1">
-                                    <div className="text-white font-bold text-lg">ALVA</div>
+                                    <div className="text-white font-bold text-base md:text-lg">ALVA</div>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-green-400"></div>
-                                        <span className="text-white text-sm">Online</span>
+                                        <span className="text-white text-xs md:text-sm">Online</span>
                                     </div>
                                 </div>
 
                                 {/* Close Button */}
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="text-white/80 hover:text-white transition-colors"
+                                    className="text-white/80 hover:text-white transition-colors p-1"
                                 >
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </button>
                             </div>
 
-                            <div className="text-white text-sm">Altama Virtual Assistant</div>
+                            <div className="text-white text-xs md:text-sm">Altama Virtual Assistant</div>
                         </div>
 
                         {/* Chat Content */}

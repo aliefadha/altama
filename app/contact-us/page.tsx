@@ -88,7 +88,7 @@ export default function ContactUsPage() {
                         </div>
                     </div>
 
-                    <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] py-12 lg:py-[120px]">
+                    <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] mt-20 lg:mt-0 py-[40px] lg:py-[120px]">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] items-start">
                             {/* Left Column - Contact Info */}
                             <div className="flex flex-col gap-8 lg:gap-[40px]">

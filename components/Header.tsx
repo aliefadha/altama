@@ -219,12 +219,12 @@ export default function Header() {
                     <Link
                         href="/"
                         onClick={() => setShowMobileMenu(false)}
-                        className="h-[45px] w-auto transition-transform hover:scale-105 inline-block relative"
+                        className="h-[45px] w-1/3 transition-transform hover:scale-105 inline-block relative"
                     >
                         <Image
                             alt="PT Altama Surya Anugerah"
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.webp"
                         />
                     </Link>

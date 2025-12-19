@@ -80,13 +80,13 @@ export default function MediaCenterPage() {
         <div className="bg-white min-h-screen">
             {/* Header Section with Purple Gradient Background */}
             <div className="relative w-full bg-gradient-to-b from-[#353185] via-[#605bc3] via-[52.404%] to-[#353185] pt-[120px] sm:pt-[80px] pb-[80px] sm:pb-[60px]">
-                <div className="max-w-[1440px] mx-auto px-[160px] sm:px-[24px]">
+                <div className="max-w-[1440px] mx-auto md:px-[160px] px-[24px]">
                     <div className="flex flex-col gap-[32px] sm:gap-[24px] items-center text-center">
                         <div className="flex flex-col gap-[16px] sm:gap-[12px] items-center">
-                            <h1 className="font-['League_Spartan'] font-bold text-white text-[48px] sm:text-[32px] leading-[1.292] tracking-[-1.92px] sm:tracking-[-1.28px]">
+                            <h1 className="font-league-spartan font-bold text-white md:text-[48px] text-[32px] leading-[1.292] tracking-[-1.92px] sm:tracking-[-1.28px]">
                                 MEDIA CENTER
                             </h1>
-                            <p className="font-['Inter'] text-white text-[20px] sm:text-[16px] leading-[1.5] sm:leading-[1.6] tracking-[-0.8px] sm:tracking-[-0.64px] max-w-[800px] sm:max-w-full opacity-90">
+                            <p className="font-inter text-white md:text-[20px] text-[16px] leading-[1.5] sm:leading-[1.6] tracking-[-0.8px] sm:tracking-[-0.64px] max-w-[800px] sm:max-w-full opacity-90">
                                 Berita terkini, press release, dan update dari PT Altama Surya Anugerah
                             </p>
                         </div>
@@ -98,7 +98,7 @@ export default function MediaCenterPage() {
                                 placeholder="Search articles..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full px-[24px] sm:px-[20px] py-[16px] sm:py-[12px] rounded-[72px] bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white placeholder:text-white/70 text-[16px] sm:text-[14px] focus:outline-none focus:bg-white/30 transition-all"
+                                className="w-full md:px-[24px] px-[20px] md:py-[16px] py-[12px] rounded-[72px] bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white placeholder:text-white/70 text-[16px] sm:text-[14px] focus:outline-none focus:bg-white/30 transition-all"
                             />
                         </div>
                     </div>
@@ -107,13 +107,13 @@ export default function MediaCenterPage() {
 
             {/* Category Filter */}
             <div className="w-full bg-[#f8f8f8] py-[32px] sm:py-[24px] sticky top-[55px] z-40">
-                <div className="max-w-[1440px] mx-auto px-[160px] sm:px-[24px]">
-                    <div className="flex lg:flex-row flex-col gap-[16px] sm:gap-[12px] items-center lg:justify-center overflow-x-auto">
+                <div className="max-w-[1440px] mx-auto lg:px-[160px] px-[24px]">
+                    <div className="flex flex-wrap md:gap-[16px] gap-[12px] items-center lg:justify-center overflow-x-auto">
                         {categories.map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setSelectedCategory(category)}
-                                className={`px-[24px] sm:px-[20px] py-[12px] sm:py-[10px] rounded-[72px] sm:rounded-[48px] font-['Inter'] font-semibold text-[16px] sm:text-[14px] tracking-[-0.64px] sm:tracking-[-0.48px] transition-all whitespace-nowrap ${selectedCategory === category
+                                className={`px-[24px] sm:px-[20px] py-[12px] sm:py-[10px] rounded-[72px] sm:rounded-[48px] font-inter font-semibold text-[16px] sm:text-[14px] tracking-[-0.64px] sm:tracking-[-0.48px] transition-all whitespace-nowrap ${selectedCategory === category
                                     ? 'bg-[#353185] text-white'
                                     : 'bg-white text-[#353185] hover:bg-[#f0f0ff]'
                                     }`}
@@ -126,7 +126,7 @@ export default function MediaCenterPage() {
             </div>
 
             {/* Articles Grid */}
-            <div className="max-w-[1440px] mx-auto px-[160px] sm:px-[24px] py-[80px] sm:py-[60px]">
+            <div className="max-w-[1440px] mx-auto lg:px-[160px] px-[24px] py-[80px] sm:py-[60px]">
                 {filteredArticles.length > 0 ? (
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[32px] sm:gap-[24px]">
                         {filteredArticles.map(article => (
@@ -144,7 +144,7 @@ export default function MediaCenterPage() {
                                     />
                                     {/* Category Badge */}
                                     <div className="absolute top-[16px] left-[16px] px-[16px] py-[6px] rounded-[64px] bg-[#353185] bg-opacity-90">
-                                        <p className="font-['Inter'] font-medium text-white text-[14px] tracking-[-0.56px]">
+                                        <p className="font-inter font-medium text-white text-[14px] tracking-[-0.56px]">
                                             {article.category}
                                         </p>
                                     </div>
@@ -154,28 +154,28 @@ export default function MediaCenterPage() {
                                 <div className="flex flex-col gap-[12px]">
                                     {/* Date and Author */}
                                     <div className="flex gap-[12px] items-center">
-                                        <p className="font-['Inter'] text-[#898989] text-[14px] tracking-[-0.56px]">
+                                        <p className="font-inter text-[#898989] text-[14px] tracking-[-0.56px]">
                                             {article.date}
                                         </p>
                                         <div className="size-[4px] rounded-full bg-[#898989]" />
-                                        <p className="font-['Inter'] text-[#898989] text-[14px] tracking-[-0.56px]">
+                                        <p className="font-inter text-[#898989] text-[14px] tracking-[-0.56px]">
                                             {article.author}
                                         </p>
                                     </div>
 
                                     {/* Title */}
-                                    <h3 className="font-['Inter'] font-semibold text-[#121212] text-[20px] leading-[1.3] tracking-[-0.8px] group-hover:text-[#353185] transition-colors">
+                                    <h3 className="font-inter font-semibold text-[#121212] text-[20px] leading-[1.3] tracking-[-0.8px] group-hover:text-[#353185] transition-colors">
                                         {article.title}
                                     </h3>
 
                                     {/* Excerpt */}
-                                    <p className="font-['Inter'] text-[#414141] text-[16px] leading-[1.5] tracking-[-0.64px] line-clamp-3">
+                                    <p className="font-inter text-[#414141] text-[16px] leading-[1.5] tracking-[-0.64px] line-clamp-3">
                                         {article.excerpt}
                                     </p>
 
                                     {/* Read More Link */}
                                     <div className="flex items-center gap-[8px] mt-[8px]">
-                                        <p className="font-['Inter'] font-semibold text-[#353185] text-[16px] tracking-[-0.64px]">
+                                        <p className="font-inter font-semibold text-[#353185] text-[16px] tracking-[-0.64px]">
                                             Baca Selengkapnya
                                         </p>
                                         <div className="size-[16px] rotate-[90deg] group-hover:translate-x-1 transition-transform">
@@ -196,7 +196,7 @@ export default function MediaCenterPage() {
                                 <path d="M20 20L16 16" stroke="#898989" strokeLinecap="round" strokeWidth="2" />
                             </svg>
                         </div>
-                        <p className="font-['Inter'] text-[#898989] text-[20px] tracking-[-0.8px]">
+                        <p className="font-inter text-[#898989] text-[20px] tracking-[-0.8px]">
                             Tidak ada artikel yang ditemukan
                         </p>
                     </div>
