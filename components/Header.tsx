@@ -25,7 +25,7 @@ export default function Header() {
                                 alt=""
                                 fill
                                 className="object-cover drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
-                                src="/images/51ec67f38194adafbc5f7e34488fce14dd2fa9d6.png"
+                                src="/images/51ec67f38194adafbc5f7e34488fce14dd2fa9d6.webp"
                             />
                         </div>
 
@@ -41,14 +41,14 @@ export default function Header() {
                                         alt="Profile"
                                         fill
                                         className="object-contain"
-                                        src="/images/c4ed1de242b8185225cf2bb51e97ba89c83cac70.png"
+                                        src="/images/c4ed1de242b8185225cf2bb51e97ba89c83cac70.webp"
                                     />
                                     <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
                                         <Image
                                             alt=""
                                             fill
                                             className="object-contain"
-                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.png"
+                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
                                 </Link>
@@ -92,14 +92,14 @@ export default function Header() {
                                         alt="Brand"
                                         fill
                                         className="object-contain"
-                                        src="/images/1a92154a51b4b0071d11b64cc022e9206d223671.png"
+                                        src="/images/1a92154a51b4b0071d11b64cc022e9206d223671.webp"
                                     />
                                     <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
                                         <Image
                                             alt=""
                                             fill
                                             className="object-contain"
-                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.png"
+                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
                                 </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                                     alt="Media Center"
                                     fill
                                     className="object-contain"
-                                    src="/images/17195abe25725815a91be733807e9582f204712e.png"
+                                    src="/images/17195abe25725815a91be733807e9582f204712e.webp"
                                 />
                             </Link>
 
@@ -156,14 +156,14 @@ export default function Header() {
                                         alt="Career"
                                         fill
                                         className="object-contain"
-                                        src="/images/5eb4f8e2a0bc0450dc61142e2295cf98221b43d5.png"
+                                        src="/images/5eb4f8e2a0bc0450dc61142e2295cf98221b43d5.webp"
                                     />
                                     <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
                                         <Image
                                             alt=""
                                             fill
                                             className="object-contain"
-                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.png"
+                                            src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
                                 </Link>
@@ -194,7 +194,7 @@ export default function Header() {
                                     alt="Contact Us"
                                     fill
                                     className="object-contain"
-                                    src="/images/6b9cdea8d38215b8635504fcde7cc4f425726060.png"
+                                    src="/images/6b9cdea8d38215b8635504fcde7cc4f425726060.webp"
                                 />
                             </Link>
                         </div>
@@ -209,7 +209,7 @@ export default function Header() {
                             alt="PT Altama Surya Anugerah"
                             fill
                             className="object-cover drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
-                            src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.png"
+                            src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.webp"
                         />
                     </Link>
                 </div>
@@ -228,7 +228,7 @@ export default function Header() {
                             alt="PT Altama Surya Anugerah"
                             fill
                             className="object-contain"
-                            src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.png"
+                            src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.webp"
                         />
                     </Link>
 

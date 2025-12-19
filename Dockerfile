@@ -1,5 +1,5 @@
-# Use Node.js 18 LTS as base image
-FROM node:18-alpine AS base
+# Use Node.js 24 LTS as base image
+FROM node:24-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
@@ -44,9 +44,9 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER nextjs
 
-EXPOSE 3000
+EXPOSE 3003
 
-ENV PORT 3000
+ENV PORT 3003
 # set hostname to localhost
 ENV HOSTNAME "0.0.0.0"
 
