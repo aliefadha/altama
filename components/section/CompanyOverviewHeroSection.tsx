@@ -4,20 +4,19 @@ export default function CompanyOverviewHeroSection() {
     return (
         <div className="relative w-full">
             {/* Wrapper untuk responsive */}
-            <div className="relative w-full h-[400px] lg:h-[1080px] overflow-hidden">
+            <div className="relative w-full h-screen overflow-hidden">
                 {/* Background gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-[#353185] via-[#4a46a4] via-[63.245%] to-[#353185]" />
 
                 {/* Content - Centered and responsive */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-5 lg:px-20">
-                    <div className="max-w-full lg:max-w-[882px] text-center">
+                <div className="flex flex-col items-center justify-center px-5 lg:px-20">
+                    <div className="max-w-full text-center">
                         {/* Title with yellow highlight */}
                         <div className="mb-6 lg:mb-8">
                             <h1 className="text-[28px] lg:text-[93px] font-['League_Spartan'] font-semibold leading-tight lg:leading-[0.945] tracking-tight lg:tracking-[-1.86px] text-white">
                                 Our Vision, Mission{' '}
                                 <span className="relative inline-block">
-                                    <span className="absolute inset-0 bg-[#f4c41c] rounded-lg -left-2 -right-2 -top-1 bottom-1 lg:-left-3 lg:-right-3 lg:-top-2 lg:bottom-2"></span>
-                                    <span className="relative z-10 px-1">&</span>
+                                    <span className="relative z-10 p-4 bg-[#f4c41c] rounded-lg">&</span>
                                 </span>{' '}
                                 Company Values
                             </h1>

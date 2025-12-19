@@ -33,8 +33,7 @@ export default function Header() {
                         <div className="relative h-full flex items-center justify-start gap-16 pl-[115px]">
                             {/* Profile with dropdown */}
                             <div className="relative group">
-                                <Link
-                                    href="/profile"
+                                <div
                                     className="relative h-[24px] w-[70px] mr-4 transition-transform hover:scale-110 inline-block"
                                 >
                                     <Image
@@ -51,7 +50,7 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </Link>
+                                </div>
 
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -84,8 +83,7 @@ export default function Header() {
 
                             {/* Brand with dropdown */}
                             <div className="relative group">
-                                <Link
-                                    href="/brand"
+                                <div
                                     className="relative h-[24px] w-[61px] mr-4 transition-transform hover:scale-110 inline-block"
                                 >
                                     <Image
@@ -102,7 +100,7 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </Link>
+                                </div>
 
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -148,8 +146,7 @@ export default function Header() {
 
                             {/* Career with dropdown */}
                             <div className="relative group">
-                                <Link
-                                    href="/career"
+                                <div
                                     className="relative h-[24px] w-[71px] mr-4 transition-transform hover:scale-110 inline-block"
                                 >
                                     <Image
@@ -166,7 +163,7 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </Link>
+                                </div>
 
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
