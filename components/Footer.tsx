@@ -68,7 +68,7 @@ export default function Footer() {
             <div className="hidden lg:block absolute -left-[80px] -top-[150px] w-[500px] h-[500px] pointer-events-none">
                 <Image
                     fill
-                    src="/images/ea8c5194ccd76102a358ded8c16351846216362c.png"
+                    src="/images/ea8c5194ccd76102a358ded8c16351846216362c.webp"
                     alt=""
                     className="w-full h-full object-contain"
                 />
@@ -100,7 +100,7 @@ export default function Footer() {
                             height={60}
                             alt="PT Altama Surya Anugerah"
                             className="h-[60px] lg:h-[90px] w-auto"
-                            src="/images/3acd7ec55c7378a3afcd33db30fc8dffeb90a076.png"
+                            src="/images/3acd7ec55c7378a3afcd33db30fc8dffeb90a076.webp"
                         />
                     </div>
 
@@ -211,7 +211,7 @@ export default function Footer() {
                         height={45}
                         alt="Certifications"
                         className="h-[36px] lg:h-[44px] w-auto"
-                        src="/images/81bb133a0e3c333ad82eb2fecff14864fd4626d7.png"
+                        src="/images/81bb133a0e3c333ad82eb2fecff14864fd4626d7.webp"
                     />
                 </div>
             </div>

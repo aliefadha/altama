@@ -6,7 +6,7 @@ export default function IntegrationSection() {
             {/* Left Image - Hidden on mobile */}
             <div className="hidden lg:block absolute left-0 top-0 bottom-0 w-[300px]">
                 <Image
-                    src="/images/9f66da3b65992f1c4d184d621d2bdeb5e95d9e33.png"
+                    src="/images/9f66da3b65992f1c4d184d621d2bdeb5e95d9e33.webp"
                     fill
                     alt="Integration Team Left"
                     className="w-full h-full object-cover"
@@ -23,7 +23,7 @@ export default function IntegrationSection() {
             {/* Right Image - Hidden on mobile */}
             <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[300px]">
                 <Image
-                    src="/images/9f66da3b65992f1c4d184d621d2bdeb5e95d9e33.png"
+                    src="/images/9f66da3b65992f1c4d184d621d2bdeb5e95d9e33.webp"
                     fill
                     alt="Integration Team Right"
                     className="w-full h-full object-cover"

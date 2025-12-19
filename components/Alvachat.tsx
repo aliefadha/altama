@@ -16,7 +16,7 @@ export default function AlvaChat() {
                     fill
                     alt="Alva Chat Assistant"
                     className="w-full h-full object-contain drop-shadow-lg"
-                    src="/images/c0ade58209357fc63454edf28ce292084ee5dc56.png"
+                    src="/images/c0ade58209357fc63454edf28ce292084ee5dc56.webp"
                 />
             </button>
 

@@ -6,9 +6,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
-    const [showProfileDropdown, setShowProfileDropdown] = useState(false);
-    const [showBrandDropdown, setShowBrandDropdown] = useState(false);
-    const [showCareerDropdown, setShowCareerDropdown] = useState(false);
+
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showMobileProfileSubmenu, setShowMobileProfileSubmenu] = useState(false);
     const [showMobileBrandSubmenu, setShowMobileBrandSubmenu] = useState(false);
@@ -34,11 +32,7 @@ export default function Header() {
                         {/* Menu Items */}
                         <div className="relative h-full flex items-center justify-start gap-16 pl-[115px]">
                             {/* Profile with dropdown */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setShowProfileDropdown(true)}
-                                onMouseLeave={() => setShowProfileDropdown(false)}
-                            >
+                            <div className="relative group">
                                 <Link
                                     href="/profile"
                                     className="relative h-[24px] w-[70px] mr-4 transition-transform hover:scale-110 inline-block"
@@ -60,46 +54,36 @@ export default function Header() {
                                 </Link>
 
                                 {/* Dropdown Menu */}
-                                {showProfileDropdown && (
-                                    <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                                        <Link
-                                            href="/profile/company-overview"
-                                            onClick={() => setShowProfileDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Company Overview
-                                        </Link>
-                                        <Link
-                                            href="/profile/awards-certification"
-                                            onClick={() => setShowProfileDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Awards and Certification
-                                        </Link>
-                                        <Link
-                                            href="/profile/board-of-directors"
-                                            onClick={() => setShowProfileDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Board of Directors
-                                        </Link>
-                                        <Link
-                                            href="/profile/gallery"
-                                            onClick={() => setShowProfileDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Gallery
-                                        </Link>
-                                    </div>
-                                )}
+                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    <Link
+                                        href="/profile/company-overview"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Company Overview
+                                    </Link>
+                                    <Link
+                                        href="/profile/awards-certification"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Awards and Certification
+                                    </Link>
+                                    <Link
+                                        href="/profile/board-of-directors"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Board of Directors
+                                    </Link>
+                                    <Link
+                                        href="/profile/gallery"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Gallery
+                                    </Link>
+                                </div>
                             </div>
 
                             {/* Brand with dropdown */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setShowBrandDropdown(true)}
-                                onMouseLeave={() => setShowBrandDropdown(false)}
-                            >
+                            <div className="relative group">
                                 <Link
                                     href="/brand"
                                     className="relative h-[24px] w-[61px] mr-4 transition-transform hover:scale-110 inline-block"
@@ -121,37 +105,32 @@ export default function Header() {
                                 </Link>
 
                                 {/* Dropdown Menu */}
-                                {showBrandDropdown && (
-                                    <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                                        <a
-                                            href="https://tekiro.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() => setShowBrandDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Tekiro
-                                        </a>
-                                        <a
-                                            href="https://rexco-solution.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() => setShowBrandDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Rexco
-                                        </a>
-                                        <a
-                                            href="https://ryupowertools.com/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={() => setShowBrandDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Ryu
-                                        </a>
-                                    </div>
-                                )}
+                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    <a
+                                        href="https://tekiro.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Tekiro
+                                    </a>
+                                    <a
+                                        href="https://rexco-solution.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Rexco
+                                    </a>
+                                    <a
+                                        href="https://ryupowertools.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Ryu
+                                    </a>
+                                </div>
                             </div>
 
                             {/* Media Center */}
@@ -168,11 +147,7 @@ export default function Header() {
                             </Link>
 
                             {/* Career with dropdown */}
-                            <div
-                                className="relative"
-                                onMouseEnter={() => setShowCareerDropdown(true)}
-                                onMouseLeave={() => setShowCareerDropdown(false)}
-                            >
+                            <div className="relative group">
                                 <Link
                                     href="/career"
                                     className="relative h-[24px] w-[71px] mr-4 transition-transform hover:scale-110 inline-block"
@@ -194,24 +169,20 @@ export default function Header() {
                                 </Link>
 
                                 {/* Dropdown Menu */}
-                                {showCareerDropdown && (
-                                    <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                                        <Link
-                                            href="/career/apply-jobs"
-                                            onClick={() => setShowCareerDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Apply Jobs
-                                        </Link>
-                                        <Link
-                                            href="/career/life-at-altama"
-                                            onClick={() => setShowCareerDropdown(false)}
-                                            className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
-                                        >
-                                            Life at Altama
-                                        </Link>
-                                    </div>
-                                )}
+                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    <Link
+                                        href="/career/apply-jobs"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Apply Jobs
+                                    </Link>
+                                    <Link
+                                        href="/career/life-at-altama"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                    >
+                                        Life at Altama
+                                    </Link>
+                                </div>
                             </div>
 
                             {/* Contact Us */}

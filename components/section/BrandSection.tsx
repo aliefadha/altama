@@ -23,7 +23,7 @@ export default function BrandSection() {
                             fill
                             alt="left decoration"
                             className="w-full h-full object-contain"
-                            src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.png"
+                            src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.webp"
                         />
                     </div>
 
@@ -34,7 +34,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full lg:w-[240px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image fill alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/2666269782fd241693d8b28321b227ad582d9613.png" />
+                        <Image fill alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/2666269782fd241693d8b28321b227ad582d9613.webp" />
                     </a>
 
                     {/* RYU */}
@@ -44,7 +44,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full lg:w-[160px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image fill alt="RYU" className="max-w-full max-h-full object-contain" src="/images/cf5c5f6103d19e8b77553633e9b9e4a99c64e524.png" />
+                        <Image fill alt="RYU" className="max-w-full max-h-full object-contain" src="/images/cf5c5f6103d19e8b77553633e9b9e4a99c64e524.webp" />
                     </a>
 
                     {/* Rexco */}
@@ -54,7 +54,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full lg:w-[160px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image fill alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/61f2228a57c82de4a7ecd9e9db6ad0dc4b126cfd.png" />
+                        <Image fill alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/61f2228a57c82de4a7ecd9e9db6ad0dc4b126cfd.webp" />
                     </a>
 
                     {/* Right Decorative Element */}
@@ -63,7 +63,7 @@ export default function BrandSection() {
                             fill
                             alt=""
                             className="w-full h-full object-contain"
-                            src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.png"
+                            src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.webp"
                         />
                     </div>
                 </div>
@@ -123,7 +123,7 @@ export default function BrandSection() {
                                 fill
                                 alt="Awards"
                                 className="w-full h-full object-cover"
-                                src="/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.png"
+                                src="/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.webp"
                             />
                         </div>
 
@@ -166,7 +166,7 @@ export default function BrandSection() {
                     fill
                     alt=""
                     className="w-full h-[100px] lg:h-[120px] object-cover"
-                    src="/images/6e2d8d721c25b71b074bcf4b65801b488f0f3b0e.png"
+                    src="/images/6e2d8d721c25b71b074bcf4b65801b488f0f3b0e.webp"
                 />
             </div>
         </div>

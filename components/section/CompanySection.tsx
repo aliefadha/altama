@@ -1,4 +1,4 @@
-import imgAsa021251 from "@/assets/65a062ebe15f383953d6a1988ebb49073df36349.png";
+import imgAsa021251 from "@/assets/65a062ebe15f383953d6a1988ebb49073df36349.webp";
 import { Image as ImageIcon, Triangle } from "lucide-react";
 import Image from "next/image";
 
@@ -18,7 +18,7 @@ export default function CompanySection() {
                                 alt="PT Altama Surya Anugerah"
                                 className="w-full h-full object-cover"
                                 fill
-                                src="/images/65a062ebe15f383953d6a1988ebb49073df36349.png"
+                                src="/images/65a062ebe15f383953d6a1988ebb49073df36349.webp"
                             />
                         </div>
 

@@ -74,20 +74,10 @@ function Frame172Helper({ additionalClassNames = "" }: Frame172HelperProps) {
     );
 }
 
-export default function AwardSection() {
+export default function DirectorHeroSection() {
     return (
         <div className="relative size-full">
             <div className="absolute bg-gradient-to-b from-[#353185] h-[1080px] left-0 to-[#353185] to-[121.81%] top-0 via-[#4a46a4] via-[63.245%] w-[1920px]" />
-            <div className="absolute h-[516px] left-[367px] top-[564px] w-[1188px]" data-name="Frame 63 (2) 1">
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <Image fill alt="" className="absolute h-[104.69%] left-[-0.04%] max-w-none top-0 w-[100.09%]" src='/images/0a2f9831607fe99269950703a1f47bd59cba08b4.webp' />
-                </div>
-            </div>
-            <div className="absolute content-stretch flex flex-col gap-[32px] items-center left-1/2 top-[280px] translate-x-[-50%]">
-                <div className="absolute bg-[#f4c41c] h-[117px] left-[408px] rounded-[8px] top-[-17px] w-[546px]" />
-                <p className="font-['League_Spartan:SemiBold',sans-serif] font-semibold leading-[0.945] relative shrink-0 text-[93px] text-center text-white tracking-[-1.86px] w-[960px]">{`Awards & Certifications`}</p>
-                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#e4e4e4] text-[24px] text-center text-nowrap tracking-[-0.96px]">Our commitment to quality and excellence</p>
-            </div>
             <div className="absolute flex h-[269px] items-center justify-center left-[1312px] top-[124px] w-[153px]">
                 <Frame172Helper />
             </div>
@@ -146,7 +136,7 @@ export default function AwardSection() {
             <div className="absolute h-[98px] left-[559px] top-[490px] w-0">
                 <div className="absolute inset-[0_-1px_-1.02%_-1px]">
                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2 99">
-                        <path d='M1.00005 0C0.983387 1.63333 0.96672 3.26667 0.950054 4.9C0.650054 34.3 0.350054 63.7 0.0500535 93.1C0.0333869 94.7333 0.0167202 96.3667 5.3525e-05 98C-0.00269036 98.2652 0.100262 98.5196 0.287845 98.7071C0.475335 98.8946 0.732093 99 1.00005 99C1.26801 99 1.52477 98.8946 1.71226 98.7071C1.89984 98.5196 2.0028 98.2652 2.00005 98C1.98339 96.3667 1.96672 94.7333 1.95005 93.1C1.65005 63.7 1.35005 34.3 1.05005 4.9C1.03339 3.26667 1.01672 1.63333 1.00005 0Z' fill="url(#paint0_linear_83_563)" id="Vector 7" />
+                        <path d='00005 0C0.983387 1.63333 0.96672 3.26667 0.950054 4.9C0.650054 34.3 0.350054 63.7 0.0500535 93.1C0.0333869 94.7333 0.0167202 96.3667 5.3525e-05 98C-0.00269036 98.2652 0.100262 98.5196 0.287845 98.7071C0.475335 98.8946 0.732093 99 1.00005 99C1.26801 99 1.52477 98.8946 1.71226 98.7071C1.89984 98.5196 2.0028 98.2652 2.00005 98C1.98339 96.3667 1.96672 94.7333 1.95005 93.1C1.65005 63.7 1.35005 34.3 1.05005 4.9C1.03339 3.26667 1.01672 1.63333 1.00005 0Z' fill="url(#paint0_linear_83_563)" id="Vector 7" />
                         <defs>
                             <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_83_563" x1="1.50005" x2="1.50005" y1="0" y2="98">
                                 <stop stopColor="white" stopOpacity="0" />
@@ -158,12 +148,22 @@ export default function AwardSection() {
             </div>
             <Frame172Helper2 additionalClassNames="left-[1743px] top-[912px]" />
             <Frame172Helper2 additionalClassNames="left-[1555px] top-[342px]" />
+            <div className="absolute content-stretch flex flex-col gap-[32px] items-center left-1/2 top-[274px] translate-x-[-50%]">
+                <div className="absolute bg-[#f4c41c] h-[117px] left-[470px] rounded-[8px] top-[-17px] w-[363px]" />
+                <p className="font-['League_Spartan:SemiBold',sans-serif] font-semibold leading-[0.945] relative shrink-0 text-[93px] text-center text-white tracking-[-1.86px] w-[960px]">Board of Directors</p>
+                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#e4e4e4] text-[24px] text-center text-nowrap tracking-[-0.96px]">Leadership driving Altama’s growth and excellence</p>
+            </div>
+            <div className="absolute h-[519px] left-1/2 top-[561px] translate-x-[-50%] w-[1194px]" data-name="Frame 63 (3) 1">
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <Image fill alt="" className="absolute h-[104.62%] left-[-0.02%] max-w-none top-0 w-[100.04%]" src='/images/6b871ef0c31b3eaa3b53b9e5aec1336b59755084.webp' />
+                </div>
+            </div>
             <div className="absolute contents left-[716px] top-[955px]">
                 <div className="absolute contents left-[716px] top-[955px]">
                     <div className="absolute backdrop-blur-[5.35px] backdrop-filter bg-gradient-to-b border border-[#403c90] border-solid from-[rgba(101,97,158,0.77)] h-[77px] left-[716px] rounded-[8px] to-[rgba(80,76,143,0.77)] top-[955px] w-[156px]" />
                     <div className="absolute h-[24px] left-[730px] top-[976px] w-[127px]" data-name="Logo Brand LP">
                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                            <Image width={160} height={75} alt="" className="absolute h-[150.12%] left-0 max-w-none top-[-0.06%] w-[302.36%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp" />
+                            <Image width={160} height={75} alt="" className="absolute h-[150.12%] left-0 max-w-none top-[-0.06%] w-[302.36%]" src='/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp' />
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ export default function AwardSection() {
                     <div className="absolute backdrop-blur-[5.35px] backdrop-filter bg-gradient-to-b border border-[#403c90] border-solid from-[rgba(101,97,158,0.77)] h-[77px] left-[882px] rounded-[8px] to-[rgba(80,76,143,0.77)] top-[955px] w-[156px]" />
                     <div className="absolute h-[36px] left-[910px] top-[976px] w-[100px]" data-name="Logo Brand LP">
                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                            <Image width={160} height={75} alt="" className="absolute h-[100.08%] left-[-150%] max-w-none top-[-0.04%] w-[384%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp" />
+                            <Image width={160} height={75} alt="" className="absolute h-[100.08%] left-[-150%] max-w-none top-[-0.04%] w-[384%]" src='/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp' />
                         </div>
                     </div>
                 </div>

@@ -208,7 +208,7 @@ export default function VisiMisiMilestone() {
                             <div className="absolute bg-[#d9d9d9] h-[469px] left-1/2 rounded-[32px] top-0 translate-x-[-50%] w-[1151px]" />
                             <div className="absolute h-[644px] left-[calc(50%+0.5px)] top-[-16px] translate-x-[-50%] w-[1168px]" data-name="_ASA3388 1">
                                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                    <Image fill alt="" className="absolute h-[102.02%] left-[-0.02%] max-w-none top-[-2.02%] w-[100.04%]" src="/images/6a0dfdac9532db67bcfdfbdf8802209f17bd1327.png" />
+                                    <Image fill alt="" className="absolute h-[102.02%] left-[-0.02%] max-w-none top-[-2.02%] w-[100.04%]" src="/images/6a0dfdac9532db67bcfdfbdf8802209f17bd1327.webp" />
                                 </div>
                             </div>
                             <div className="absolute content-stretch flex gap-[10px] items-center leading-[0] left-[calc(50%+0.5px)] top-[337px] translate-x-[-50%]">
@@ -216,7 +216,7 @@ export default function VisiMisiMilestone() {
                                     <div className="[grid-area:1_/_1] backdrop-blur-[5.35px] backdrop-filter bg-gradient-to-b border border-[#403c90] border-solid from-[rgba(101,97,158,0.77)] h-[77px] ml-0 mt-0 rounded-[8px] to-[rgba(80,76,143,0.77)] w-[156px]" />
                                     <div className="[grid-area:1_/_1] h-[24px] ml-[14px] mt-[21px] relative w-[127px]" data-name="Logo Brand LP">
                                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                            <Image width={160} height={75} alt="" className="absolute h-[150.12%] left-0 max-w-none top-[-0.06%] w-[302.36%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.png" />
+                                            <Image width={160} height={75} alt="" className="absolute h-[150.12%] left-0 max-w-none top-[-0.06%] w-[302.36%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp" />
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +224,7 @@ export default function VisiMisiMilestone() {
                                     <div className="[grid-area:1_/_1] backdrop-blur-[5.35px] backdrop-filter bg-gradient-to-b border border-[#403c90] border-solid from-[rgba(101,97,158,0.77)] h-[77px] ml-0 mt-0 rounded-[8px] to-[rgba(80,76,143,0.77)] w-[156px]" />
                                     <div className="[grid-area:1_/_1] h-[36px] ml-[28px] mt-[21px] relative w-[100px]" data-name="Logo Brand LP">
                                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                            <Image width={160} height={75} alt="" className="absolute h-[100.08%] left-[-150%] max-w-none top-[-0.04%] w-[384%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.png" />
+                                            <Image width={160} height={75} alt="" className="absolute h-[100.08%] left-[-150%] max-w-none top-[-0.04%] w-[384%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp" />
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@ export default function VisiMisiMilestone() {
                                     <div className="[grid-area:1_/_1] backdrop-blur-[5.35px] backdrop-filter bg-gradient-to-b border border-[#403c90] border-solid from-[rgba(101,97,158,0.77)] h-[77px] ml-0 mt-0 rounded-[8px] to-[rgba(80,76,143,0.77)] w-[156px]" />
                                     <div className="[grid-area:1_/_1] h-[28px] ml-[19px] mt-[21px] relative w-[118px]" data-name="Logo Brand LP">
                                         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                            <Image width={160} height={75} alt="" className="absolute h-[128.68%] left-[-226.27%] max-w-none top-[-0.05%] w-[325.42%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.png" />
+                                            <Image width={160} height={75} alt="" className="absolute h-[128.68%] left-[-226.27%] max-w-none top-[-0.05%] w-[325.42%]" src="/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp" />
                                         </div>
                                     </div>
                                 </div>

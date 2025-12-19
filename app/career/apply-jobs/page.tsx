@@ -32,7 +32,7 @@ export default function ApplyJobsPage() {
                     {/* Decorative Background Lines */}
                     <Image
                         className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40 lg:opacity-100"
-                        src="/images/f0b36a6155a50c52be487b4eff0f34ea34014d9f.png"
+                        src="/images/f0b36a6155a50c52be487b4eff0f34ea34014d9f.webp"
                         alt=""
                         fill
                     />

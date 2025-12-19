@@ -1,15 +1,15 @@
 'use client'
 import { useState, useRef } from "react";
 import Image from "next/image";
-const imgFoto61 = "/images/3eb02941f1230bfd31b9afd1bd7a1d713d85c2df.png";
-const imgAsa35161 = "/images/30bfbd6b040edf9d92ae59b3472e07444f3834c4.png";
-const imgLogoBrandLp = "/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.png";
-const imgEllipse10 = "/images/06310d6ac34bfdf5c99689acd61ade1908915105.png";
-const imgEllipse11 = "/images/2303138e4da6b79f3eca4b9933422fef6df4f944.png";
-const imgVideoTestimoni = "/images/7b9b36ec87a12134b5a4c54ecdb3838bbb6d5193.png";
-const imgEllipse12 = "/images/541419ea83f81e18686ce66b82646ed7ff8c9485.png";
-const imgEllipse13 = "/images/4103347516e3518c93c2934d46b12629077931f3.png";
-const imgEllipse14 = "/images/c06eab4feb5829d0e82ca41b027a2bc9f629f3f9.png";
+const imgFoto61 = "/images/3eb02941f1230bfd31b9afd1bd7a1d713d85c2df.webp";
+const imgAsa35161 = "/images/30bfbd6b040edf9d92ae59b3472e07444f3834c4.webp";
+const imgLogoBrandLp = "/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp";
+const imgEllipse10 = "/images/06310d6ac34bfdf5c99689acd61ade1908915105.webp";
+const imgEllipse11 = "/images/2303138e4da6b79f3eca4b9933422fef6df4f944.webp";
+const imgVideoTestimoni = "/images/7b9b36ec87a12134b5a4c54ecdb3838bbb6d5193.webp";
+const imgEllipse12 = "/images/541419ea83f81e18686ce66b82646ed7ff8c9485.webp";
+const imgEllipse13 = "/images/4103347516e3518c93c2934d46b12629077931f3.webp";
+const imgEllipse14 = "/images/c06eab4feb5829d0e82ca41b027a2bc9f629f3f9.webp";
 
 // Testimonial Data
 const testimonialData = [

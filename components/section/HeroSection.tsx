@@ -16,7 +16,7 @@ export default function HeroSection() {
                     alt="foto61"
                     fill
                     className="w-full h-full object-cover"
-                    src="/images/0c1d2a3b7eb424e2f5d2bfe8c72d39db643b8338.png"
+                    src="/images/0c1d2a3b7eb424e2f5d2bfe8c72d39db643b8338.webp"
                 />
                 {/* Gradient overlay - darker on mobile for better text readability */}
                 <div className="absolute inset-0 bg-linear-to-b from-[rgba(53,49,133,0.92)] via-[rgba(53,49,133,0.88)] to-[rgba(53,49,133,0.85)] lg:bg-linear-to-r lg:from-[rgba(53,49,133,0.85)] lg:via-[rgba(53,49,133,0.5)] lg:via-35% lg:to-transparent lg:to-60%" />
@@ -58,7 +58,7 @@ export default function HeroSection() {
                         width={240}
                         height={300}
                         className="w-auto h-[300px] object-contain ml-[40px]"
-                        src="/images/de3b537a0eb96eb5d5bd7bb64cbdaa6228608132.png"
+                        src="/images/de3b537a0eb96eb5d5bd7bb64cbdaa6228608132.webp"
                     />
                 </div>
             </div>
@@ -71,7 +71,7 @@ export default function HeroSection() {
                         width={220}
                         height={40}
                         className="h-[36px] lg:h-[50px] w-auto object-contain"
-                        src="/images/4b5235fe13d1739052f84d08402cd513d8821c23.png"
+                        src="/images/4b5235fe13d1739052f84d08402cd513d8821c23.webp"
                     />
                 </div>
             </div>

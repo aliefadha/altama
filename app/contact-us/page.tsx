@@ -160,7 +160,7 @@ export default function ContactUsPage() {
                                             fill
                                             alt="Alva Chat"
                                             className="w-full h-full object-contain"
-                                            src="/images/96297028645c9421eba3a09013acf2a94eb4099c.png"
+                                            src="/images/96297028645c9421eba3a09013acf2a94eb4099c.webp"
                                         />
                                     </div>
 

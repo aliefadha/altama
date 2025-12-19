@@ -33,13 +33,13 @@ export default function CompanyOverviewHeroSection() {
                 {/* Brand Logos at bottom - Hidden on mobile, shown on desktop */}
                 <div className="hidden lg:flex absolute left-1/2 bottom-20 -translate-x-1/2 gap-4">
                     <div className="backdrop-blur-sm bg-gradient-to-b from-[rgba(101,97,158,0.77)] to-[rgba(80,76,143,0.77)] border border-[#403c90] rounded-lg px-6 py-4 w-[156px] h-[77px] flex items-center justify-center">
-                        <Image fill alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/2666269782fd241693d8b28321b227ad582d9613.png" style={{ objectPosition: '0 0' }} />
+                        <Image fill alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/2666269782fd241693d8b28321b227ad582d9613.webp" style={{ objectPosition: '0 0' }} />
                     </div>
                     <div className="backdrop-blur-sm bg-gradient-to-b from-[rgba(101,97,158,0.77)] to-[rgba(80,76,143,0.77)] border border-[#403c90] rounded-lg px-6 py-4 w-[156px] h-[77px] flex items-center justify-center">
-                        <Image fill alt="RYU" className="max-w-full max-h-full object-contain" src="/images/cf5c5f6103d19e8b77553633e9b9e4a99c64e524.png" style={{ objectPosition: '-150% 0' }} />
+                        <Image fill alt="RYU" className="max-w-full max-h-full object-contain" src="/images/cf5c5f6103d19e8b77553633e9b9e4a99c64e524.webp" style={{ objectPosition: '-150% 0' }} />
                     </div>
                     <div className="backdrop-blur-sm bg-gradient-to-b from-[rgba(101,97,158,0.77)] to-[rgba(80,76,143,0.77)] border border-[#403c90] rounded-lg px-6 py-4 w-[156px] h-[77px] flex items-center justify-center">
-                        <Image fill alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/61f2228a57c82de4a7ecd9e9db6ad0dc4b126cfd.png" style={{ objectPosition: '-226% 0' }} />
+                        <Image fill alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/61f2228a57c82de4a7ecd9e9db6ad0dc4b126cfd.webp" style={{ objectPosition: '-226% 0' }} />
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@ export default function CompanyOverviewHeroSection() {
                 <div className="hidden lg:block absolute inset-0 pointer-events-none">
                     <div className="absolute h-[451px] left-[376px] top-[629px] w-[1171px]">
                         <div className="absolute inset-0 overflow-hidden">
-                            <Image fill alt="" className="absolute h-[113.3%] left-[-0.01%] max-w-none top-0 w-[100.02%]" src="/images/5d79243e794a7459c8a32b85b99085a3303863f3.png" />
+                            <Image fill alt="" className="absolute h-[113.3%] left-[-0.01%] max-w-none top-0 w-[100.02%]" src="/images/5d79243e794a7459c8a32b85b99085a3303863f3.webp" />
                         </div>
                     </div>
                 </div>
