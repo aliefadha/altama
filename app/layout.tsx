@@ -4,6 +4,7 @@ import { Inter, League_Spartan } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlvaChat from "@/components/Alvachat";
+import localFont from 'next/font/local'
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,9 +17,14 @@ const leagueSpartan = League_Spartan({
   weight: ["700", "800", "900"],
 })
 
+const helvetica = localFont({
+  src: '../public/fonts/Helvetica.ttf',
+  variable: '--font-helvetica',
+})
+
 export const metadata: Metadata = {
-  title: "Altama Surya Anugerah",
-  description: "Altama Surya Anugerah",
+  title: "Altama",
+  description: "Altama - Engineering a Better World with Better Tools",
 };
 
 export default function RootLayout({
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${leagueSpartan.variable} antialiased`}
+        className={`${inter.className} ${leagueSpartan.variable} ${helvetica.variable} antialiased`}
       >
         <Header />
         <div className="w-full h-full">

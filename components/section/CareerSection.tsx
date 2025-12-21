@@ -29,7 +29,7 @@ export default function CareerSection() {
             {/* Decorative Background Lines */}
             <Image
                 fill
-                className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-40 lg:opacity-100"
+                className="absolute inset-0 w-full max-w-[1200px] mx-auto h-full object-cover pointer-events-none opacity-40 lg:opacity-100"
                 src="/images/f0b36a6155a50c52be487b4eff0f34ea34014d9f.webp"
                 alt=""
             />

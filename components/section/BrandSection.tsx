@@ -32,9 +32,9 @@ export default function BrandSection() {
                         href="https://tekiro.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full max-w-[240px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
+                        className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={450} height={85} alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/tekiro.webp" />
+                        <Image width={250} height={80} alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/rexco.webp" />
                     </a>
 
                     {/* RYU */}
@@ -42,7 +42,7 @@ export default function BrandSection() {
                         href="https://ryupowertools.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full max-w-[160px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
+                        className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
                         <Image width={240} height={80} alt="RYU" className="max-w-full max-h-full object-contain" src="/images/ryu.webp" />
                     </a>
@@ -52,9 +52,9 @@ export default function BrandSection() {
                         href="https://rexco-solution.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full max-w-[160px] h-[60px] lg:h-[70px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
+                        className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={250} height={80} alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/rexco.webp" />
+                        <Image width={450} height={85} alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/tekiro.webp" />
                     </a>
 
                     {/* Right Decorative Element */}
@@ -161,12 +161,12 @@ export default function BrandSection() {
             </div>
 
             {/* Bottom Yellow Wave */}
-            <div className="absolute bottom-0 left-0 right-0 h-[40px] lg:h-[50px] overflow-hidden">
+            <div className="absolute bottom-0 left-0 right-0 h-[40px] lg:h-[60px] overflow-hidden">
                 <Image
                     fill
                     alt=""
-                    className="w-full h-[100px] lg:h-[120px] object-cover"
-                    src="/images/6e2d8d721c25b71b074bcf4b65801b488f0f3b0e.webp"
+                    className="w-full object-top object-cover"
+                    src="/images/yellow-gif.gif"
                 />
             </div>
         </div>

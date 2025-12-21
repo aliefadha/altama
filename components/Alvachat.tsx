@@ -10,7 +10,7 @@ export default function AlvaChat() {
             {/* Chat Button - Sticky di kanan bawah */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[70px] h-[140px] md:w-[100px] md:h-[200px] hover:scale-105 transition-transform duration-300"
+                className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[150px] h-[250px] hover:scale-105 transition-transform duration-300"
             >
                 <Image
                     fill

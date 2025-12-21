@@ -23,56 +23,65 @@ export default function HeroSection() {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 max-w-360 mx-auto px-5 lg:px-[80px] h-full flex flex-col justify-center pb-20 pt-20 lg:pb-0 lg:pt-0 lg:-mt-[60px]">
+            <div className="relative z-10 max-w-360 mx-auto px-5 lg:px-[80px] h-full flex flex-col gap-10 justify-center ">
                 {/* Badge with purple background */}
-                <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
-                    <p className="text-white font-['League_Spartan'] text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]">
-                        #AltamaGueBanget
+                <div>
+                    <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
+                        <p className="text-white font-league-spartan text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]">
+                            #AltamaGueBanget
+                        </p>
+                    </div>
+                    {/* Brand Logos - aligned with content */}
+                    <div className="relative flex flex-wrap items-center justify-start gap-1 sm:gap-2">
+                        {/* Tekiro */}
+                        <a
+                            href="https://tekiro.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                        >
+                            <Image width={150} height={40} alt="Tekiro" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
+                        </a>
+                        {/* Rexco */}
+                        <a
+                            href="https://rexco-solution.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                        >
+                            <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
+                        </a>
+
+                        {/* RYU */}
+                        <a
+                            href="https://ryupowertools.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                        >
+                            <Image width={150} height={40} alt="RYU" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    {/* Main Heading with yellow background on INNOVATION */}
+                    <h1 className={`${leagueSpartan.className} text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
+                        THE POWER OF
+                        <br />
+                        <span className="relative inline-block my-1 lg:my-0.5">
+                            <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#353185] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
+                            <span className="relative z-10 text-white px-1 lg:px-[4px]">INNOVATION</span>
+                        </span>{' '}
+                        FOR A
+                        <br />
+                        STRONGER NATION.
+                    </h1>
+
+                    {/* Subtitle */}
+                    <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
+                        Your partner in progress, empowering every step toward Indonesia&apos;s success.
                     </p>
-                </div>
-
-                {/* Main Heading with yellow background on INNOVATION */}
-                <h1 className={`${leagueSpartan.className} text-white font-['League_Spartan'] font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
-                    THE POWER OF
-                    <br />
-                    <span className="relative inline-block my-1 lg:my-0.5">
-                        <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#353185] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
-                        <span className="relative z-10 text-white px-1 lg:px-[4px]">INNOVATION</span>
-                    </span>{' '}
-                    FOR A
-                    <br />
-                    STRONGER NATION.
-                </h1>
-
-                {/* Subtitle */}
-                <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
-                    Your partner in progress, empowering every step toward Indonesia&apos;s success.
-                </p>
-            </div>
-
-            {/* Decorative Image - hidden on mobile */}
-            <div className="hidden lg:block absolute left-0 right-0 bottom-[-10px] z-[5]">
-                <div className="max-w-360 mx-auto px-[80px]">
-                    <Image
-                        alt="decorative"
-                        width={240}
-                        height={300}
-                        className="w-auto h-[300px] object-contain ml-[40px]"
-                        src="/images/de3b537a0eb96eb5d5bd7bb64cbdaa6228608132.webp"
-                    />
-                </div>
-            </div>
-
-            {/* Brand Logos - aligned with content */}
-            <div className="absolute left-0 right-0 bottom-6 lg:bottom-[80px] z-10">
-                <div className="max-w-[1440px] mx-auto px-5 lg:px-[80px]">
-                    <Image
-                        alt="Brand Logos - TEKIRO, REXCO, RYU"
-                        width={220}
-                        height={40}
-                        className="h-[36px] lg:h-[50px] w-auto object-contain"
-                        src="/images/4b5235fe13d1739052f84d08402cd513d8821c23.webp"
-                    />
                 </div>
             </div>
         </div>

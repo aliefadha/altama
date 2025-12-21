@@ -1,6 +1,7 @@
 import imgAsa021251 from "@/assets/65a062ebe15f383953d6a1988ebb49073df36349.webp";
 import { Image as ImageIcon, Triangle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function CompanySection() {
@@ -78,7 +79,7 @@ export default function CompanySection() {
                         </div>
 
                         {/* Read More Button */}
-                        <button className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
+                        <Link href="/profile/company-overview" className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
                             <p className="text-white text-[15px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
                                 Read More
                             </p>
@@ -87,7 +88,7 @@ export default function CompanySection() {
                                     <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                 </svg>
                             </div>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

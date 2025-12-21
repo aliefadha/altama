@@ -30,22 +30,20 @@ export default function Header() {
                         </div>
 
                         {/* Menu Items */}
-                        <div className="relative h-full flex items-center justify-start gap-16 pl-[115px]">
+                        <div className="relative h-full flex items-center justify-start gap-12 pl-[115px]">
                             {/* Profile with dropdown */}
                             <div className="relative group">
                                 <div
-                                    className="relative h-[24px] w-[70px] mr-4 transition-transform hover:scale-110 inline-block"
+                                    className="relative  flex items-center gap-2"
                                 >
-                                    <Image
-                                        alt="Profile"
-                                        fill
-                                        className="object-contain"
-                                        src="/images/c4ed1de242b8185225cf2bb51e97ba89c83cac70.webp"
-                                    />
-                                    <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
+                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                        Profile
+                                    </h1>
+                                    <div className="">
                                         <Image
                                             alt=""
-                                            fill
+                                            width={10}
+                                            height={14}
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -56,25 +54,25 @@ export default function Header() {
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                     <Link
                                         href="/profile/company-overview"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Company Overview
                                     </Link>
                                     <Link
                                         href="/profile/awards-certification"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Awards and Certification
                                     </Link>
                                     <Link
                                         href="/profile/board-of-directors"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Board of Directors
                                     </Link>
                                     <Link
                                         href="/profile/gallery"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Gallery
                                     </Link>
@@ -84,18 +82,16 @@ export default function Header() {
                             {/* Brand with dropdown */}
                             <div className="relative group">
                                 <div
-                                    className="relative h-[24px] w-[61px] mr-4 transition-transform hover:scale-110 inline-block"
+                                    className="relative  flex items-center gap-2"
                                 >
-                                    <Image
-                                        alt="Brand"
-                                        fill
-                                        className="object-contain"
-                                        src="/images/1a92154a51b4b0071d11b64cc022e9206d223671.webp"
-                                    />
-                                    <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
+                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                        Brand
+                                    </h1>
+                                    <div className="">
                                         <Image
                                             alt=""
-                                            fill
+                                            width={10}
+                                            height={14}
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -108,7 +104,7 @@ export default function Header() {
                                         href="https://tekiro.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Tekiro
                                     </a>
@@ -116,7 +112,7 @@ export default function Header() {
                                         href="https://rexco-solution.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Rexco
                                     </a>
@@ -124,7 +120,7 @@ export default function Header() {
                                         href="https://ryupowertools.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Ryu
                                     </a>
@@ -134,31 +130,26 @@ export default function Header() {
                             {/* Media Center */}
                             <Link
                                 href="/media-center"
-                                className="relative h-[24px] w-[134px] transition-transform hover:scale-110 inline-block"
+                                className="relative  flex"
                             >
-                                <Image
-                                    alt="Media Center"
-                                    fill
-                                    className="object-contain"
-                                    src="/images/17195abe25725815a91be733807e9582f204712e.webp"
-                                />
+                                <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                    Media Center
+                                </h1>
                             </Link>
 
                             {/* Career with dropdown */}
                             <div className="relative group">
                                 <div
-                                    className="relative h-[24px] w-[71px] mr-4 transition-transform hover:scale-110 inline-block"
+                                    className="relative  flex items-center gap-2"
                                 >
-                                    <Image
-                                        alt="Career"
-                                        fill
-                                        className="object-contain"
-                                        src="/images/5eb4f8e2a0bc0450dc61142e2295cf98221b43d5.webp"
-                                    />
-                                    <div className="absolute -right-7 top-[6px] h-[14px] w-[19px]">
+                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                        Career
+                                    </h1>
+                                    <div className="">
                                         <Image
                                             alt=""
-                                            fill
+                                            width={10}
+                                            height={14}
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -169,13 +160,13 @@ export default function Header() {
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                     <Link
                                         href="/career/apply-jobs"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Apply Jobs
                                     </Link>
                                     <Link
                                         href="/career/life-at-altama"
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-['Inter:Regular',sans-serif] text-[14px]"
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         Life at Altama
                                     </Link>
@@ -185,14 +176,11 @@ export default function Header() {
                             {/* Contact Us */}
                             <Link
                                 href="/contact-us"
-                                className="relative h-[24px] w-[112px] transition-transform hover:scale-110 inline-block"
+                                className="relative  inline-block"
                             >
-                                <Image
-                                    alt="Contact Us"
-                                    fill
-                                    className="object-contain"
-                                    src="/images/6b9cdea8d38215b8635504fcde7cc4f425726060.webp"
-                                />
+                                <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                    Contact Us
+                                </h1>
                             </Link>
                         </div>
                     </div>
@@ -200,7 +188,7 @@ export default function Header() {
                     {/* Logo Altama - DI DEPAN SHAPE */}
                     <Link
                         href="/"
-                        className="absolute left-0 top-0 h-[60px] w-[210px] pointer-events-auto z-10 transition-transform hover:scale-105 cursor-pointer inline-block"
+                        className="absolute left-0 top-0 h-[60px] w-[210px] pointer-events-auto z-10 cursor-pointer inline-block"
                     >
                         <Image
                             alt="PT Altama Surya Anugerah"
@@ -219,7 +207,7 @@ export default function Header() {
                     <Link
                         href="/"
                         onClick={() => setShowMobileMenu(false)}
-                        className="h-[45px] w-1/3 transition-transform hover:scale-105 inline-block relative"
+                        className="h-[45px] w-1/3  inline-block relative"
                     >
                         <Image
                             alt="PT Altama Surya Anugerah"

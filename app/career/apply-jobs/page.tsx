@@ -26,7 +26,7 @@ export default function ApplyJobsPage() {
 
     return (
         <>
-            <div className="pt-[55px] min-h-screen">
+            <div className="pt-[55px] ">
                 {/* Grow with Us Section */}
                 <div className="relative w-full bg-gradient-to-b from-[#353185] via-[#605bc3] via-[52.404%] to-[#353185] py-12 lg:py-16 overflow-hidden">
                     {/* Decorative Background Lines */}
