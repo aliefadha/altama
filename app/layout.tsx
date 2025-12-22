@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AlvaChat from "@/components/Alvachat";
-import { inter, leagueSpartan } from "./font";
+import { inter } from "./font";
 
 
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${leagueSpartan.className} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         <Header />
         <div className="w-full h-full">
