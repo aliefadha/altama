@@ -27,7 +27,7 @@ export default function HeroSection() {
                 {/* Badge with purple background */}
                 <div>
                     <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
-                        <p className="text-white font-league-spartan text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]">
+                        <p className={`${leagueSpartan.className} text-white font-league-spartan text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
                             #AltamaGueBanget
                         </p>
                     </div>
