@@ -1,5 +1,6 @@
 import { inter, leagueSpartan } from "@/app/font";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BoardOfDirectorsPage() {
     return (
@@ -224,28 +225,28 @@ export default function BoardOfDirectorsPage() {
                 <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] pb-12 lg:pb-[80px] z-10">
                     <div className="flex gap-3 lg:gap-6 items-center justify-center">
                         {/* Back Button */}
-                        <button className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#2a2667] transition-colors">
-                            <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg] scale-y-[-100%]">
-                                <svg className="block size-full" fill="none" viewBox="0 0 24 24">
-                                    <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                        <Link href="/profile/awards-certification" className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full border-2 border-[#353185] bg-transparent hover:bg-[#353185] transition-all duration-300 group">
+                            <div className="relative w-4 h-4">
+                                <svg className="block size-full rotate-[90deg] scale-y-[-100%]" fill="none" viewBox="0 0 24 24">
+                                    <path d="M17 14L12 9L7 14" className="stroke-[#353185] group-hover:stroke-white transition-colors duration-300" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                 </svg>
                             </div>
-                            <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
+                            <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-[#353185] group-hover:text-white tracking-tight whitespace-nowrap transition-colors duration-300`}>
                                 Back
                             </p>
-                        </button>
+                        </Link>
 
-                        {/* Next Button (Disabled) */}
-                        <button className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full border-2 border-[#d3d3d3] cursor-not-allowed">
-                            <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-[#808080] tracking-tight">
+                        {/* Next Button */}
+                        <Link href="/profile/gallery" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
+                            <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
                                 Next
                             </p>
                             <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg]">
                                 <svg className="block size-full" fill="none" viewBox="0 0 24 24">
-                                    <path d="M17 14L12 9L7 14" stroke="#808080" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                    <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                 </svg>
                             </div>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div >

@@ -1,6 +1,6 @@
-import AwardSection from "@/components/section/AwardSection";
 import { Inter, League_Spartan } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
@@ -124,7 +124,7 @@ export default function AwardsCertificationPage() {
                         {/* Navigation Buttons */}
                         <div className="flex gap-3 lg:gap-4 items-center justify-center">
                             {/* Back Button */}
-                            <button className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full border-2 border-[#353185] bg-transparent hover:bg-[#353185] transition-all duration-300 group">
+                            <Link href="/profile/company-overview" className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full border-2 border-[#353185] bg-transparent hover:bg-[#353185] transition-all duration-300 group">
                                 <div className="relative w-4 h-4">
                                     <svg className="block size-full rotate-[90deg] scale-y-[-100%]" fill="none" viewBox="0 0 24 24">
                                         <path d="M17 14L12 9L7 14" className="stroke-[#353185] group-hover:stroke-white transition-colors duration-300" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -133,10 +133,10 @@ export default function AwardsCertificationPage() {
                                 <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-[#353185] group-hover:text-white tracking-tight whitespace-nowrap transition-colors duration-300`}>
                                     Back
                                 </p>
-                            </button>
+                            </Link>
 
                             {/* Next Button */}
-                            <button className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full hover:bg-[#605bc3] transition-all duration-300">
+                            <Link href="/profile/board-of-directors" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full hover:bg-[#605bc3] transition-all duration-300">
                                 <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-white tracking-tight whitespace-nowrap`}>
                                     Next
                                 </p>
@@ -145,7 +145,7 @@ export default function AwardsCertificationPage() {
                                         <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                     </svg>
                                 </div>
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

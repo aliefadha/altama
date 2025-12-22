@@ -1,6 +1,7 @@
 import { inter, leagueSpartan } from "@/app/font";
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CompanyOverviewPage() {
     return (
@@ -223,6 +224,35 @@ export default function CompanyOverviewPage() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] py-12 lg:py-[80px]">
+                <div className="flex gap-3 lg:gap-6 items-center justify-center">
+                    {/* Back Button (Disabled) */}
+                    <button className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full border-2 border-[#d3d3d3] cursor-not-allowed">
+                        <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg] scale-y-[-100%]">
+                            <svg className="block size-full" fill="none" viewBox="0 0 24 24">
+                                <path d="M17 14L12 9L7 14" stroke="#808080" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                            </svg>
+                        </div>
+                        <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-[#808080] tracking-tight">
+                            Back
+                        </p>
+                    </button>
+
+                    {/* Next Button */}
+                    <Link href="/profile/awards-certification" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
+                        <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
+                            Next
+                        </p>
+                        <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg]">
+                            <svg className="block size-full" fill="none" viewBox="0 0 24 24">
+                                <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                            </svg>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </>
