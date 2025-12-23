@@ -132,7 +132,7 @@ export default function BrandSection() {
             </div>
 
             {/* Bottom Yellow Wave */}
-            <div className="absolute bottom-0 left-0 right-0 h-[40px] lg:h-[60px] overflow-hidden">
+            <div className="absolute bottom-0 left-0 right-0 h-[10px] lg:h-[20px] xl:h-[40px] overflow-hidden">
                 <Image
                     fill
                     alt=""
