@@ -1,6 +1,9 @@
+"use client";
+
 import { Inter, League_Spartan } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
@@ -12,19 +15,44 @@ const inter = Inter({
     subsets: ["latin"]
 })
 
+const backgroundImages = [
+    "/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.webp",
+    "/images/award2.webp",
+    "/images/award3.webp",
+    "/images/award4.webp",
+    "/images/award5.webp",
+]
 
 export default function AwardsCertificationPage() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <>
             <div className="relative w-full h-screen overflow-hidden">
-                {/* Background Image */}
+                {/* Background Images Slider */}
                 <div className="absolute inset-0 ">
-                    <Image
-                        alt="foto61"
-                        fill
-                        className="w-full h-full object-cover bg-[#353185]"
-                        src="/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.webp"
-                    />
+                    {backgroundImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                                }`}
+                        >
+                            <Image
+                                alt={`hero-bg-${index}`}
+                                fill
+                                className="w-full h-full object-cover bg-[#353185]"
+                                src={src}
+                                priority={index === 0}
+                            />
+                        </div>
+                    ))}
                     {/* Gradient overlay - darker on mobile for better text readability */}
                     <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />
                 </div>

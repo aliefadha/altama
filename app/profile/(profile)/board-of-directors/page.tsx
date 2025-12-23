@@ -12,7 +12,7 @@ export default function BoardOfDirectorsPage() {
                         alt="foto61"
                         fill
                         className="w-full h-full object-cover object-[25%_75%]"
-                        src="/images/8d50d8b0c558d03a95547c2cb9ad6f95d8eab291.webp"
+                        src="/images/bod.webp"
                     />
                     {/* Gradient overlay - darker on mobile for better text readability */}
                     <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />

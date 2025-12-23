@@ -1,20 +1,46 @@
+"use client";
+
 import { TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+
+const backgroundImages = [
+    "/images/6a0dfdac9532db67bcfdfbdf8802209f17bd1327.webp",
+    "/images/foto1.webp",
+]
 
 export default function CompanyOverviewPage() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <>
             {/* Hero Section */}
             <div className="relative w-full h-screen overflow-hidden">
-                {/* Background Image */}
+                {/* Background Images Slider */}
                 <div className="absolute inset-0 bg-[#353185]">
-                    <Image
-                        alt="foto61"
-                        fill
-                        className="w-full h-full object-cover"
-                        src="/images/green.webp"
-                    />
+                    {backgroundImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                                }`}
+                        >
+                            <Image
+                                alt={`hero-bg-${index}`}
+                                fill
+                                className="w-full h-full object-cover"
+                                src={src}
+                                priority={index === 0}
+                            />
+                        </div>
+                    ))}
                     {/* Gradient overlay - darker on mobile for better text readability */}
                     <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />
                 </div>

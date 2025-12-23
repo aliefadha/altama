@@ -1,23 +1,51 @@
+"use client";
+
 import { League_Spartan } from "next/font/google";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
     subsets: ["latin"]
 })
 
+const backgroundImages = [
+    "/images/0c1d2a3b7eb424e2f5d2bfe8c72d39db643b8338.webp",
+    "/images/green.webp",
+    "/images/carousel-3.webp",
+]
+
 
 export default function HeroSection() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="relative w-full h-screen min-h-150 lg:min-h-175 bg-[#353185] overflow-hidden">
-            {/* Background Image */}
+            {/* Background Images Slider */}
             <div className="absolute inset-0">
-                <Image
-                    alt="foto61"
-                    fill
-                    className="w-full h-full object-cover"
-                    src="/images/0c1d2a3b7eb424e2f5d2bfe8c72d39db643b8338.webp"
-                />
+                {backgroundImages.map((src, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
+                    >
+                        <Image
+                            alt={`hero-bg-${index}`}
+                            fill
+                            className="w-full h-full object-cover"
+                            src={src}
+                            priority={index === 0}
+                        />
+                    </div>
+                ))}
                 {/* Gradient overlay - darker on mobile for better text readability */}
                 <div className="absolute inset-0 bg-linear-to-b from-[rgba(53,49,133,0.92)] via-[rgba(53,49,133,0.88)] to-[rgba(53,49,133,0.85)] lg:bg-linear-to-r lg:from-[rgba(53,49,133,0.85)] lg:via-[rgba(53,49,133,0.5)] lg:via-35% lg:to-transparent lg:to-60%" />
             </div>
