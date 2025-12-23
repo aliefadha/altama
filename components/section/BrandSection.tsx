@@ -34,7 +34,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={250} height={80} alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/rexco.webp" />
+                        <Image width={250} height={80} alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/tekiroo.webp" />
                     </a>
 
                     {/* RYU */}
@@ -54,7 +54,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={450} height={85} alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/tekiro.webp" />
+                        <Image width={450} height={85} alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/rexcoo.webp" />
                     </a>
 
                     {/* Right Decorative Element */}
@@ -127,35 +127,6 @@ export default function BrandSection() {
                             />
                         </div>
 
-                        {/* Award Progress Card */}
-                        <div className="absolute right-3 lg:right-4 bottom-3 lg:bottom-4 bg-white rounded-xl lg:rounded-[16px] shadow-lg p-3 lg:p-4 w-[200px] lg:w-[260px]">
-                            <div className="flex items-center gap-2 mb-2">
-                                <div className="w-8 lg:w-10 h-8 lg:h-10 bg-[#353185] rounded-lg flex items-center justify-center">
-                                    <svg className="w-5 lg:w-6 h-5 lg:h-6" fill="none" viewBox="0 0 40 40">
-                                        <path d="M6.70242 1.15556C7.59197 -0.385185 9.81584 -0.385185 10.7054 1.15556L17.0947 12.2222C17.9843 13.763 16.8723 15.6889 15.0932 15.6889H2.31456C0.535465 15.6889 -0.576469 13.763 0.313078 12.2222L6.70242 1.15556Z" fill="white" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="text-[#121212] text-[13px] lg:text-[16px] font-['Inter'] font-medium tracking-tight leading-tight">
-                                        Award Progress
-                                    </p>
-                                    <p className="text-[#414141] text-[11px] lg:text-[12px] font-['Inter'] tracking-tight leading-tight">
-                                        Pertumbuhan brand awareness
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Progress Bar */}
-                            <div className="relative">
-                                <div className="flex gap-1">
-                                    <div className="h-5 lg:h-6 w-[130px] lg:w-[200px] bg-[rgba(53,49,133,0.32)] rounded" />
-                                    <div className="h-5 lg:h-6 w-[24px] lg:w-[32px] bg-[rgba(190,189,216,0.48)] rounded" />
-                                </div>
-                                <p className="absolute left-2 top-0.5 lg:top-1 text-[#353185] text-[11px] lg:text-[12px] font-['Inter'] font-medium tracking-tight">
-                                    60%
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

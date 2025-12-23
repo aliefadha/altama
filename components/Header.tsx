@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { helvetica } from "@/app/font";
 
 export default function Header() {
 
@@ -15,7 +15,7 @@ export default function Header() {
     return (
         <>
             {/* Desktop Header */}
-            <div className="hidden lg:block fixed top-0 left-0 right-0 z-50 h-[55px] pointer-events-none">
+            <div className={`${helvetica.variable} hidden lg:block fixed top-0 left-0 right-0 z-50 h-[55px] pointer-events-none`}>
                 <div className="relative h-full">
                     {/* Navigation Background & Menu - DI BELAKANG LOGO */}
                     <div className="absolute left-[130px] top-0 h-[55px] w-[920px] pointer-events-auto z-0">
@@ -36,7 +36,7 @@ export default function Header() {
                                 <div
                                     className="relative  flex items-center gap-2"
                                 >
-                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                    <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         Profile
                                     </h1>
                                     <div className="">
@@ -84,7 +84,7 @@ export default function Header() {
                                 <div
                                     className="relative  flex items-center gap-2"
                                 >
-                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                    <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         Brand
                                     </h1>
                                     <div className="">
@@ -132,7 +132,7 @@ export default function Header() {
                                 href="/media-center"
                                 className="relative  flex"
                             >
-                                <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                     Media Center
                                 </h1>
                             </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                                 <div
                                     className="relative  flex items-center gap-2"
                                 >
-                                    <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                    <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         Career
                                     </h1>
                                     <div className="">
@@ -178,7 +178,7 @@ export default function Header() {
                                 href="/contact-us"
                                 className="relative  inline-block"
                             >
-                                <h1 className="font-sans text-[#353183] text-[20px] font-extrabold">
+                                <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                     Contact Us
                                 </h1>
                             </Link>

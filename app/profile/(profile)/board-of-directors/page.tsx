@@ -1,53 +1,75 @@
-import { inter, leagueSpartan } from "@/app/font";
+import { inter } from "@/app/font";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function BoardOfDirectorsPage() {
     return (
         <>
-            <div className="w-full overflow-y-hidden max-h-[700px] bg-gradient-to-b from-[#353185] via-[#605BC3] to-[#353185] pt-36 flex flex-col justify-center items-center gap-12">
-                <div className="max-w-xl text-center space-y-4 px-8 lg:px-0">
-                    <h1 className={`${leagueSpartan.variable} text-white font-semibold text-[45px] lg:text-[60px] leading-[95%] tracking-[-2%] lg:tracking-[-2%]`}>
-                        Our Vision, Mission & <span className="p-1 bg-[#F4C41C] rounded-md">Company Values</span>
-                    </h1>
-                    <p className={`${inter.variable} text-white text-[16px] lg:text-[20px] max-w-md mx-auto tracking-[-4%]`}>
-                        Fondasi yang membentuk Altama Surya Anugerah dalam berkarya dan berkembang.
-                    </p>
+            <div className="relative w-full h-screen overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 bg-[#353185]">
+                    <Image
+                        alt="foto61"
+                        fill
+                        className="w-full h-full object-cover object-[25%_75%]"
+                        src="/images/8d50d8b0c558d03a95547c2cb9ad6f95d8eab291.webp"
+                    />
+                    {/* Gradient overlay - darker on mobile for better text readability */}
+                    <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />
                 </div>
-                <div className="overflow-hidden h-[750px] w-2/3 mx-auto relative rounded-t-xl bg-gradient-to-b from-[#9795BD] to-[#605BC3] translate-y-3 ">
-                    <Image fill alt="" src='/images/6b871ef0c31b3eaa3b53b9e5aec1336b59755084.webp' className="w-full h-full object-cover object-[25%_75%] pt-2 px-2 rounded-xl" />
-                    <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-center gap-1 sm:gap-2 pb-8">
-                        {/* Tekiro */}
-                        <a
-                            href="https://tekiro.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
-                        >
-                            <Image width={150} height={40} alt="Tekiro" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
-                        </a>
-                        {/* Rexco */}
-                        <a
-                            href="https://rexco-solution.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
-                        >
-                            <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
-                        </a>
 
-                        {/* RYU */}
-                        <a
-                            href="https://ryupowertools.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
-                        >
-                            <Image width={150} height={40} alt="RYU" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
-                        </a>
+                {/* Hero Content - absolutely positioned */}
+                <div className="absolute inset-0 max-w-360 mx-auto px-5 lg:px-[80px] h-full flex flex-col gap-10 justify-center">
+                    <div>
+
+                        {/* Brand Logos - aligned with content */}
+                        <div className="relative flex flex-wrap items-center justify-start gap-1 sm:gap-2">
+                            {/* Tekiro */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="Tekiro" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
+                            </div>
+                            {/* Rexco */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
+                            </div>
+
+                            {/* RYU */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="RYU" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        {/* Main Heading with yellow background on INNOVATION */}
+                        <h1 className={`text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
+                            Board Of
+                            <span className="relative inline-block my-1 lg:my-0.5">
+                                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] left-[5px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
+                                <span className="relative z-10 text-white px-1 lg:px-[4px]">Directors</span>
+                            </span>
+                        </h1>
+
+                        {/* Subtitle */}
+                        <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
+                            Leadership driving Altama’s growth and excellence
+                        </p>
+                    </div>
+                    <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
+                        <p className={`font-league-spartan text-white text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
+                            #AltamaGueBanget
+                        </p>
                     </div>
                 </div>
             </div>
+
+
             <div className="bg-white relative">
                 {/* Director 1 - Oscar Andrew Sutjadi */}
                 <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] pt-12 lg:pt-[120px] pb-12 lg:pb-[100px] z-10">
