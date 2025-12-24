@@ -5,14 +5,14 @@ import Link from "next/link";
 export default function BoardOfDirectorsPage() {
     return (
         <>
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full h-[800px] overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 bg-[#353185]">
                     <Image
                         alt="foto61"
                         fill
-                        className="w-full h-full object-cover object-[25%_75%]"
-                        src="/images/bod.webp"
+                        className="w-full h-full object-cover"
+                        src="/images/bodimage.webp"
                     />
                     {/* Gradient overlay - darker on mobile for better text readability */}
                     <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />

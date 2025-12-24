@@ -17,7 +17,6 @@ const inter = Inter({
 
 const backgroundImages = [
     "/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.webp",
-    "/images/award2.webp",
     "/images/award3.webp",
     "/images/award4.webp",
     "/images/award5.webp",
@@ -29,25 +28,25 @@ export default function AwardsCertificationPage() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
     return (
         <>
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full h-[800px] overflow-hidden">
                 {/* Background Images Slider */}
-                <div className="absolute inset-0 ">
+                <div className="absolute inset-0 bg-[#353185]">
                     {backgroundImages.map((src, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out scale-y-95  ${index === currentIndex ? 'opacity-100' : 'opacity-0'
                                 }`}
                         >
                             <Image
                                 alt={`hero-bg-${index}`}
                                 fill
-                                className="w-full h-full object-cover bg-[#353185]"
+                                className="w-full h-full object-cover bg-[#353185] "
                                 src={src}
                                 priority={index === 0}
                             />

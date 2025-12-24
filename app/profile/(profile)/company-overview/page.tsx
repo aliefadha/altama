@@ -6,8 +6,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const backgroundImages = [
-    "/images/6a0dfdac9532db67bcfdfbdf8802209f17bd1327.webp",
-    "/images/foto1.webp",
+    "/images/overview1.webp",
+    "/images/overview2.webp",
+    "/images/overview3.webp",
+    "/images/overview4.webp",
 ]
 
 export default function CompanyOverviewPage() {
@@ -16,14 +18,14 @@ export default function CompanyOverviewPage() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
     return (
         <>
             {/* Hero Section */}
-            <div className="relative w-full h-screen overflow-hidden">
+            <div className="relative w-full h-[800px] overflow-hidden">
                 {/* Background Images Slider */}
                 <div className="absolute inset-0 bg-[#353185]">
                     {backgroundImages.map((src, index) => (

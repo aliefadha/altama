@@ -11,7 +11,7 @@ const leagueSpartan = League_Spartan({
 
 const backgroundImages = [
     "/images/0c1d2a3b7eb424e2f5d2bfe8c72d39db643b8338.webp",
-    "/images/green.webp",
+    "/images/home2.webp",
     "/images/carousel-3.webp",
 ]
 
@@ -22,13 +22,13 @@ export default function HeroSection() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
-        <div className="relative w-full h-screen min-h-150 lg:min-h-175 bg-[#353185] overflow-hidden">
+        <div className="relative w-full h-[800px]  bg-[#353185] overflow-hidden">
             {/* Background Images Slider */}
             <div className="absolute inset-0">
                 {backgroundImages.map((src, index) => (
@@ -98,7 +98,7 @@ export default function HeroSection() {
                         THE POWER OF
                         <br />
                         <span className="relative inline-block my-1 lg:my-0.5">
-                            <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#353185] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
+                            <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
                             <span className="relative z-10 text-white px-1 lg:px-[4px]">INNOVATION</span>
                         </span>{' '}
                         FOR A
