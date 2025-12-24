@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "WE ARE HIRING",
+    "joinBadge": "JOIN",
+    "title": "ALTAMA TODAY!",
+    "subtitle": "Be part of a dynamic team driving innovation in Indonesia's industrial, automotive, and household sectors.",
+    "cta": "View Open Positions"
+  },
+  "infoCard": {
+    "text": "Trusted by professionals across Indonesia for quality and reliability."
+  },
+  "jobRoles": {
+    "mechanicStaff": "Mechanic Staff",
+    "coordinatorStaff": "Coordinator Staff",
+    "distributionSupervisor": "Distribution Supervisor"
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "subtitle": "What our team members say about working at Altama",
+    "items": {
+      "1": {
+        "quote": "Working at Altama has been an incredible journey. The company provides great opportunities for growth and the team is very supportive.",
+        "name": "Andi Pratama",
+        "position": "Marketing Manager"
+      },
+      "2": {
+        "name": "Budi Santoso",
+        "position": "Operations Supervisor"
+      },
+      "3": {
+        "quote": "I've been with Altama for 3 years now. The company culture encourages innovation and values every employee's contribution.",
+        "name": "Dewi Kartika",
+        "position": "HR Manager"
+      },
+      "4": {
+        "quote": "The work-life balance here is excellent. Management truly cares about employee well-being while driving for excellence.",
+        "name": "Eko Prasetyo",
+        "position": "Sales Executive"
+      },
+      "5": {
+        "quote": "Altama has helped me develop my skills and advance my career. The training programs are comprehensive and practical.",
+        "name": "Fitriani Putri",
+        "position": "Finance Staff"
+      },
+      "6": {
+        "quote": "Being part of the Tekiro, RYU, and Rexco distribution network gives us a sense of pride and responsibility.",
+        "name": "Gunawan Wijaya",
+        "position": "Warehouse Manager"
+      },
+      "7": {
+        "quote": "The collaborative environment at Altama makes every workday enjoyable. Teamwork is at the heart of everything we do.",
+        "name": "Hesti Utami",
+        "position": "Customer Service"
+      },
+      "8": {
+        "quote": "I appreciate how the company invests in its people. There are always new challenges and learning opportunities.",
+        "name": "Irwan Kusuma",
+        "position": "Technical Support"
+      }
+    }
+  }
+}

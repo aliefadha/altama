@@ -1,8 +1,13 @@
+"use client";
+
 import { inter } from "@/app/font";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 export default function BoardOfDirectorsPage() {
+    const t = useTranslations('boardOfDirectors');
+    const tNav = useTranslations('companyOverview.navigation');
     return (
         <>
             <div className="relative w-full h-[800px] overflow-hidden">
@@ -49,21 +54,20 @@ export default function BoardOfDirectorsPage() {
                     <div>
                         {/* Main Heading with yellow background on INNOVATION */}
                         <h1 className={`text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
-                            Board Of
+                            {t('hero.title')}
                             <span className="relative inline-block my-1 lg:my-0.5">
                                 <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] left-[5px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
-                                <span className="relative z-10 text-white px-1 lg:px-[4px]">Directors</span>
+                                <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('hero.highlight')}</span>
                             </span>
                         </h1>
 
-                        {/* Subtitle */}
                         <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
-                            Leadership driving Altama’s growth and excellence
+                            {t('hero.subtitle')}
                         </p>
                     </div>
                     <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
                         <p className={`font-league-spartan text-white text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
-                            #AltamaGueBanget
+                            {t('hero.tag')}
                         </p>
                     </div>
                 </div>
@@ -92,24 +96,22 @@ export default function BoardOfDirectorsPage() {
                             {/* Name and Title */}
                             <div className="flex flex-col gap-2">
                                 <h2 className="font-league-spartan font-semibold text-[28px] lg:text-[42px] leading-tight tracking-tight lg:tracking-[-1.68px] text-[#353185]">
-                                    Oscar Andrew Sutjadi
+                                    {t('director1.name')}
                                 </h2>
                                 <p className="font-inter text-[15px] lg:text-[18px] leading-relaxed tracking-tight text-[#121212]">
-                                    Director, PT Altama Surya Anugerah
+                                    {t('director1.title')}
                                 </p>
                             </div>
 
-                            {/* Description */}
                             <div className="font-inter text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-[#414141]">
                                 <p className="mb-4">
-                                    Oscar Andrew Sutjadi adalah Director PT Altama Surya Anugerah yang berperan dalam mengarahkan strategi bisnis dan pengembangan perusahaan sebagai distributor nasional peralatan teknik, otomotif, dan industri.
+                                    {t('director1.description1')}
                                 </p>
                                 <p>
-                                    Ia berfokus pada penguatan jaringan distribusi, pengembangan merek Tekiro, RYU, dan Rexco, serta memastikan pertumbuhan perusahaan berjalan secara berkelanjutan dengan tetap mengedepankan kualitas dan profesionalisme.
+                                    {t('director1.description2')}
                                 </p>
                             </div>
 
-                            {/* Tags */}
                             <div className="flex gap-3 lg:gap-4 items-center flex-wrap">
                                 <div className="bg-[rgba(53,49,133,0.08)] flex gap-2 items-center px-3 py-2 rounded-full">
                                     <div className="size-[18px] relative overflow-hidden flex-shrink-0">
@@ -121,7 +123,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Leadership
+                                        {t('director1.tags.leadership')}
                                     </p>
                                 </div>
 
@@ -135,7 +137,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Business Development
+                                        {t('director1.tags.businessDevelopment')}
                                     </p>
                                 </div>
 
@@ -149,7 +151,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Strategy
+                                        {t('director1.tags.strategy')}
                                     </p>
                                 </div>
                             </div>
@@ -165,24 +167,22 @@ export default function BoardOfDirectorsPage() {
                             {/* Name and Title */}
                             <div className="flex flex-col gap-2">
                                 <h2 className="font-league-spartan font-semibold text-[28px] lg:text-[42px] leading-tight tracking-tight lg:tracking-[-1.68px] text-[#353185]">
-                                    Stephanus Ferdinand Santoso
+                                    {t('director2.name')}
                                 </h2>
                                 <p className="font-inter text-[15px] lg:text-[18px] leading-relaxed tracking-tight text-[#121212]">
-                                    Vice Director, PT Altama Surya Anugerah
+                                    {t('director2.title')}
                                 </p>
                             </div>
 
-                            {/* Description */}
                             <div className="font-inter text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-[#414141]">
                                 <p className="mb-4">
-                                    Stephanus Ferdinand Santoso menjabat sebagai Vice Director PT Altama Surya Anugerah dengan tanggung jawab utama pada pengelolaan operasional dan peningkatan efektivitas organisasi.
+                                    {t('director2.description1')}
                                 </p>
                                 <p>
-                                    Dengan latar belakang teknik dan manajemen, ia berperan dalam menjaga standar mutu, mengoptimalkan proses kerja, serta mendukung pertumbuhan perusahaan melalui sistem yang efisien dan berkelanjutan.
+                                    {t('director2.description2')}
                                 </p>
                             </div>
 
-                            {/* Tags */}
                             <div className="flex gap-3 lg:gap-4 items-center flex-wrap">
                                 <div className="bg-[rgba(53,49,133,0.08)] flex gap-2 items-center px-3 py-2 rounded-full">
                                     <div className="size-[18px] relative overflow-hidden flex-shrink-0">
@@ -194,7 +194,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Operations
+                                        {t('director2.tags.operations')}
                                     </p>
                                 </div>
 
@@ -208,7 +208,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Engineering
+                                        {t('director2.tags.engineering')}
                                     </p>
                                 </div>
 
@@ -222,7 +222,7 @@ export default function BoardOfDirectorsPage() {
                                         </div>
                                     </div>
                                     <p className="font-inter text-[14px] lg:text-[16px] leading-tight tracking-tight text-[#353185]">
-                                        Management
+                                        {t('director2.tags.management')}
                                     </p>
                                 </div>
                             </div>
@@ -254,14 +254,13 @@ export default function BoardOfDirectorsPage() {
                                 </svg>
                             </div>
                             <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-[#353185] group-hover:text-white tracking-tight whitespace-nowrap transition-colors duration-300`}>
-                                Back
+                                {tNav('back')}
                             </p>
                         </Link>
 
-                        {/* Next Button */}
                         <Link href="/profile/gallery" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
                             <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
-                                Next
+                                {tNav('next')}
                             </p>
                             <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg]">
                                 <svg className="block size-full" fill="none" viewBox="0 0 24 24">

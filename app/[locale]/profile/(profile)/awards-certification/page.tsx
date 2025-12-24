@@ -4,6 +4,7 @@ import { Inter, League_Spartan } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { useTranslations } from 'next-intl';
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
@@ -23,6 +24,8 @@ const backgroundImages = [
 ]
 
 export default function AwardsCertificationPage() {
+    const t = useTranslations('awardsCertification');
+    const tNav = useTranslations('companyOverview.navigation');
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -87,21 +90,20 @@ export default function AwardsCertificationPage() {
                     <div>
                         {/* Main Heading with yellow background on INNOVATION */}
                         <h1 className={`text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
-                            Awards &
+                            {t('hero.title')}
                             <span className="relative inline-block my-1 lg:my-0.5">
                                 <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] left-[5px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
-                                <span className="relative z-10 text-white px-1 lg:px-[4px]">Certifications</span>
+                                <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('hero.highlight')}</span>
                             </span>
                         </h1>
 
-                        {/* Subtitle */}
                         <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
-                            Leadership driving Altama’s growth and excellence
+                            {t('hero.subtitle')}
                         </p>
                     </div>
                     <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
                         <p className={`font-league-spartan text-white text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
-                            #AltamaGueBanget
+                            {t('hero.tag')}
                         </p>
                     </div>
                 </div>
@@ -127,14 +129,12 @@ export default function AwardsCertificationPage() {
                                         </svg>
                                     </div>
 
-                                    {/* Title */}
                                     <h3 className={`${leagueSpartan.className} font-semibold text-[22px] lg:text-[32px] leading-tight text-white tracking-tight lg:tracking-[-1.28px] uppercase mb-3 lg:mb-4`}>
-                                        Award Recognition
+                                        {t('awardRecognition.title')}
                                     </h3>
 
-                                    {/* Description */}
                                     <p className="font-['Inter'] text-[13px] lg:text-[14px] leading-relaxed text-white tracking-tight max-w-full lg:max-w-[468px]">
-                                        Penghargaan ini menegaskan posisi Altama sebagai distributor nasional dengan kekuatan merek yang terpercaya di Indonesia.
+                                        {t('awardRecognition.description')}
                                     </p>
                                 </div>
                             </div>
@@ -154,15 +154,13 @@ export default function AwardsCertificationPage() {
                                         </svg>
                                     </div>
 
-                                    {/* Title */}
                                     <div className="font-['League_Spartan'] font-semibold text-[18px] lg:text-[20px] leading-tight text-[#353185] tracking-tight uppercase mb-3 lg:mb-4">
-                                        <p className="mb-0.5">International Standard:</p>
-                                        <p>- ISO 9001:2015 (Quality Policy)</p>
+                                        <p className="mb-0.5">{t('internationalStandard.title')}</p>
+                                        <p>- {t('internationalStandard.iso')}</p>
                                     </div>
 
-                                    {/* Description */}
                                     <p className="font-['Inter'] text-[13px] lg:text-[14px] leading-relaxed text-[#414141] tracking-tight max-w-full lg:max-w-[468px]">
-                                        Sertifikasi ini memastikan seluruh proses bisnis Altama memenuhi standar mutu internasional dan berorientasi pada kepuasan pelanggan.
+                                        {t('internationalStandard.description')}
                                     </p>
                                 </div>
                             </div>
@@ -178,14 +176,14 @@ export default function AwardsCertificationPage() {
                                     </svg>
                                 </div>
                                 <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-[#353185] group-hover:text-white tracking-tight whitespace-nowrap transition-colors duration-300`}>
-                                    Back
+                                    {tNav('back')}
                                 </p>
                             </Link>
 
                             {/* Next Button */}
                             <Link href="/profile/board-of-directors" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full hover:bg-[#605bc3] transition-all duration-300">
                                 <p className={`${inter.className} font-semibold text-[14px] lg:text-[16px] text-white tracking-tight whitespace-nowrap`}>
-                                    Next
+                                    {tNav('next')}
                                 </p>
                                 <div className="relative w-4 h-4">
                                     <svg className="block size-full rotate-[90deg]" fill="none" viewBox="0 0 24 24">

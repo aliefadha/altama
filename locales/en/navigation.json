@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "profile": "Profile",
+    "brand": "Brand",
+    "mediaCenter": "Media Center",
+    "career": "Career",
+    "contactUs": "Contact Us",
+    "companyOverview": "Company Overview",
+    "awardsAndCertification": "Awards and Certification",
+    "boardOfDirectors": "Board of Directors",
+    "gallery": "Gallery",
+    "tekiro": "Tekiro",
+    "rexco": "Rexco",
+    "ryu": "Ryu",
+    "applyJobs": "Apply Jobs",
+    "lifeAtAltama": "Life at Altama"
+  }
+}

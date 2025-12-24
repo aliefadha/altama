@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 interface GalleryItemProps {
     image: string;
@@ -8,7 +9,8 @@ interface GalleryItemProps {
     instagramUrl?: string;
 }
 
-function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
+ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
+    const t = useTranslations('gallery');
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -51,8 +53,8 @@ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
                     rel="noopener noreferrer"
                     className={`absolute bg-[#353185] flex items-center justify-center left-1/2 px-6 lg:px-8 py-3 lg:py-4 rounded-full top-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 hover:bg-[#605bc3] ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                 >
-                    <p className="font-inter font-semibold text-[15px] lg:text-[24px] text-white tracking-tight whitespace-nowrap">
-                        View on Instagram
+                     <p className="font-inter font-semibold text-[15px] lg:text-[24px] text-white tracking-tight whitespace-nowrap">
+                        {t('viewOnInstagram')}
                     </p>
                 </a>
             )}
@@ -60,7 +62,8 @@ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
     );
 }
 
-export default function GalleryPage() {
+ export default function GalleryPage() {
+    const t = useTranslations('gallery');
     const [activeTab, setActiveTab] = useState<'instagram' | 'web'>('instagram');
 
     const instagramGallery = [
@@ -90,11 +93,11 @@ export default function GalleryPage() {
                 {/* Hero Section */}
                 <div className="flex flex-col gap-[8px] sm:gap-[6px] items-center text-center pt-[80px] sm:pt-[60px] pb-[48px] sm:pb-[32px] px-[24px]">
                     <h1 className="font-league-spartan font-bold md:text-[56px] text-[32px] leading-[1.292] text-white tracking-[-2.24px] sm:tracking-[-1.28px]">
-                        <span>Moments from </span>
-                        <span className="text-[#f4c41c]">Altama</span>
+                        <span>{t('hero.title')} </span>
+                        <span className="text-[#f4c41c]">{t('hero.titleHighlight')}</span>
                     </h1>
                     <p className="font-inter md:text-[24px] text-[16px] text-[#e4e4e4] tracking-[-0.96px] sm:tracking-[-0.64px]">
-                        Dokumentasi kegiatan, budaya kerja, dan perjalanan Altama.
+                        {t('hero.subtitle')}
                     </p>
                 </div>
 
@@ -106,9 +109,9 @@ export default function GalleryPage() {
                             className={`flex items-center justify-center px-[20px] sm:px-[16px] md:px-[24px] py-[10px] sm:py-[8px] md:py-[12px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 w-full md:w-auto min-w-0 sm:min-w-[140px] ${activeTab === 'instagram' ? 'bg-[#353185] shadow-md' : 'bg-[#d4d4d4] hover:bg-[#c9c9c9]'
                                 }`}
                         >
-                            <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'instagram' ? 'text-white' : 'text-[#414141]'
+                             <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'instagram' ? 'text-white' : 'text-[#414141]'
                                 }`}>
-                                Instagram Gallery
+                                {t('tabs.instagram')}
                             </p>
                         </button>
                         <button
@@ -116,9 +119,9 @@ export default function GalleryPage() {
                             className={`flex items-center justify-center px-[20px] sm:px-[16px] md:px-[24px] py-[10px] sm:py-[8px] md:py-[12px] rounded-[72px] sm:rounded-[16px] transition-all duration-300 w-full md:w-auto min-w-0 sm:min-w-[140px] ${activeTab === 'web' ? 'bg-[#353185] shadow-md' : 'bg-[#d4d4d4] hover:bg-[#c9c9c9]'
                                 }`}
                         >
-                            <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'web' ? 'text-white' : 'text-[#414141]'
+                             <p className={`font-inter font-semibold text-[14px] md:text-[18px] tracking-[-0.64px] sm:tracking-[-0.56px] md:tracking-[-0.72px] whitespace-nowrap ${activeTab === 'web' ? 'text-white' : 'text-[#414141]'
                                 }`}>
-                                Web Gallery
+                                {t('tabs.web')}
                             </p>
                         </button>
                     </div>
@@ -162,8 +165,8 @@ export default function GalleryPage() {
                                 className="relative bg-white flex gap-[8px] items-center justify-center px-[32px] sm:px-[24px] py-[16px] sm:py-[12px] rounded-[72px] hover:bg-[#f4c41c] transition-all duration-300 group"
                             >
                                 <div aria-hidden="true" className="absolute border-4 border-[#9795bd] inset-[-4px] pointer-events-none rounded-[76px] group-hover:border-[#353185] transition-colors duration-300" />
-                                <p className="font-inter font-semibold text-[16px] text-[#29266e] tracking-[-0.96px] sm:tracking-[-0.64px] whitespace-nowrap">
-                                    See Our Instagram
+                                 <p className="font-inter font-semibold text-[16px] text-[#29266e] tracking-[-0.96px] sm:tracking-[-0.64px] whitespace-nowrap">
+                                    {t('seeOurInstagram')}
                                 </p>
                                 <div className="size-[24px] sm:size-[20px] rotate-90">
                                     <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
@@ -343,17 +346,17 @@ export default function GalleryPage() {
                     {/* Content */}
                     <div className="relative max-w-[721px] sm:max-w-full mx-auto flex flex-col gap-[32px] items-center">
                         <div className="flex flex-col gap-[16px] sm:gap-[12px] items-center text-center w-full">
-                            <h2 className="text-[#353185] text-[28px] lg:text-[40px] font-league-spartan font-medium leading-[1.292] tracking-[-2.24px] sm:tracking-[-1.12px]">
-                                Insights, Innovation, and Progress
+                             <h2 className="text-[#353185] text-[28px] lg:text-[40px] font-league-spartan font-medium leading-[1.292] tracking-[-2.24px] sm:tracking-[-1.12px]">
+                                {t('insights.title')}
                             </h2>
                             <p className="text-[#414141] text-[18px] sm:text-[14px] font-inter font-medium leading-[1.292] sm:leading-[1.4] tracking-[-0.96px] sm:tracking-[-0.48px] md:w-[487px] w-full">
-                                Temukan solusi terbaik untuk kebutuhan teknik, otomotif, dan industri Anda.
+                                {t('insights.subtitle')}
                             </p>
                         </div>
 
                         <div className="relative">
-                            <button className="bg-[#353185] text-white rounded-[72px] px-[24px] py-[12px] text-[16px] md:text-[18px] font-inter font-semibold tracking-[-0.96px] sm:tracking-[-0.64px] hover:bg-[#605bc3] transition-colors duration-300">
-                                Explore News
+                             <button className="bg-[#353185] text-white rounded-[72px] px-[24px] py-[12px] text-[16px] md:text-[18px] font-inter font-semibold tracking-[-0.96px] sm:tracking-[-0.64px] hover:bg-[#605bc3] transition-colors duration-300">
+                                {t('exploreNews')}
                             </button>
                             <div className="absolute border-4 border-[rgba(53,49,133,0.24)] border-solid inset-[-4px] pointer-events-none rounded-[76px]" />
                         </div>

@@ -1,0 +1,14 @@
+{
+  "common": {
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "submit": "Kirim",
+    "cancel": "Batal",
+    "back": "Kembali",
+    "next": "Lanjut",
+    "readMore": "Baca Selengkapnya",
+    "viewAll": "Lihat Semua",
+    "search": "Cari",
+    "filter": "Filter"
+  }
+}

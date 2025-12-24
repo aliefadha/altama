@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "line1": "THE POWER OF",
+    "line2": "INNOVATION",
+    "line3": "FOR A",
+    "line4": "STRONGER NATION.",
+    "subtitle": "Your partner in progress, empowering every step toward Indonesia's success."
+  },
+  "companySection": {
+    "badge": "COMPANY OVERVIEW",
+    "heading": "is the official distributor of Tekiro, RYU, and Rexco brands in Indonesia.",
+    "description": "We deliver high-quality tools, machinery, and chemicals that are sturdy, innovative, and reliable. With an extensive distribution network, we become partners for professionals and individuals in supporting various needs.",
+    "category1": "Industrial",
+    "category2": "Automotive",
+    "category3": "Household",
+    "seeOurGallery": "See Our Gallery",
+    "readMore": "Read More"
+  },
+  "careerSection": {
+    "title1": "GROW WITH US",
+    "title2": "AT ALTAMA!",
+    "searchPlaceholder": "Search job position…",
+    "viewAllJobs": "View All Jobs"
+  },
+  "locationSection": {
+    "our": "OUR",
+    "location": "LOCATION",
+    "yourName": "Your Name",
+    "yourNamePlaceholder": "Your Name",
+    "emailAddress": "Email Address",
+    "emailPlaceholder": "Your Email Address",
+    "message": "Message",
+    "messagePlaceholder": "Write Something...",
+    "sendMessage": "Send Message"
+  },
+  "brandSection": {
+    "our": "OUR",
+    "brand": "BRAND",
+    "description": "Leading brands under PT. Altama Surya Anugerah.",
+    "awardTitle1": "DIGITAL",
+    "awardTitle2": "POPULER BRAND",
+    "awardTitle3": "AWARD 2023",
+    "awardDescription": "This year PT. Altama Surya Anugerah won the Digital Populer Brand Award 2023 for Tekiro brand in the Handtools category and Ryu in the Powertools category.",
+    "stat1": "Awards received by Tekiro brand",
+    "stat2": "Consecutive awards received by Ryu",
+    "readMore": "Read More"
+  }
+}

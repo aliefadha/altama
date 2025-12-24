@@ -1,12 +1,27 @@
+"use client"
+
+import { useTranslations } from 'next-intl';
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+
+type Locale = 'en' | 'id';
 
 export default function LocationSection() {
+    const pathname = usePathname();
+    const t = useTranslations('locationSection');
+
+    const locale = useMemo(() => {
+        const segments = pathname.split('/');
+        const localeCode = segments[1] as Locale;
+        return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+    }, [pathname]);
     return (
         <div className="relative w-full bg-white py-10 lg:py-16 overflow-hidden">
             <div className="max-w-[1440px] mx-auto px-5 lg:px-[80px]">
                 {/* Title */}
                 <h2 className="text-center text-[26px] lg:text-[40px] font-['League_Spartan'] font-bold leading-tight tracking-tight lg:tracking-[-1.6px] mb-6 lg:mb-16">
-                    <span className="text-[#121212]">OUR</span>
-                    <span className="text-[#353185]"> LOCATION</span>
+                    <span className="text-[#121212]">{t('our')}</span>
+                    <span className="text-[#353185]"> {t('location')}</span>
                 </h2>
 
                 {/* Content */}
@@ -38,22 +53,22 @@ export default function LocationSection() {
                         <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
                             <div className="flex-1">
                                 <label className="block text-[#121212] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight mb-2">
-                                    Your Name
+                                    {t('yourName')}
                                 </label>
                                 <input
                                     type="text"
-                                    placeholder="Your Name"
+                                    placeholder={t('yourNamePlaceholder')}
                                     className="w-full bg-[#efefef] rounded-full px-4 lg:px-5 py-3 lg:py-4 text-[#a7a7a7] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight outline-none focus:ring-2 focus:ring-[#353185]"
                                 />
                             </div>
 
                             <div className="flex-1">
                                 <label className="block text-[#121212] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight mb-2">
-                                    Email Address
+                                    {t('emailAddress')}
                                 </label>
                                 <input
                                     type="email"
-                                    placeholder="Your Email Address"
+                                    placeholder={t('emailPlaceholder')}
                                     className="w-full bg-[#efefef] rounded-full px-4 lg:px-5 py-3 lg:py-4 text-[#a7a7a7] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight outline-none focus:ring-2 focus:ring-[#353185]"
                                 />
                             </div>
@@ -62,10 +77,10 @@ export default function LocationSection() {
                         {/* Message */}
                         <div>
                             <label className="block text-[#121212] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight mb-2">
-                                Message
+                                {t('message')}
                             </label>
                             <textarea
-                                placeholder="Write Something..."
+                                placeholder={t('messagePlaceholder')}
                                 rows={4}
                                 className="w-full bg-[#efefef] rounded-2xl lg:rounded-[24px] px-4 lg:px-5 py-3 lg:py-4 text-[#a7a7a7] text-[14px] lg:text-[16px] font-['Inter'] tracking-tight outline-none resize-none focus:ring-2 focus:ring-[#353185]"
                             />
@@ -73,7 +88,7 @@ export default function LocationSection() {
 
                         {/* Submit Button */}
                         <button className="w-full bg-[#353185] rounded-full px-5 py-3 lg:py-3 text-white text-[15px] lg:text-[18px] font-['Inter'] font-semibold tracking-tight text-center hover:bg-[#2d2870] transition-colors">
-                            Send Message
+                            {t('sendMessage')}
                         </button>
                     </div>
                 </div>

@@ -1,11 +1,24 @@
-import imgAsa021251 from "@/assets/65a062ebe15f383953d6a1988ebb49073df36349.webp";
-import { Image as ImageIcon, Triangle } from "lucide-react";
+"use client"
+import { Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
 
+type Locale = 'en' | 'id';
 
 export default function CompanySection() {
-    const categories = ["Industri", "Otomotif", "Rumah tangga"];
+    const pathname = usePathname();
+    const t = useTranslations('companySection');
+
+    const locale = useMemo(() => {
+        const segments = pathname.split('/');
+        const localeCode = segments[1] as Locale;
+        return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+    }, [pathname]);
+
+    const categories = [t('category1'), t('category2'), t('category3')];
 
     return (
         <div className="relative w-full bg-white py-10 lg:py-16 overflow-hidden">
@@ -29,7 +42,7 @@ export default function CompanySection() {
                                 <ImageIcon className="w-3 lg:w-[14px] h-3 lg:h-[14px] text-white" />
                             </div>
                             <p className="text-[#353185] text-[13px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
-                                See Our Gallery
+                                {t('seeOurGallery')}
                             </p>
                         </div>
                     </div>
@@ -44,19 +57,19 @@ export default function CompanySection() {
                                 </svg>
                             </div>
                             <p className="text-[#353185] text-[12px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
-                                COMPANY OVERVIEW
+                                {t('badge')}
                             </p>
                         </div>
 
                         {/* Heading */}
                         <h2 className="text-[24px] lg:text-[32px] font-['League_Spartan'] font-semibold leading-tight lg:leading-[0.93] tracking-tight lg:tracking-[-1.28px] mb-3 lg:mb-4">
                             <span className="text-[#353185]">PT Altama Surya Anugerah</span>
-                            <span className="text-[#121212]"> adalah distributor resmi merek Tekiro, RYU, dan Rexco di Indonesia.</span>
+                            <span className="text-[#121212]"> {t('heading')}</span>
                         </h2>
 
                         {/* Description */}
                         <p className="text-[#414141] text-[14px] lg:text-[15px] font-['Inter'] leading-relaxed lg:leading-[103.33%] tracking-tight lg:tracking-[-0.6px] opacity-75 mb-5 lg:mb-8">
-                            Kami menghadirkan perkakas, mesin, dan chemical berkualitas tinggi yang kokoh, inovatif, dan terpercaya. Dengan jaringan distribusi luas, kami menjadi mitra bagi para profesional maupun individu dalam mendukung berbagai kebutuhan.
+                            {t('description')}
                         </p>
 
                         {/* Categories */}
@@ -79,9 +92,9 @@ export default function CompanySection() {
                         </div>
 
                         {/* Read More Button */}
-                        <Link href="/profile/company-overview" className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
+                        <Link href={`/${locale}/profile/company-overview`} className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
                             <p className="text-white text-[15px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
-                                Read More
+                                {t('readMore')}
                             </p>
                             <div className="w-4 h-4 rotate-90">
                                 <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">

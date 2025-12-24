@@ -1,0 +1,252 @@
+{
+  "companyOverview": {
+    "hero": {
+      "title": "Our Vision, Mission &",
+      "highlight": "Company Values",
+      "subtitle": "The foundation that shapes Altama Surya Anugerah in creating and growing."
+    },
+    "vision": {
+      "label": "Vision",
+      "description": "To be a trusted distributor in Indonesia for technical, automotive, and industrial equipment, providing high-quality products that support professionals, entrepreneurs, and households."
+    },
+    "mission": {
+      "label": "Mission",
+      "items": [
+        "Delivering <strong>high-quality products</strong> with international standards.",
+        "<strong>Supporting the needs</strong> of the community, professionals, and industries.",
+        "Expanding <strong>distribution networks</strong> to make products accessible throughout Indonesia.",
+        "Continuously <strong>improving innovation and expansion</strong> in line with market developments."
+      ]
+    },
+    "coreValues": {
+      "title": "CORE VALUE",
+      "integrity": {
+        "title": "Integrity",
+        "description": "Consistent and trustworthy."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always bringing better solutions."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Working together for a common purpose."
+      },
+      "customerFocus": {
+        "title": "Customer Focus",
+        "description": "Prioritizing customer satisfaction and needs."
+      }
+    },
+    "milestone": {
+      "title": "Milestone",
+      "2011": {
+        "title": "2011",
+        "description": "Altama was founded in Jakarta, starting its journey as a technical distributor."
+      },
+      "2015": {
+        "title": "2015",
+        "description": "Expanded distribution network to more major cities."
+      },
+      "2018": {
+        "title": "2018",
+        "description": "Added new products: <span class=\"font-semibold text-white\">Tekiro Handtools, RYU Power Tools, Rexco Chemicals.</span>"
+      },
+      "2020": {
+        "title": "2020",
+        "description": "National distribution strengthened + modern market expansion improved."
+      },
+      "2023": {
+        "title": "2023",
+        "description": "Won Digital Popular Brand Award."
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "next": "Next"
+    }
+  },
+  "awardsCertification": {
+    "hero": {
+      "title": "Awards &",
+      "highlight": "Certifications",
+      "subtitle": "Leadership driving Altama's growth and excellence",
+      "tag": "#AltamaGueBanget"
+    },
+    "awardRecognition": {
+      "title": "Award Recognition",
+      "description": "This award reinforces Altama's position as a national distributor with a trusted brand strength in Indonesia."
+    },
+    "internationalStandard": {
+      "title": "International Standard:",
+      "iso": "ISO 9001:2015 (Quality Policy)",
+      "description": "This certification ensures all of Altama's business processes meet international quality standards and focus on customer satisfaction."
+    }
+  },
+  "boardOfDirectors": {
+    "hero": {
+      "title": "Board Of",
+      "highlight": "Directors",
+      "subtitle": "Leadership driving Altama's growth and excellence",
+      "tag": "#AltamaGueBanget"
+    },
+    "director1": {
+      "name": "Oscar Andrew Sutjadi",
+      "title": "Director, PT Altama Surya Anugerah",
+      "description1": "Oscar Andrew Sutjadi is the Director of PT Altama Surya Anugerah, playing a key role in directing business strategy and company development as a national distributor of technical, automotive, and industrial equipment.",
+      "description2": "He focuses on strengthening distribution networks, developing the Tekiro, RYU, and Rexco brands, and ensuring the company's growth runs sustainably while maintaining quality and professionalism.",
+      "tags": {
+        "leadership": "Leadership",
+        "businessDevelopment": "Business Development",
+        "strategy": "Strategy"
+      }
+    },
+    "director2": {
+      "name": "Stephanus Ferdinand Santoso",
+      "title": "Vice Director, PT Altama Surya Anugerah",
+      "description1": "Stephanus Ferdinand Santoso serves as Vice Director of PT Altama Surya Anugerah with primary responsibility for operational management and organizational effectiveness improvement.",
+      "description2": "With a background in engineering and management, he plays a role in maintaining quality standards, optimizing work processes, and supporting company growth through efficient and sustainable systems.",
+      "tags": {
+        "operations": "Operations",
+        "engineering": "Engineering",
+        "management": "Management"
+      }
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Moments from",
+      "titleHighlight": "Altama",
+      "subtitle": "Documentation of Altama's activities, work culture, and journeys."
+    },
+    "tabs": {
+      "instagram": "Instagram Gallery",
+      "web": "Web Gallery"
+    },
+    "viewOnInstagram": "View on Instagram",
+    "seeOurInstagram": "See Our Instagram",
+    "insights": {
+      "title": "Insights, Innovation, and Progress",
+      "subtitle": "Find the best solutions for your technical, automotive, and industrial needs."
+    },
+    "exploreNews": "Explore News"
+  },
+  "lifeAtAltama": {
+    "hero": {
+      "badge": "#AltamaGueBanget",
+      "joinBadge": "JOIN US HERE!",
+      "title": "GROW TOGETHER",
+      "subtitle": "Your partner in progress, empowering every step toward Indonesia's success.",
+      "cta": "Find your dream job now!"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "subtitle": "What our partners say about Altama",
+      "items": {
+        "1": {
+          "quote": "Altama consistently provides quality products with timely distribution. Their team is professional and easy to work with.",
+          "name": "Andi Pratama",
+          "position": "Procurement Manager – Retail Partner"
+        },
+        "2": {
+          "name": "Marvin McKinney",
+          "position": "Louis Vuitton"
+        },
+        "3": {
+          "quote": "Tekiro and RYU products from Altama greatly help our operations. Quality is guaranteed and their after-sales service is excellent.",
+          "name": "Siti Nurhaliza",
+          "position": "Operations Director – Manufacturing"
+        },
+        "4": {
+          "quote": "Altama has become a trusted partner in providing industrial equipment with consistent quality standards.",
+          "name": "Dianne Russell",
+          "position": "Supply Chain Manager – MasterCard"
+        },
+        "5": {
+          "quote": "Working with Altama is very transparent and structured. The distribution team support really helps us in the field.",
+          "name": "Devon Lane",
+          "position": "Purchasing Head – General Electric"
+        },
+        "6": {
+          "quote": "Altama's product quality never needs to be questioned. Their after-sales service is also very satisfying and responsive.",
+          "name": "Ronald Richards",
+          "position": "Procurement Specialist – Nintendo"
+        },
+        "7": {
+          "quote": "Partnership with Altama brings significant value to our business operations. Highly recommended!",
+          "name": "Budi Santoso",
+          "position": "General Manager – Industrial Solutions"
+        },
+        "8": {
+          "quote": "The Altama team is always ready to help with our needs with the right solutions and competitive prices.",
+          "name": "Jenny Wilson",
+          "position": "Head of Operations – Tech Corp"
+        }
+      },
+      "jobRoles": {
+        "mechanicStaff": "Mechanic Staff",
+        "coordinatorStaff": "Coordinator Staff",
+        "distributionSupervisor": "Distribution Supervisor"
+      }
+    },
+     "infoCard": {
+      "text": "Where people grow, collaborate, and make an impact."
+    },
+    "jobRoles": {
+      "mechanicStaff": "Mechanic Staff",
+      "coordinatorStaff": "Coordinator Staff",
+      "distributionSupervisor": "Distribution Supervisor"
+    }
+  },
+  "mediaCenter": {
+    "hero": {
+      "title": "MEDIA CENTER",
+      "subtitle": "Latest news, press releases, and updates from PT Altama Surya Anugerah"
+    },
+    "search": {
+      "placeholder": "Search articles..."
+    },
+    "categories": {
+      "all": "All",
+      "innovation": "Innovation",
+      "awards": "Awards",
+      "business": "Business",
+      "sustainability": "Sustainability",
+      "companyCulture": "Company Culture",
+      "productLaunch": "Product Launch"
+    },
+    "articles": {
+      "1": {
+        "title": "Latest Technology Innovation from Altama in the Tools Industry",
+        "excerpt": "Altama continues to innovate by introducing the latest technology in the production of high-quality tools to support Indonesia's industry.",
+        "author": "Altama Editorial Team"
+      },
+      "2": {
+        "title": "Altama Wins Best Manufacturing Company 2024 Award",
+        "excerpt": "Altama's brilliant achievement in winning the award as the best manufacturing company in 2024 from Indonesia Manufacturing Awards.",
+        "author": "Corporate Communications"
+      },
+      "3": {
+        "title": "Market Expansion: Tekiro Products Reach Southeast Asia",
+        "excerpt": "Tekiro brand from Altama is now present in various Southeast Asian countries, expanding market reach and increasing consumer trust.",
+        "author": "Marketing Team"
+      },
+      "4": {
+        "title": "Altama's Commitment to Sustainability and Green Manufacturing",
+        "excerpt": "Altama implements green manufacturing practices in the production process to maintain environmental sustainability and long-term sustainability.",
+        "author": "Sustainability Team"
+      },
+      "5": {
+        "title": "Workshop Series: Enhancing Altama Employees' Skills",
+        "excerpt": "Regular training programs organized by Altama to improve the competence and professionalism of the team across various departments.",
+        "author": "HR Department"
+      },
+      "6": {
+        "title": "New Product Launch: Rexco Professional Series 2025",
+        "excerpt": "Altama introduces the latest series from the Rexco brand with professional features designed specifically for heavy industry and construction.",
+        "author": "Product Development"
+      }
+    },
+    "readMore": "Read More",
+    "noArticles": "No articles found"
+  }
+}

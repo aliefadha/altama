@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "line1": "KEKUATAN",
+    "line2": "INOVASI",
+    "line3": "UNTUK",
+    "line4": "BANGSA YANG KUAT.",
+    "subtitle": "Mitra kemajuan Anda, memberdayakan setiap langkah menuju kesuksesan Indonesia."
+  },
+  "companySection": {
+    "badge": "COMPANY OVERVIEW",
+    "heading": "adalah distributor resmi merek Tekiro, RYU, dan Rexco di Indonesia.",
+    "description": "Kami menghadirkan perkakas, mesin, dan chemical berkualitas tinggi yang kokoh, inovatif, dan terpercaya. Dengan jaringan distribusi luas, kami menjadi mitra bagi para profesional maupun individu dalam mendukung berbagai kebutuhan.",
+    "category1": "Industri",
+    "category2": "Otomotif",
+    "category3": "Rumah tangga",
+    "seeOurGallery": "Lihat Galeri Kami",
+    "readMore": "Baca Selengkapnya"
+  },
+  "careerSection": {
+    "title1": "BERKEMBANG BERSAMA",
+    "title2": "DI ALTAMA!",
+    "searchPlaceholder": "Cari posisi pekerjaan…",
+    "viewAllJobs": "Lihat Semua Pekerjaan"
+  },
+  "locationSection": {
+    "our": "LOKASI",
+    "location": "KAMI",
+    "yourName": "Nama Lengkap",
+    "yourNamePlaceholder": "Nama Lengkap",
+    "emailAddress": "Alamat Email",
+    "emailPlaceholder": "Alamat Email Anda",
+    "message": "Pesan",
+    "messagePlaceholder": "Tulis sesuatu...",
+    "sendMessage": "Kirim Pesan"
+  },
+  "brandSection": {
+    "our": "BRAND",
+    "brand": "KAMI",
+    "description": "Brand unggulan yang berada di bawah PT. Altama Surya Anugerah.",
+    "awardTitle1": "DIGITAL",
+    "awardTitle2": "POPULER BRAND",
+    "awardTitle3": "AWARD 2023",
+    "awardDescription": "Tahun ini kembali PT.Altama Surya Anugerah memenangkan Digital Populer Brand Award 2023 untuk brand Tekiro kategori Handtools dan Ryu kategori Powertools.",
+    "stat1": "Penghargaan yang diterima brand Tekiro",
+    "stat2": "Penghargaan yang diterima Ryu Berturut-turut",
+    "readMore": "Baca Selengkapnya"
+  }
+}

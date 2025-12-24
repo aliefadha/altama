@@ -1,17 +1,31 @@
+"use client"
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+
+type Locale = 'en' | 'id';
 
 export default function BrandSection() {
+    const pathname = usePathname();
+    const t = useTranslations('brandSection');
+
+    const locale = useMemo(() => {
+        const segments = pathname.split('/');
+        const localeCode = segments[1] as Locale;
+        return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+    }, [pathname]);
     return (
         <div className="relative w-full bg-white py-10 pb-24 lg:py-12 lg:pb-32 overflow-hidden">
             {/* Top Section: Our Brand */}
             <div className="max-w-[1440px] mx-auto px-5 lg:px-[80px] mb-16 lg:mb-28">
                 <div className="text-center mb-6 lg:mb-8">
                     <h2 className="text-[28px] lg:text-[40px] font-['League_Spartan'] font-bold leading-tight tracking-tight lg:tracking-[-1.6px] mb-2">
-                        <span className="text-[#121212]">OUR </span>
-                        <span className="text-[#353185]">BRAND</span>
+                        <span className="text-[#121212]">{t('our')} </span>
+                        <span className="text-[#353185]">{t('brand')}</span>
                     </h2>
                     <p className="text-[#414141] text-[14px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[103.33%] tracking-tight lg:tracking-[-0.72px] opacity-75">
-                        Brand unggulan yang berada di bawah PT. Altama Surya Anugerah.
+                        {t('description')}
                     </p>
                 </div>
 
@@ -76,13 +90,13 @@ export default function BrandSection() {
                     <div className="flex-1 max-w-full lg:max-w-[580px]">
                         <div className="mb-6 lg:mb-8">
                             <h2 className="text-[26px] lg:text-[40px] font-['League_Spartan'] font-semibold leading-tight tracking-tight lg:tracking-[-1.6px] mb-3 lg:mb-5">
-                                <span className="text-[#121212]">DIGITAL </span>
-                                <span className="text-[#353185]">POPULER BRAND</span>
+                                <span className="text-[#121212]">{t('awardTitle1')} </span>
+                                <span className="text-[#353185]">{t('awardTitle2')}</span>
                                 <br />
-                                <span className="text-[#121212]">AWARD 2023</span>
+                                <span className="text-[#121212]">{t('awardTitle3')}</span>
                             </h2>
                             <p className="text-[#414141] text-[14px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[103.33%] tracking-tight lg:tracking-[-0.72px] opacity-75 max-w-full lg:max-w-[480px]">
-                                Tahun ini kembali PT.Altama Surya Anugerah memenangkan Digital Populer Brand Award 2023 untuk brand Tekiro kategori Handtools dan Ryu kategori Powertools.
+                                {t('awardDescription')}
                             </p>
                         </div>
 
@@ -91,14 +105,14 @@ export default function BrandSection() {
                             <div className="bg-[#f1f0fa] border border-[rgba(53,49,133,0.32)] rounded-xl px-4 py-3 flex-1">
                                 <p className="text-[#29266e] text-[28px] lg:text-[32px] font-['Inter'] font-bold leading-none tracking-tight lg:tracking-[-1.28px] mb-1">7</p>
                                 <p className="text-[#29266e] text-[14px] lg:text-[16px] font-['Inter'] leading-relaxed tracking-tight lg:tracking-[-0.64px] opacity-75">
-                                    Penghargaan yang diterima brand Tekiro
+                                    {t('stat1')}
                                 </p>
                             </div>
 
                             <div className="bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-xl px-4 py-3 flex-1">
                                 <p className="text-[#29266e] text-[28px] lg:text-[32px] font-['Inter'] font-bold leading-none tracking-tight lg:tracking-[-1.28px] mb-1">3</p>
                                 <p className="text-[#29266e] text-[14px] lg:text-[16px] font-['Inter'] leading-relaxed tracking-tight lg:tracking-[-0.64px] opacity-75">
-                                    Penghargaan yang diterima Ryu Berturut-turut
+                                    {t('stat2')}
                                 </p>
                             </div>
                         </div>

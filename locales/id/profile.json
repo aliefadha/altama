@@ -1,0 +1,247 @@
+{
+  "companyOverview": {
+    "hero": {
+      "title": "Visi, Misi &",
+      "highlight": "Nilai Perusahaan",
+      "subtitle": "Fondasi yang membentuk Altama Surya Anugerah dalam berkarya dan berkembang."
+    },
+    "vision": {
+      "label": "Visi",
+      "description": "Menjadi distributor terpercaya di Indonesia untuk peralatan teknik, otomotif, dan industri, dengan produk berkualitas tinggi yang mendukung profesional, pelaku usaha, hingga pengguna rumahan."
+    },
+    "mission": {
+      "label": "Misi",
+      "items": [
+        "Menghadirkan <strong>produk berkualitas tinggi</strong> dengan standar internasional.",
+        "<strong>Mendukung kebutuhan</strong> masyarakat, profesional, dan industri.",
+        "Memperluas <strong>jaringan distribusi</strong> agar produk mudah dijangkau di seluruh Indonesia.",
+        "Terus <strong>meningkatkan inovasi dan ekspansi</strong> sesuai perkembangan pasar."
+      ]
+    },
+    "coreValues": {
+      "title": "CORE VALUE",
+      "integrity": {
+        "title": "Integritas",
+        "description": "Konsisten dan dapat dipercaya."
+      },
+      "innovation": {
+        "title": "Inovasi",
+        "description": "Selalu menghadirkan solusi lebih baik."
+      },
+      "collaboration": {
+        "title": "Kolaborasi",
+        "description": "Bekerja bersama untuk tujuan yang sama."
+      },
+      "customerFocus": {
+        "title": "Fokus Pelanggan",
+        "description": "Mengutamakan kepuasan dan kebutuhan pelanggan."
+      }
+    },
+    "milestone": {
+      "title": "Milestone",
+      "2011": {
+        "title": "2011",
+        "description": "Altama berdiri di Jakarta, memulai perjalanan sebagai distributor teknik."
+      },
+      "2015": {
+        "title": "2015",
+        "description": "Perluasan jaringan distribusi ke lebih banyak kota besar."
+      },
+      "2018": {
+        "title": "2018",
+        "description": "Penambahan produk baru: <span class=\"font-semibold text-white\">Tekiro Handtools, RYU Power Tools, Rexco Chemicals.</span>"
+      },
+      "2020": {
+        "title": "2020",
+        "description": "Distribusi nasional semakin kuat + peningkatan ekspansi modern market."
+      },
+      "2023": {
+        "title": "2023",
+        "description": "Memenangkan Digital Popular Brand Award."
+      }
+    },
+    "navigation": {
+      "back": "Kembali",
+      "next": "Selanjutnya"
+    }
+  },
+  "awardsCertification": {
+    "hero": {
+      "title": "Penghargaan &",
+      "highlight": "Sertifikasi",
+      "subtitle": "Kepemimpinan mendorong pertumbuhan dan keunggulan Altama",
+      "tag": "#AltamaGueBanget"
+    },
+    "awardRecognition": {
+      "title": "Award Recognition",
+      "description": "Penghargaan ini menegaskan posisi Altama sebagai distributor nasional dengan kekuatan merek yang terpercaya di Indonesia."
+    },
+    "internationalStandard": {
+      "title": "International Standard:",
+      "iso": "ISO 9001:2015 (Quality Policy)",
+      "description": "Sertifikasi ini memastikan seluruh proses bisnis Altama memenuhi standar mutu internasional dan berorientasi pada kepuasan pelanggan."
+    }
+  },
+  "boardOfDirectors": {
+    "hero": {
+      "title": "Dewan",
+      "highlight": "Direksi",
+      "subtitle": "Kepemimpinan mendorong pertumbuhan dan keunggulan Altama",
+      "tag": "#AltamaGueBanget"
+    },
+    "director1": {
+      "name": "Oscar Andrew Sutjadi",
+      "title": "Direktur, PT Altama Surya Anugerah",
+      "description1": "Oscar Andrew Sutjadi adalah Direktur PT Altama Surya Anugerah yang berperan dalam mengarahkan strategi bisnis dan pengembangan perusahaan sebagai distributor nasional peralatan teknik, otomotif, dan industri.",
+      "description2": "Ia berfokus pada penguatan jaringan distribusi, pengembangan merek Tekiro, RYU, dan Rexco, serta memastikan pertumbuhan perusahaan berjalan secara berkelanjutan dengan tetap mengedepankan kualitas dan profesionalisme.",
+      "tags": {
+        "leadership": "Kepemimpinan",
+        "businessDevelopment": "Pengembangan Bisnis",
+        "strategy": "Strategi"
+      }
+    },
+    "director2": {
+      "name": "Stephanus Ferdinand Santoso",
+      "title": "Wakil Direktur, PT Altama Surya Anugerah",
+      "description1": "Stephanus Ferdinand Santoso menjabat sebagai Wakil Direktur PT Altama Surya Anugerah dengan tanggung jawab utama pada pengelolaan operasional dan peningkatan efektivitas organisasi.",
+      "description2": "Dengan latar belakang teknik dan manajemen, ia berperan dalam menjaga standar mutu, mengoptimalkan proses kerja, serta mendukung pertumbuhan perusahaan melalui sistem yang efisien dan berkelanjutan.",
+      "tags": {
+        "operations": "Operasional",
+        "engineering": "Teknik",
+        "management": "Manajemen"
+      }
+    }
+  },
+  "gallery": {
+    "hero": {
+      "title": "Momen dari",
+      "titleHighlight": "Altama",
+      "subtitle": "Dokumentasi kegiatan, budaya kerja, dan perjalanan Altama."
+    },
+    "tabs": {
+      "instagram": "Galeri Instagram",
+      "web": "Galeri Web"
+    },
+    "viewOnInstagram": "Lihat di Instagram",
+    "seeOurInstagram": "Lihat Instagram Kami",
+    "insights": {
+      "title": "Wawasan, Inovasi, dan Kemajuan",
+      "subtitle": "Temukan solusi terbaik untuk kebutuhan teknik, otomotif, dan industri Anda."
+    },
+    "exploreNews": "Jelajahi Berita"
+  },
+  "lifeAtAltama": {
+    "hero": {
+      "badge": "#AltamaGueBanget",
+      "joinBadge": "BERGABUNG BERSAMA KAMI!",
+      "title": "BERKEMBANG BERSAMA",
+      "subtitle": "Mitra Anda dalam kemajuan, memberdayakan setiap langkah menuju kesuksesan Indonesia.",
+      "cta": "Temukan karir impianmu sekarang!"
+    },
+    "testimonials": {
+      "title": "Testimoni",
+      "subtitle": "Apa yang dikatakan mitra kami tentang Altama",
+      "items": {
+        "1": {
+          "quote": "Altama selalu konsisten menyediakan produk berkualitas dengan distribusi yang tepat waktu. Timnya profesional dan mudah diajak bekerja sama.",
+          "name": "Andi Pratama",
+          "position": "Procurement Manager – Retail Partner"
+        },
+        "2": {
+          "name": "Marvin McKinney",
+          "position": "Louis Vuitton"
+        },
+        "3": {
+          "quote": "Produk Tekiro dan RYU dari Altama sangat membantu operasional kami. Kualitas terjamin dan layanan purna jualnya responsif.",
+          "name": "Siti Nurhaliza",
+          "position": "Operations Director – Manufacturing"
+        },
+        "4": {
+          "quote": "Altama menjadi mitra terpercaya dalam penyediaan peralatan industri dengan standar mutu yang konsisten.",
+          "name": "Dianne Russell",
+          "position": "Supply Chain Manager – MasterCard"
+        },
+        "5": {
+          "quote": "Kerja sama dengan Altama sangat transparan dan terstruktur. Dukungan tim distribusi sangat membantu di lapangan.",
+          "name": "Devon Lane",
+          "position": "Purchasing Head – General Electric"
+        },
+        "6": {
+          "quote": "Kualitas produk Altama tidak perlu diragukan lagi. Pelayanan after-sales mereka juga sangat memuaskan dan cepat tanggap.",
+          "name": "Ronald Richards",
+          "position": "Procurement Specialist – Nintendo"
+        },
+        "7": {
+          "quote": "Partnership dengan Altama memberikan nilai yang signifikan untuk operasional bisnis kami. Highly recommended!",
+          "name": "Budi Santoso",
+          "position": "General Manager – Industrial Solutions"
+        },
+        "8": {
+          "quote": "Tim Altama selalu siap membantu kebutuhan kami dengan solusi yang tepat dan harga yang kompetitif.",
+          "name": "Jenny Wilson",
+          "position": "Head of Operations – Tech Corp"
+        }
+      },
+      "jobRoles": {
+        "mechanicStaff": "Mechanic Staff",
+        "coordinatorStaff": "Coordinator Staff",
+        "distributionSupervisor": "Distribution Supervisor"
+      }
+    },
+    "infoCard": {
+      "text": "Dimana orang berkembang, berkolaborasi, dan menciptakan dampak."
+    }
+  },
+  "mediaCenter": {
+    "hero": {
+      "title": "MEDIA CENTER",
+      "subtitle": "Berita terkini, press release, dan update dari PT Altama Surya Anugerah"
+    },
+    "search": {
+      "placeholder": "Cari artikel..."
+    },
+    "categories": {
+      "all": "Semua",
+      "innovation": "Inovasi",
+      "awards": "Penghargaan",
+      "business": "Bisnis",
+      "sustainability": "Sustainability",
+      "companyCulture": "Budaya Perusahaan",
+      "productLaunch": "Peluncuran Produk"
+    },
+    "articles": {
+      "1": {
+        "title": "Inovasi Teknologi Terbaru dari Altama dalam Industri Tools",
+        "excerpt": "Altama terus berinovasi dengan menghadirkan teknologi terbaru dalam produksi tools berkualitas tinggi untuk mendukung industri Indonesia.",
+        "author": "Tim Redaksi Altama"
+      },
+      "2": {
+        "title": "Altama Raih Penghargaan Best Manufacturing Company 2024",
+        "excerpt": "Pencapaian gemilang Altama dalam meraih penghargaan sebagai perusahaan manufaktur terbaik tahun 2024 dari Indonesia Manufacturing Awards.",
+        "author": "Corporate Communications"
+      },
+      "3": {
+        "title": "Ekspansi Pasar: Produk Tekiro Merambah Asia Tenggara",
+        "excerpt": "Brand Tekiro dari Altama kini hadir di berbagai negara Asia Tenggara, memperluas jangkauan pasar dan meningkatkan kepercayaan konsumen.",
+        "author": "Marketing Team"
+      },
+      "4": {
+        "title": "Komitemen Altama terhadap Sustainability dan Green Manufacturing",
+        "excerpt": "Altama menerapkan praktik green manufacturing dalam proses produksi untuk menjaga kelestarian lingkungan dan sustainability jangka panjang.",
+        "author": "Sustainability Team"
+      },
+      "5": {
+        "title": "Workshop Series: Meningkatkan Skill Karyawan Altama",
+        "excerpt": "Program pelatihan berkala yang diselenggarakan Altama untuk meningkatkan kompetensi dan profesionalisme tim di berbagai departemen.",
+        "author": "HR Department"
+      },
+      "6": {
+        "title": "Peluncuran Produk Baru: Rexco Professional Series 2025",
+        "excerpt": "Altama memperkenalkan seri terbaru dari brand Rexco dengan fitur profesional yang dirancang khusus untuk industri berat dan konstruksi.",
+        "author": "Product Development"
+      }
+    },
+    "readMore": "Baca Selengkapnya",
+    "noArticles": "Tidak ada artikel yang ditemukan"
+  }
+}

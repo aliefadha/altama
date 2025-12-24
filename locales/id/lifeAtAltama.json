@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "badge": "KAMI SEDANG MENCARI",
+    "joinBadge": "GABUNG",
+    "title": "ALTAMA HARI INI!",
+    "subtitle": "Jadilah bagian dari tim dinamis yang mendorong inovasi di sektor industri, otomotif, dan rumah tangga Indonesia.",
+    "cta": "Lihat Posisi Tersedia"
+  },
+  "infoCard": {
+    "text": "Dipercaya oleh para profesional di seluruh Indonesia karena kualitas dan keandalan."
+  },
+  "jobRoles": {
+    "mechanicStaff": "Staff Mekanik",
+    "coordinatorStaff": "Staff Koordinator",
+    "distributionSupervisor": "Supervisor Distribusi"
+  },
+  "testimonials": {
+    "title": "TESTIMONI",
+    "subtitle": "Apa kata anggota tim kami tentang bekerja di Altama",
+    "items": {
+      "1": {
+        "quote": "Bekerja di Altama telah menjadi perjalanan yang luar biasa. Perusahaan memberikan peluang besar untuk berkembang dan tim sangat mendukung.",
+        "name": "Andi Pratama",
+        "position": "Manajer Pemasaran"
+      },
+      "2": {
+        "name": "Budi Santoso",
+        "position": "Supervisor Operasional"
+      },
+      "3": {
+        "quote": "Sudah 3 tahun saya bersama Altama. Budaya perusahaan mendorong inovasi dan menghargai kontribusi setiap karyawan.",
+        "name": "Dewi Kartika",
+        "position": "Manajer HR"
+      },
+      "4": {
+        "quote": "Keseimbangan kerja-hidup di sini sangat baik. Manajemen benar-benar peduli dengan kesejahteraan karyawan sambil mendorong keunggulan.",
+        "name": "Eko Prasetyo",
+        "position": "Eksekutif Penjualan"
+      },
+      "5": {
+        "quote": "Altama telah membantu saya mengembangkan keterampilan dan memajukan karir saya. Program pelatihan sangat komprehensif dan praktis.",
+        "name": "Fitriani Putri",
+        "position": "Staf Keuangan"
+      },
+      "6": {
+        "quote": "Menjadi bagian dari jaringan distribusi Tekiro, RYU, dan Rexco memberi kami rasa bangga dan tanggung jawab.",
+        "name": "Gunawan Wijaya",
+        "position": "Manajer Gudang"
+      },
+      "7": {
+        "quote": "Lingkungan kolaboratif di Altama membuat setiap hari kerja menyenangkan. Kerja tim adalah inti dari segala yang kami lakukan.",
+        "name": "Hesti Utami",
+        "position": "Layanan Pelanggan"
+      },
+      "8": {
+        "quote": "Saya menghargai bagaimana perusahaan berinvestasi pada orang-orangnya. Selalu ada tantangan dan peluang pembelajaran baru.",
+        "name": "Irwan Kusuma",
+        "position": "Dukungan Teknis"
+      }
+    }
+  }
+}

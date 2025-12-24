@@ -1,5 +1,7 @@
+"use client"
 import { Inter, League_Spartan } from "next/font/google";
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 const inter = Inter({
     variable: "--font-inter",
@@ -12,6 +14,7 @@ const leagueSpartan = League_Spartan({
 })
 
 export default function ContactUsPage() {
+    const t = useTranslations('contactUs');
     return (
         <>
             <div className={`{${inter.className} pt-[55px]}`}>
@@ -95,10 +98,10 @@ export default function ContactUsPage() {
                                 {/* Title */}
                                 <div className="flex flex-col gap-2">
                                     <h1 className={`${leagueSpartan.className} font-bold text-[28px] lg:text-[40px] leading-tight lg:leading-[1.2] tracking-tight lg:tracking-[-1.6px] text-white`}>
-                                        Connect<span className="text-[#f4c41c]"> With Us!</span>
+                                        {t('hero.title')}
                                     </h1>
                                     <p className="text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-white">
-                                        Kami siap membantu kebutuhan bisnis, distribusi, dan kerja sama Anda.
+                                        {t('hero.subtitle')}
                                     </p>
                                 </div>
 
@@ -117,7 +120,7 @@ export default function ContactUsPage() {
                                             </svg>
                                         </div>
                                         <p className="text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-white">
-                                            +62 xxx xxxx xxxx
+                                            {t('contact.phone')}
                                         </p>
                                     </div>
 
@@ -132,7 +135,7 @@ export default function ContactUsPage() {
                                             </svg>
                                         </div>
                                         <p className=" text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-white">
-                                            info@altama.co.id
+                                            {t('contact.email')}
                                         </p>
                                     </div>
 
@@ -147,7 +150,7 @@ export default function ContactUsPage() {
                                             </svg>
                                         </div>
                                         <p className=" text-[14px] lg:text-[16px] leading-relaxed tracking-tight text-white">
-                                            Jakarta, Indonesia
+                                            {t('contact.location')}
                                         </p>
                                     </div>
                                 </div>
@@ -167,10 +170,10 @@ export default function ContactUsPage() {
                                     {/* White Box with CTA */}
                                     <div className="bg-white rounded-[24px] px-[32px] py-[28px] relative z-0 max-w-[420px]">
                                         <h3 className={`${leagueSpartan.className} font-semibold text-[24px] leading-[1.2] tracking-[-0.96px] text-[#353185] mb-[8px]`}>
-                                            Connect With Altama!
+                                            {t('cta.title')}
                                         </h3>
                                         <p className={`${leagueSpartan.className} text-[16px] leading-[1.3] tracking-[-0.64px] text-[#414141] max-w-[250px]`}>
-                                            Tim kami akan menghubungi Anda secepat mungkin.
+                                            {t('cta.subtitle')}
                                         </p>
                                     </div>
                                 </div>
@@ -185,21 +188,21 @@ export default function ContactUsPage() {
                                         <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className="font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
-                                                    Your Name
+                                                    {t('form.nameLabel')}
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Your Name"
+                                                    placeholder={t('form.namePlaceholder')}
                                                     className="bg-[#efefef] rounded-full px-5 py-3  text-[14px] leading-relaxed tracking-tight text-[#a7a7a7] placeholder:text-[#a7a7a7] outline-none focus:ring-2 focus:ring-[#353185]"
                                                 />
                                             </div>
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className=" font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
-                                                    Email Address
+                                                    {t('form.emailLabel')}
                                                 </label>
                                                 <input
                                                     type="email"
-                                                    placeholder="Your Email Address"
+                                                    placeholder={t('form.emailPlaceholder')}
                                                     className="bg-[#efefef] rounded-full px-5 py-3  text-[14px] leading-relaxed tracking-tight text-[#a7a7a7] placeholder:text-[#a7a7a7] outline-none focus:ring-2 focus:ring-[#353185]"
                                                 />
                                             </div>
@@ -209,21 +212,21 @@ export default function ContactUsPage() {
                                         <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className=" font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
-                                                    Phone Number
+                                                    {t('form.phoneLabel')}
                                                 </label>
                                                 <input
                                                     type="tel"
-                                                    placeholder="Your Phone Number"
+                                                    placeholder={t('form.phonePlaceholder')}
                                                     className="bg-[#efefef] rounded-full px-5 py-3  text-[14px] leading-relaxed tracking-tight text-[#a7a7a7] placeholder:text-[#a7a7a7] outline-none focus:ring-2 focus:ring-[#353185]"
                                                 />
                                             </div>
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className=" font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
-                                                    Location
+                                                    {t('form.locationLabel')}
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Your Location"
+                                                    placeholder={t('form.locationPlaceholder')}
                                                     className="bg-[#efefef] rounded-full px-5 py-3  text-[14px] leading-relaxed tracking-tight text-[#a7a7a7] placeholder:text-[#a7a7a7] outline-none focus:ring-2 focus:ring-[#353185]"
                                                 />
                                             </div>
@@ -232,10 +235,10 @@ export default function ContactUsPage() {
                                         {/* Row 3: Message */}
                                         <div className="flex flex-col gap-2">
                                             <label className=" font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
-                                                Tell Us Your Story
+                                                {t('form.messageLabel')}
                                             </label>
                                             <textarea
-                                                placeholder="Write Something..."
+                                                placeholder={t('form.messagePlaceholder')}
                                                 rows={4}
                                                 className="bg-[#efefef] rounded-2xl px-5 py-3  text-[14px] leading-relaxed tracking-tight text-[#a7a7a7] placeholder:text-[#a7a7a7] outline-none resize-none focus:ring-2 focus:ring-[#353185]"
                                             />
@@ -245,7 +248,7 @@ export default function ContactUsPage() {
                                     {/* Submit Button */}
                                     <button className="bg-[#353185] rounded-full px-6 py-3 w-full hover:bg-[#2a2667] transition-colors">
                                         <span className=" font-semibold text-[15px] lg:text-[18px] leading-relaxed tracking-tight text-white">
-                                            Send Message
+                                            {t('form.submitButton')}
                                         </span>
                                     </button>
                                 </div>
@@ -278,16 +281,16 @@ export default function ContactUsPage() {
                         <div className="relative max-w-full lg:max-w-[721px] mx-auto flex flex-col gap-8 lg:gap-[56px] items-center">
                             <div className="flex flex-col gap-3 lg:gap-4 items-center text-center w-full">
                                 <h2 className={`text-[#353185] text-[26px] lg:text-[40px] ${leagueSpartan.className} font-medium leading-tight lg:leading-[1.292] tracking-tight lg:tracking-[-2.24px]`}>
-                                    Insights, Innovation, and Progress
+                                    {t('insights.title')}
                                 </h2>
                                 <p className="text-[#414141] text-[14px] lg:text-[18px]  font-medium leading-relaxed lg:leading-[1.292] tracking-tight lg:tracking-[-0.96px] max-w-full lg:max-w-[487px]">
-                                    Temukan solusi terbaik untuk kebutuhan teknik, otomotif, dan industri Anda.
+                                    {t('insights.subtitle')}
                                 </p>
                             </div>
 
                             <div className="relative">
                                 <button className="bg-[#353185] text-white rounded-full px-6 lg:px-6 py-3 lg:py-3 text-[15px] lg:text-[18px]  font-semibold tracking-tight lg:tracking-[-0.96px] hover:bg-[#2a2667] transition-colors">
-                                    Explore News
+                                    {t('insights.button')}
                                 </button>
                                 <div className="absolute border-4 border-[rgba(53,49,133,0.24)] inset-[-4px] pointer-events-none rounded-full" />
                             </div>

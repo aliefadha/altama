@@ -2,7 +2,11 @@
 
 import { League_Spartan } from "next/font/google";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { usePathname } from "next/navigation";
+import { useTranslations } from 'next-intl';
+
+type Locale = 'en' | 'id';
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
@@ -17,6 +21,15 @@ const backgroundImages = [
 
 
 export default function HeroSection() {
+    const pathname = usePathname();
+    const t = useTranslations('hero');
+
+    const locale = useMemo(() => {
+        const segments = pathname.split('/');
+        const localeCode = segments[1] as Locale;
+        return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+    }, [pathname]);
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -95,20 +108,20 @@ export default function HeroSection() {
                 <div>
                     {/* Main Heading with yellow background on INNOVATION */}
                     <h1 className={`${leagueSpartan.className} text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
-                        THE POWER OF
+                        {t('line1')}
                         <br />
                         <span className="relative inline-block my-1 lg:my-0.5">
                             <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
-                            <span className="relative z-10 text-white px-1 lg:px-[4px]">INNOVATION</span>
+                            <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('line2')}</span>
                         </span>{' '}
-                        FOR A
+                        {t('line3')}
                         <br />
-                        STRONGER NATION.
+                        {t('line4')}
                     </h1>
 
                     {/* Subtitle */}
                     <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
-                        Your partner in progress, empowering every step toward Indonesia&apos;s success.
+                        {t('subtitle')}
                     </p>
                 </div>
             </div>

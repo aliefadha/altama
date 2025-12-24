@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "title": "Connect With Us!",
+    "subtitle": "We're ready to assist with your business, distribution, and partnership needs."
+  },
+  "contact": {
+    "phone": "+62 xxx xxxx xxxx",
+    "email": "info@altama.co.id",
+    "location": "Jakarta, Indonesia"
+  },
+  "cta": {
+    "title": "Connect With Altama!",
+    "subtitle": "Our team will contact you as soon as possible."
+  },
+  "form": {
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Your Name",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Your Email Address",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Your Phone Number",
+    "locationLabel": "Location",
+    "locationPlaceholder": "Your Location",
+    "messageLabel": "Tell Us Your Story",
+    "messagePlaceholder": "Write Something...",
+    "submitButton": "Send Message"
+  },
+  "insights": {
+    "title": "Insights, Innovation, and Progress",
+    "subtitle": "Discover the best solutions for your technical, automotive, and industrial needs.",
+    "button": "Explore News"
+  }
+}

@@ -1,9 +1,22 @@
 "use client"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useTranslations } from 'next-intl';
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+
+type Locale = 'en' | 'id';
 
 export default function CareerSection() {
     const router = useRouter();
+    const pathname = usePathname();
+    const t = useTranslations('careerSection');
+
+    const locale = useMemo(() => {
+        const segments = pathname.split('/');
+        const localeCode = segments[1] as Locale;
+        return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+    }, [pathname]);
 
     const jobs = [
         {
@@ -37,15 +50,15 @@ export default function CareerSection() {
             <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px]">
                 {/* Title */}
                 <h2 className="text-center text-[26px] lg:text-[32px] font-['League_Spartan'] font-bold leading-tight tracking-tight lg:tracking-[-1.6px] mb-6 lg:mb-8">
-                    <span className="text-white">GROW WITH US </span>
-                    <span className="text-[#f4c41c]">AT ALTAMA!</span>
+                    <span className="text-white">{t('title1')} </span>
+                    <span className="text-[#f4c41c]">{t('title2')}</span>
                 </h2>
 
                 {/* Search Bar */}
                 <div className="flex items-center gap-2 lg:gap-[10px] max-w-full lg:max-w-[580px] mx-auto bg-white rounded-full px-4 py-2 lg:py-2 mb-6 lg:mb-10">
                     <input
                         type="text"
-                        placeholder="Search job position…"
+                        placeholder={t('searchPlaceholder')}
                         className="flex-1 text-[#808080] text-[14px] lg:text-[14px] font-['Inter'] tracking-tight outline-none bg-transparent"
                     />
                     <button className="w-7 h-7 bg-[#353185] rounded-full flex items-center justify-center flex-shrink-0">
@@ -103,7 +116,7 @@ export default function CareerSection() {
                         onClick={() => router.push('/career/apply-jobs')}
                         className="w-full lg:w-auto bg-white text-[#353185] rounded-full px-6 lg:px-6 py-3 lg:py-3 text-[15px] lg:text-[16px] font-['Inter'] font-semibold tracking-tight hover:bg-[#f0f0f0] transition-colors"
                     >
-                        View All Jobs
+                        {t('viewAllJobs')}
                     </button>
                 </div>
             </div>

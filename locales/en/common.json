@@ -1,0 +1,14 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "search": "Search",
+    "filter": "Filter"
+  }
+}
