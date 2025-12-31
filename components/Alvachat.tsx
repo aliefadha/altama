@@ -1,16 +1,35 @@
 "use client"
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function AlvaChat() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isScrolling, setIsScrolling] = useState(false);
+
+    useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
+
+        const handleScroll = () => {
+            setIsScrolling(true);
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                setIsScrolling(false);
+            }, 150);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            clearTimeout(timeoutId);
+        };
+    }, []);
 
     return (
         <>
             {/* Chat Button - Sticky di kanan bawah */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[150px] h-[250px] hover:scale-105 transition-transform duration-300"
+                className={`fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[150px] h-[250px] transition-transform duration-300 ${isScrolling ? 'scale-105' : 'hover:scale-105'}`}
             >
                 <Image
                     fill
@@ -68,7 +87,7 @@ export default function AlvaChat() {
                             {/* Welcome Message */}
                             <div className="bg-gray-50 rounded-2xl rounded-tl-none p-4">
                                 <p className="text-gray-800 mb-2">
-                                    Halo! Selamat datang di PT Altama Surya Artha Deco 👋
+                                    Halo! Selamat datang di PT Altama Surya Anugerah 👋
                                 </p>
                                 <p className="text-gray-600">
                                     Ada yang bisa kami bantu hari ini?

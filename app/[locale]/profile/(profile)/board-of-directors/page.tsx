@@ -10,13 +10,14 @@ export default function BoardOfDirectorsPage() {
     const tNav = useTranslations('companyOverview.navigation');
     return (
         <>
-            <div className="relative w-full h-[800px] overflow-hidden">
+            <div className="relative w-full h-screen overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 bg-[#353185]">
                     <Image
                         alt="foto61"
                         fill
                         className="w-full h-full object-cover"
+                        style={{ transform: "translateX(3%)", objectPosition: "center" }}
                         src="/images/bodimage.webp"
                     />
                     {/* Gradient overlay - darker on mobile for better text readability */}

@@ -63,7 +63,7 @@ export default function Footer() {
     ];
 
     return (
-        <div className="relative w-full bg-[#353185] py-12 lg:py-20 overflow-hidden">
+        <div className="relative w-full bg-[#353185] py-12 lg:py-20 overflow-hidden h-screen">
             {/* Decorative Element - Top Left - Hidden on mobile */}
             <div className="hidden lg:block absolute -left-[80px] -top-[150px] w-[500px] h-[500px] pointer-events-none">
                 <Image
@@ -206,13 +206,6 @@ export default function Footer() {
                     <p className="text-white text-[12px] lg:text-[18px] font-['League_Spartan'] font-medium tracking-tight lg:tracking-[-0.72px] text-center">
                         Copyright 2025 PT. Altama Surya Anugerah. All Right Reserved
                     </p>
-                    <Image
-                        width={150}
-                        height={45}
-                        alt="Certifications"
-                        className="h-[36px] lg:h-[44px] w-auto"
-                        src="/images/81bb133a0e3c333ad82eb2fecff14864fd4626d7.webp"
-                    />
                 </div>
             </div>
 

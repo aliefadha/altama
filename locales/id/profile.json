@@ -19,7 +19,8 @@
       ]
     },
     "coreValues": {
-      "title": "CORE VALUE",
+      "core": "NILAI",
+      "values": "PENTING",
       "integrity": {
         "title": "Integritas",
         "description": "Konsisten dan dapat dipercaya."

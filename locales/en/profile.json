@@ -19,7 +19,8 @@
       ]
     },
     "coreValues": {
-      "title": "CORE VALUE",
+      "core": "CORE",
+      "values": "VALUES",
       "integrity": {
         "title": "Integrity",
         "description": "Consistent and trustworthy."
@@ -188,7 +189,7 @@
         "distributionSupervisor": "Distribution Supervisor"
       }
     },
-     "infoCard": {
+    "infoCard": {
       "text": "Where people grow, collaborate, and make an impact."
     },
     "jobRoles": {

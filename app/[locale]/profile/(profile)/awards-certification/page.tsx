@@ -37,13 +37,13 @@ export default function AwardsCertificationPage() {
     }, []);
     return (
         <>
-            <div className="relative w-full h-[800px] overflow-hidden">
+            <div className="relative w-full h-screen overflow-hidden">
                 {/* Background Images Slider */}
                 <div className="absolute inset-0 bg-[#353185]">
                     {backgroundImages.map((src, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out scale-y-95  ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out  ${index === currentIndex ? 'opacity-100' : 'opacity-0'
                                 }`}
                         >
                             <Image

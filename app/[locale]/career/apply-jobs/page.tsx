@@ -8,19 +8,21 @@ export default function ApplyJobsPage() {
     const jobs = [
         {
             title: "Modern Market Coordinator Staff",
-            description: "Bertanggung jawab mengembangkan relasi modern market",
         },
         {
             title: "Mechanic Staff",
-            description: "Melakukan perawatan, pemeriksaan, serta perbaikan alat",
         },
         {
             title: "Modern Market Coordinator Staff",
-            description: "Mengelola penjualan dan display produk di jaringan modern",
         },
         {
             title: "Distribution Supervisor",
-            description: "Mengawasi proses distribusi, mengelola tim logistik",
+        },
+        {
+            title: "Creative Director",
+        },
+        {
+            title: "Content Creator",
         },
     ];
 
@@ -69,31 +71,27 @@ export default function ApplyJobsPage() {
                     </div>
 
                     {/* Job Cards Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-x-10 lg:gap-y-4 mb-8 lg:mb-12 max-w-full lg:max-w-[900px] mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-8 lg:mb-12 max-w-full  mx-auto">
                         {jobs.map((job, index) => (
-                            <div key={index} className="bg-white rounded-2xl lg:rounded-[20px] p-4 flex flex-col gap-3 lg:h-[140px] lg:justify-between">
-                                <div>
-                                    <h3 className="text-[#121212] text-[15px] lg:text-[16px] font-inter font-semibold leading-tight tracking-tight mb-2">
+                            <div key={index} className="bg-white rounded-2xl lg:rounded-[20px] p-4 flex flex-col lg:justify-between">
+                                <div className="flex flex-col justify-between gap-6">
+                                    <h3 className="text-[#121212] text-[16px] lg:text-[20px] font-inter font-semibold leading-tight tracking-tight">
                                         {job.title}
                                     </h3>
-                                    <p className="text-[#414141] text-[13px] lg:text-[13px] font-inter leading-relaxed tracking-tight opacity-75">
-                                        {job.description}
-                                    </p>
+                                    <button
+                                        onClick={() => router.push('/career/job-detail')}
+                                        className="w-full lg:w-auto flex items-center justify-center gap-2 bg-[#353185] rounded-full px-5 py-2.5 self-start hover:bg-[#2d2870] transition-colors"
+                                    >
+                                        <span className="text-white text-[14px] lg:text-[16px] font-inter font-semibold tracking-tight">
+                                            Apply Now
+                                        </span>
+                                        <div className="w-3.5 h-3.5 lg:w-4 lg:h-4 rotate-90">
+                                            <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
+                                                <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                                            </svg>
+                                        </div>
+                                    </button>
                                 </div>
-
-                                <button
-                                    onClick={() => router.push('/career/job-detail')}
-                                    className="w-full lg:w-auto flex items-center justify-center gap-2 bg-[#353185] rounded-full px-5 py-2.5 self-start hover:bg-[#2d2870] transition-colors"
-                                >
-                                    <span className="text-white text-[14px] lg:text-[16px] font-inter font-semibold tracking-tight">
-                                        Apply Now
-                                    </span>
-                                    <div className="w-3.5 h-3.5 lg:w-4 lg:h-4 rotate-90">
-                                        <svg className="w-full h-full" fill="none" viewBox="0 0 24 24">
-                                            <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                                        </svg>
-                                    </div>
-                                </button>
                             </div>
                         ))}
                     </div>

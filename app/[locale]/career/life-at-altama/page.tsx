@@ -91,157 +91,87 @@ export default function LifeAtAltamaPage() {
     return (
         <>
             {/* Hero Section */}
-            <div className="relative bg-gradient-to-b from-[#353185] via-[#605bc3] to-[#353185] pt-[130px] pb-[100px] overflow-hidden">
-                {/* Content Container */}
-                <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[60px] items-center">
-                        {/* Left Content */}
-                        <div className="flex flex-col gap-[32px]">
-                            {/* Badge */}
-                            <div className="bg-[rgba(53,49,133,0.6)] border border-[rgba(255,255,255,0.2)] flex items-center justify-center px-[20px] py-[8px] rounded-[65px] w-fit">
-                                <p className="font-inter text-[16px] text-white tracking-[-0.64px]">
-                                    {t('hero.badge')}
-                                </p>
+            <div className="relative w-full h-screen overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 bg-[#353185]">
+                    <div className="absolute inset-0">
+                        <Image
+                            alt="hero-bg"
+                            fill
+                            className="w-full h-full object-cover"
+                            src={imgAsa35161}
+                            priority
+                        />
+                    </div>
+                    {/* Gradient overlay - darker on mobile for better text readability */}
+                    <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />
+                </div>
+
+                {/* Hero Content - absolutely positioned */}
+                <div className="absolute inset-0 max-w-360 mx-auto px-5 lg:px-[80px] h-full flex flex-col gap-10 justify-center">
+                    <div>
+                        {/* Brand Logos - aligned with content */}
+                        <div className="relative flex flex-wrap items-center justify-start gap-1 sm:gap-2">
+                            {/* Tekiro */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="Tekiro" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
+                            </div>
+                            {/* Rexco */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
                             </div>
 
-                            {/* Title */}
-                            <div className="flex flex-col gap-[8px]">
-                                <div className="inline-block w-fit">
-                                    <div className="bg-[#f4c41c] px-[16px] py-[8px] rounded-[8px] inline-block">
-                                        <h1 className="font-league-spartan font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
-                                            {t('hero.joinBadge')}
-                                        </h1>
-                                    </div>
-                                </div>
-                                <h2 className="font-league-spartan font-bold text-[48px] leading-[1.1] text-white tracking-[-1.92px]">
-                                    {t('hero.title')}
-                                </h2>
-                            </div>
-
-                            {/* Subtitle */}
-                            <p className="font-inter text-[18px] text-[#e4e4e4] tracking-[-0.72px] max-w-[480px]">
-                                {t('hero.subtitle')}
-                            </p>
-
-                            {/* Brand Logos */}
-                            <div className="flex flex-row gap-[12px] flex-wrap items-center">
-                                {/* Tekiro */}
-                                <div className="relative">
-                                    <div className="backdrop-blur-[2px] bg-gradient-to-b border border-[#403c90] from-[rgba(151,149,189,0.38)] to-[rgba(94,90,168,0.38)] h-[56px] rounded-[8px] w-[120px]" />
-                                    <div className="absolute left-[10px] top-[16px] h-[18px] w-[95px] overflow-hidden">
-                                        <Image alt="Tekiro" className="absolute h-[150.12%] left-0 max-w-none top-[-0.06%] w-[302.36%]" src={imgLogoBrandLp} width={95} height={18} />
-                                    </div>
-                                </div>
-
-                                {/* Rexco */}
-                                <div className="relative">
-                                    <div className="backdrop-blur-[2px] bg-gradient-to-b border border-[#403c90] from-[rgba(151,149,189,0.38)] to-[rgba(94,90,168,0.38)] h-[56px] rounded-[8px] w-[120px]" />
-                                    <div className="absolute left-[21px] top-[14px] h-[28px] w-[78px] overflow-hidden">
-                                        <Image alt="Rexco" className="absolute h-[100.08%] left-[-150%] max-w-none top-[-0.04%] w-[384%]" src={imgLogoBrandLp} width={78} height={28} />
-                                    </div>
-                                </div>
-
-                                {/* Ryu */}
-                                <div className="relative">
-                                    <div className="backdrop-blur-[2px] bg-gradient-to-b border border-[#403c90] from-[rgba(151,149,189,0.38)] to-[rgba(94,90,168,0.38)] h-[56px] rounded-[8px] w-[120px]" />
-                                    <div className="absolute left-[15px] top-[16px] h-[22px] w-[90px] overflow-hidden">
-                                        <Image alt="Ryu" className="absolute h-[128.68%] left-[-226.27%] max-w-none top-[-0.05%] w-[325.42%]" src={imgLogoBrandLp} width={90} height={22} />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* CTA Button */}
-                            <div className="relative bg-white flex gap-[8px] items-center justify-center px-[24px] py-[12px] rounded-[72px] w-fit">
-                                <div className="absolute border-4 border-[rgba(151,149,189,0.4)] inset-[-4px] pointer-events-none rounded-[76px]" />
-                                <p className="font-inter font-semibold text-[18px] text-[#353185] tracking-[-0.72px]">
-                                    {t('hero.cta')}
-                                </p>
-                                <div className="flex items-center justify-center size-[20px] rotate-90">
-                                    <svg className="block size-full" fill="none" viewBox="0 0 24 24">
-                                        <path d="M17 14L12 9L7 14" stroke="#353185" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-                                    </svg>
-                                </div>
+                            {/* RYU */}
+                            <div
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                            >
+                                <Image width={150} height={40} alt="RYU" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
                             </div>
                         </div>
+                    </div>
 
-                        {/* Right Image Container */}
-                        <div className="relative h-[500px] overflow-hidden rounded-[32px]">
-                            <div className="absolute inset-0 bg-[#d9d9d9]" />
-                            <div className="absolute inset-0">
-                                <Image alt="Team collaboration at Altama office" className="absolute inset-0 w-full h-full object-cover object-center" src={imgFoto61} fill />
-                            </div>
-                            <div className="absolute inset-0">
-                                <Image alt="Altama employees working together" className="absolute inset-0 w-full h-full object-cover object-center" src={imgAsa35161} fill />
-                            </div>
+                    <div>
+                        {/* Main Heading with yellow background */}
+                        <h1 className={`text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
+                            <span className="relative inline-block my-1 lg:my-0.5">
+                                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
+                                <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('hero.joinBadge')}</span>
+                            </span>
+                            <br />
+                            {t('hero.title')}
+                        </h1>
 
-                            {/* Info Card Overlay */}
-                            <div className="absolute bg-white flex flex-col gap-[12px] right-[20px] px-[12px] py-[16px] rounded-[16px] top-[20px] w-[200px]">
-                                {/* Icon */}
-                                <div className="overflow-clip rounded-full size-[28px]">
-                                    <div className="bg-[#414141] rounded-full size-[28px] flex items-center justify-center">
-                                        <svg className="size-[18px]" fill="none" viewBox="0 0 23 23">
-                                            <path d='M11.3327 13.6702L13.1507 14.7563C13.3239 14.8665 13.4933 14.8627 13.6588 14.745C13.8244 14.6272 13.8833 14.4657 13.8355 14.2605L13.3632 12.2063L14.9688 10.8132C15.1262 10.6716 15.1734 10.5025 15.1105 10.3061C15.0475 10.1096 14.9058 10.0032 14.6855 9.98685L12.5841 9.82157L11.7577 7.86185C11.679 7.67296 11.5373 7.57852 11.3327 7.57852C11.1281 7.57852 10.9864 7.67296 10.9077 7.86185L10.0813 9.82157L7.9799 9.98685C7.75953 10.0026 7.61787 10.109 7.5549 10.3061C7.49194 10.5031 7.53916 10.6722 7.69657 10.8132L9.30213 12.2063L8.82991 14.2605C8.78268 14.4651 8.84187 14.6266 9.00746 14.745C9.17305 14.8633 9.34211 14.8671 9.51463 14.7563L11.3327 13.6702ZM8.16879 18.8882H5.66602C5.14657 18.8882 4.70205 18.7034 4.33246 18.3338C3.96287 17.9643 3.77776 17.5194 3.77713 16.9993V14.4966L1.95907 12.6549C1.78592 12.466 1.65213 12.2576 1.55768 12.0297C1.46324 11.8018 1.41602 11.5694 1.41602 11.3327C1.41602 11.0959 1.46324 10.8639 1.55768 10.6366C1.65213 10.4093 1.78592 10.2006 1.95907 10.0105L3.77713 8.16879V5.66602C3.77713 5.14657 3.96224 4.70205 4.33246 4.33246C4.70268 3.96287 5.1472 3.77776 5.66602 3.77713H8.16879L10.0105 1.95907C10.1993 1.78592 10.4081 1.65213 10.6366 1.55768C10.8652 1.46324 11.0972 1.41602 11.3327 1.41602C11.5682 1.41602 11.8005 1.46324 12.0297 1.55768C12.2589 1.65213 12.4673 1.78592 12.6549 1.95907L14.4966 3.77713H16.9993C17.5188 3.77713 17.9636 3.96224 18.3338 4.33246C18.7041 4.70268 18.8889 5.1472 18.8882 5.66602V8.16879L20.7063 10.0105C20.8794 10.1993 21.0132 10.4081 21.1077 10.6366C21.2021 10.8652 21.2493 11.0972 21.2493 11.3327C21.2493 11.5682 21.2021 11.8005 21.1077 12.0297C21.0132 12.2589 20.8794 12.4673 20.7063 12.6549L18.8882 14.4966V16.9993C18.8882 17.5188 18.7034 17.9636 18.3338 18.3338C17.9643 18.7041 17.5194 18.8889 16.9993 18.8882H14.4966L12.6549 20.7063C12.466 20.8794 12.2576 21.0132 12.0297 21.1077C11.8018 21.2021 11.5694 21.2493 11.3327 21.2493C11.0959 21.2493 10.8639 21.2021 10.6366 21.1077C10...' />
-                                        </svg>
-                                    </div>
-                                </div>
+                        {/* Subtitle */}
+                        <p className="text-[#e4e4e4] text-[15px] lg:text-[18px] font-['Inter'] leading-relaxed lg:leading-[1.4] tracking-tight lg:tracking-[-0.64px] max-w-full lg:max-w-[520px]">
+                            {t('hero.subtitle')}
+                        </p>
+                    </div>
+                    <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
+                        <p className={`font-league-spartan text-white text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
+                            {t('hero.badge')}
+                        </p>
+                    </div>
 
-                                {/* Text */}
-                                <p className="font-league-spartan text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
-                                    <span className="font-medium">{t('infoCard.text')}</span>
-                                </p>
-                            </div>
-
-                            {/* Job Pills */}
-                            <div className="absolute flex flex-col gap-[12px] left-[20px] bottom-[20px] w-[240px]">
-                                {/* Mechanic Staff */}
-                                <div className="bg-white flex gap-[8px] items-center px-[10px] py-[10px] rounded-[95px]">
-                                    <div className="overflow-clip rounded-full shrink-0 size-[28px]">
-                                        <div className="bg-[#353185] rounded-full size-[28px] flex items-center justify-center">
-                                            <svg className="size-[18px]" fill="none" viewBox="0 0 23 23">
-                                                <path d='M11.3327 13.6702L13.1507 14.7563C13.3239 14.8665 13.4933 14.8627 13.6588 14.745C13.8244 14.6272 13.8833 14.4657 13.8355 14.2605L13.3632 12.2063L14.9688 10.8132C15.1262 10.6716 15.1734 10.5025 15.1105 10.3061C15.0475 10.1096 14.9058 10.0032 14.6855 9.98685L12.5841 9.82157L11.7577 7.86185C11.679 7.67296 11.5373 7.57852 11.3327 7.57852C11.1281 7.57852 10.9864 7.67296 10.9077 7.86185L10.0813 9.82157L7.9799 9.98685C7.75953 10.0026 7.61787 10.109 7.5549 10.3061C7.49194 10.5031 7.53916 10.6722 7.69657 10.8132L9.30213 12.2063L8.82991 14.2605C8.78268 14.4651 8.84187 14.6266 9.00746 14.745C9.17305 14.8633 9.34211 14.8671 9.51463 14.7563L11.3327 13.6702ZM8.16879 18.8882H5.66602C5.14657 18.8882 4.70205 18.7034 4.33246 18.3338C3.96287 17.9643 3.77776 17.5194 3.77713 16.9993V14.4966L1.95907 12.6549C1.78592 12.466 1.65213 12.2576 1.55768 12.0297C1.46324 11.8018 1.41602 11.5694 1.41602 11.3327C1.41602 11.0959 1.46324 10.8639 1.55768 10.6366C1.65213 10.4093 1.78592 10.2006 1.95907 10.0105L3.77713 8.16879V5.66602C3.77713 5.14657 3.96224 4.70205 4.33246 4.33246C4.70268 3.96287 5.1472 3.77776 5.66602 3.77713H8.16879L10.0105 1.95907C10.1993 1.78592 10.4081 1.65213 10.6366 1.55768C10.8652 1.46324 11.0972 1.41602 11.3327 1.41602C11.5682 1.41602 11.8005 1.46324 12.0297 1.55768C12.2589 1.65213 12.4673 1.78592 12.6549 1.95907L14.4966 3.77713H16.9993C17.5188 3.77713 17.9636 3.96224 18.3338 4.33246C18.7041 4.70268 18.8889 5.1472 18.8882 5.66602V8.16879L20.7063 10.0105C20.8794 10.1993 21.0132 10.4081 21.1077 10.6366C21.2021 10.8652 21.2493 11.0972 21.2493 11.3327C21.2493 11.5682 21.2021 11.8005 21.1077 12.0297C21.0132 12.2589 20.8794 12.4673 20.7063 12.6549L18.8882 14.4966V16.9993C18.8882 17.5188 18.7034 17.9636 18.3338 18.3338C17.9643 18.7041 17.5194 18.8889 16.9993 18.8882H14.4966L12.6549 20.7063C12.466 20.8794 12.2576 21.0132 12.0297 21.1077C11.8018 21.2021 11.5694 21.2493 11.3327 21.2493C11.0959 21.2493 10.8639 21.2021 10.6366 21.1077...' />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
-                                        {t('jobRoles.mechanicStaff')}
-                                    </p>
-                                </div>
-
-                                {/* Coordinator Staff */}
-                                <div className="bg-white flex gap-[8px] items-center px-[10px] py-[10px] rounded-[95px]">
-                                    <div className="overflow-clip rounded-full shrink-0 size-[28px]">
-                                        <div className="bg-[#414141] rounded-full size-[28px] flex items-center justify-center">
-                                            <svg className="size-[18px]" fill="none" viewBox="0 0 23 23">
-                                                <path d='M11.3327 13.6702L13.1507 14.7563C13.3239 14.8665 13.4933 14.8627 13.6588 14.745C13.8244 14.6272 13.8833 14.4657 13.8355 14.2605L13.3632 12.2063L14.9688 10.8132C15.1262 10.6716 15.1734 10.5025 15.1105 10.3061C15.0475 10.1096 14.9058 10.0032 14.6855 9.98685L12.5841 9.82157L11.7577 7.86185C11.679 7.67296 11.5373 7.57852 11.3327 7.57852C11.1281 7.57852 10.9864 7.67296 10.9077 7.86185L10.0813 9.82157L7.9799 9.98685C7.75953 10.0026 7.61787 10.109 7.5549 10.3061C7.49194 10.5031 7.53916 10.6722 7.69657 10.8132L9.30213 12.2063L8.82991 14.2605C8.78268 14.4651 8.84187 14.6266 9.00746 14.745C9.17305 14.8633 9.34211 14.8671 9.51463 14.7563L11.3327 13.6702ZM8.16879 18.8882H5.66602C5.14657 18.8882 4.70205 18.7034 4.33246 18.3338C3.96287 17.9643 3.77776 17.5194 3.77713 16.9993V14.4966L1.95907 12.6549C1.78592 12.466 1.65213 12.2576 1.55768 12.0297C1.46324 11.8018 1.41602 11.5694 1.41602 11.3327C1.41602 11.0959 1.46324 10.8639 1.55768 10.6366C1.65213 10.4093 1.78592 10.2006 1.95907 10.0105L3.77713 8.16879V5.66602C3.77713 5.14657 3.96224 4.70205 4.33246 4.33246C4.70268 3.96287 5.1472 3.77776 5.66602 3.77713H8.16879L10.0105 1.95907C10.1993 1.78592 10.4081 1.65213 10.6366 1.55768C10.8652 1.46324 11.0972 1.41602 11.3327 1.41602C11.5682 1.41602 11.8005 1.46324 12.0297 1.55768C12.2589 1.65213 12.4673 1.78592 12.6549 1.95907L14.4966 3.77713H16.9993C17.5188 3.77713 17.9636 3.96224 18.3338 4.33246C18.7041 4.70268 18.8889 5.1472 18.8882 5.66602V8.16879L20.7063 10.0105C20.8794 10.1993 21.0132 10.4081 21.1077 10.6366C21.2021 10.8652 21.2493 11.0972 21.2493 11.3327C21.2493 11.5682 21.2021 11.8005 21.1077 12.0297C21.0132 12.2589 20.8794 12.4673 20.7063 12.6549L18.8882 14.4966V16.9993C18.8882 17.5188 18.7034 17.9636 18.3338 18.3338C17.9643 18.7041 17.5194 18.8889 16.9993 18.8882H14.4966L12.6549 20.7063C12.466 20.8794 12.2576 21.0132 12.0297 21.1077C11.8018 21.2021 11.5694 21.2493 11.3327 21.2493C11.0959 21.2493 10.8639 21.2021 10.6366 21.1077...' />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
-                                        {t('jobRoles.coordinatorStaff')}
-                                    </p>
-                                </div>
-
-                                {/* Distribution Supervisor */}
-                                <div className="bg-white flex gap-[8px] items-center px-[10px] py-[10px] rounded-[95px]">
-                                    <div className="overflow-clip rounded-full shrink-0 size-[28px]">
-                                        <div className="bg-[#e7e1e1] rounded-full size-[28px] flex items-center justify-center">
-                                            <svg className="size-[18px]" fill="none" viewBox="0 0 23 23">
-                                                <path d='M11.3327 13.6702L13.1507 14.7563C13.3239 14.8665 13.4933 14.8627 13.6588 14.745C13.8244 14.6272 13.8833 14.4657 13.8355 14.2605L13.3632 12.2063L14.9688 10.8132C15.1262 10.6716 15.1734 10.5025 15.1105 10.3061C15.0475 10.1096 14.9058 10.0032 14.6855 9.98685L12.5841 9.82157L11.7577 7.86185C11.679 7.67296 11.5373 7.57852 11.3327 7.57852C11.1281 7.57852 10.9864 7.67296 10.9077 7.86185L10.0813 9.82157L7.9799 9.98685C7.75953 10.0026 7.61787 10.109 7.5549 10.3061C7.49194 10.5031 7.53916 10.6722 7.69657 10.8132L9.30213 12.2063L8.82991 14.2605C8.78268 14.4651 8.84187 14.6266 9.00746 14.745C9.17305 14.8633 9.34211 14.8671 9.51463 14.7563L11.3327 13.6702ZM8.16879 18.8882H5.66602C5.14657 18.8882 4.70205 18.7034 4.33246 18.3338C3.96287 17.9643 3.77776 17.5194 3.77713 16.9993V14.4966L1.95907 12.6549C1.78592 12.466 1.65213 12.2576 1.55768 12.0297C1.46324 11.8018 1.41602 11.5694 1.41602 11.3327C1.41602 11.0959 1.46324 10.8639 1.55768 10.6366C1.65213 10.4093 1.78592 10.2006 1.95907 10.0105L3.77713 8.16879V5.66602C3.77713 5.14657 3.96224 4.70205 4.33246 4.33246C4.70268 3.96287 5.1472 3.77776 5.66602 3.77713H8.16879L10.0105 1.95907C10.1993 1.78592 10.4081 1.65213 10.6366 1.55768C10.8652 1.46324 11.0972 1.41602 11.3327 1.41602C11.5682 1.41602 11.8005 1.46324 12.0297 1.55768C12.2589 1.65213 12.4673 1.78592 12.6549 1.95907L14.4966 3.77713H16.9993C17.5188 3.77713 17.9636 3.96224 18.3338 4.33246C18.7041 4.70268 18.8889 5.1472 18.8882 5.66602V8.16879L20.7063 10.0105C20.8794 10.1993 21.0132 10.4081 21.1077 10.6366C21.2021 10.8652 21.2493 11.0972 21.2493 11.3327C21.2493 11.5682 21.2021 11.8005 21.1077 12.0297C21.0132 12.2589 20.8794 12.4673 20.7063 12.6549L18.8882 14.4966V16.9993C18.8882 17.5188 18.7034 17.9636 18.3338 18.3338C17.9643 18.7041 17.5194 18.8889 16.9993 18.8882H14.4966L12.6549 20.7063C12.466 20.8794 12.2576 21.0132 12.0297 21.1077C11.8018 21.2021 11.5694 21.2493 11.3327 21.2493C11.0959 21.2493 10.8639 21.2021 10.6366 21.1077...' />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                    <p className="font-league-spartan font-medium text-[16px] leading-[1.2] text-[#191844] tracking-[-0.64px]">
-                                        {t('jobRoles.distributionSupervisor')}
-                                    </p>
-                                </div>
-                            </div>
+                    {/* CTA Button */}
+                    <div className="relative bg-white flex gap-[8px] items-center justify-center px-[24px] py-[12px] rounded-[72px] w-fit cursor-pointer hover:bg-gray-100 transition-colors">
+                        <div className="absolute border-4 border-[rgba(151,149,189,0.4)] inset-[-4px] pointer-events-none rounded-[76px]" />
+                        <p className="font-inter font-semibold text-[18px] text-[#353185] tracking-[-0.72px]">
+                            {t('hero.cta')}
+                        </p>
+                        <div className="flex items-center justify-center size-[20px] rotate-90">
+                            <svg className="block size-full" fill="none" viewBox="0 0 24 24">
+                                <path d="M17 14L12 9L7 14" stroke="#353185" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                            </svg>
                         </div>
                     </div>
                 </div>
             </div>
-
             {/* Testimonials Section */}
-            <div className="relative bg-white py-[80px] overflow-hidden">
+            < div className="relative bg-white py-[80px] overflow-hidden" >
                 <div className="max-w-[1440px] mx-auto px-[20px] lg:px-[80px]">
                     {/* Header */}
                     <div className="flex flex-col gap-[20px] md:flex-row md:items-end md:justify-between mb-[40px] md:mb-[60px]">
@@ -530,7 +460,7 @@ export default function LifeAtAltamaPage() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }
