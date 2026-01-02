@@ -96,11 +96,11 @@ export default function Footer() {
                     {/* Logo */}
                     <div>
                         <Image
-                            width={250}
-                            height={60}
+                            width={350}
+                            height={150}
                             alt="PT Altama Surya Anugerah"
-                            className="h-[60px] lg:h-[90px] w-auto"
-                            src="/images/3acd7ec55c7378a3afcd33db30fc8dffeb90a076.webp"
+                            className="h-[120px] lg:h-[100px] xl:h-[150px] w-auto"
+                            src="/images/footer.webp"
                         />
                     </div>
 

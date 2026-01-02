@@ -10,8 +10,8 @@ import { inter } from "../font";
 import LocaleLayoutClient from "./layout-client";
 
 export const metadata: Metadata = {
-  title: "Altama",
-  description: "Altama - Engineering a Better World with Better Tools",
+  title: "Altama Surya Anugerah",
+  description: "Altama Surya Anugerah - Engineering a Better World with Better Tools",
 };
 
 export function generateStaticParams() {

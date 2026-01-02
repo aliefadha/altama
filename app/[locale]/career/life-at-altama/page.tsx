@@ -3,15 +3,18 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
-const imgFoto61 = "/images/3eb02941f1230bfd31b9afd1bd7a1d713d85c2df.webp";
-const imgAsa35161 = "/images/30bfbd6b040edf9d92ae59b3472e07444f3834c4.webp";
-const imgLogoBrandLp = "/images/34e1fe96d8c7e1d3577612a571dde700a4b70c55.webp";
 const imgEllipse10 = "/images/06310d6ac34bfdf5c99689acd61ade1908915105.webp";
 const imgEllipse11 = "/images/2303138e4da6b79f3eca4b9933422fef6df4f944.webp";
 const imgVideoTestimoni = "/images/7b9b36ec87a12134b5a4c54ecdb3838bbb6d5193.webp";
 const imgEllipse12 = "/images/541419ea83f81e18686ce66b82646ed7ff8c9485.webp";
 const imgEllipse13 = "/images/4103347516e3518c93c2934d46b12629077931f3.webp";
 const imgEllipse14 = "/images/c06eab4feb5829d0e82ca41b027a2bc9f629f3f9.webp";
+
+const backgroundImages = [
+    "/images/life-altama-3.webp",
+    "/images/life-altama-2.webp",
+    "/images/life-altama-1.webp",
+]
 
 export default function LifeAtAltamaPage() {
     const t = useTranslations('lifeAtAltama');
@@ -45,25 +48,6 @@ export default function LifeAtAltamaPage() {
         }
     };
 
-    const handleTouchStart = (e: React.TouchEvent) => {
-        startX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = (e: React.TouchEvent) => {
-        if (!scrollContainerRef.current) return;
-
-        const endX = e.changedTouches[0].clientX;
-        const diff = startX.current - endX;
-
-        if (Math.abs(diff) > 50) {
-            if (diff > 0 && currentIndex < 7) {
-                handleNext();
-            } else if (diff < 0 && currentIndex > 0) {
-                handlePrev();
-            }
-        }
-    };
-
     const handleScroll = () => {
         if (!scrollContainerRef.current) return;
 
@@ -79,14 +63,12 @@ export default function LifeAtAltamaPage() {
     };
 
     useEffect(() => {
-        const container = scrollContainerRef.current;
-        if (container) {
-            container.addEventListener('scroll', handleScroll, { passive: true });
-            return () => {
-                container.removeEventListener('scroll', handleScroll);
-            };
-        }
-    }, [currentIndex, handleScroll]);
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % backgroundImages.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <>
@@ -94,15 +76,21 @@ export default function LifeAtAltamaPage() {
             <div className="relative w-full h-screen overflow-hidden">
                 {/* Background Image */}
                 <div className="absolute inset-0 bg-[#353185]">
-                    <div className="absolute inset-0">
-                        <Image
-                            alt="hero-bg"
-                            fill
-                            className="w-full h-full object-cover"
-                            src={imgAsa35161}
-                            priority
-                        />
-                    </div>
+                    {backgroundImages.map((src, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                                }`}
+                        >
+                            <Image
+                                alt={`hero-bg-${index}`}
+                                fill
+                                className="w-full h-full object-cover"
+                                src={src}
+                                priority={index === 0}
+                            />
+                        </div>
+                    ))}
                     {/* Gradient overlay - darker on mobile for better text readability */}
                     <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />
                 </div>
@@ -120,7 +108,7 @@ export default function LifeAtAltamaPage() {
                             </div>
                             {/* Rexco */}
                             <div
-                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-1 hover:shadow-lg transition-shadow relative z-10"
                             >
                                 <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
                             </div>
@@ -152,7 +140,7 @@ export default function LifeAtAltamaPage() {
                     </div>
                     <div className="inline-flex mb-5 lg:mb-[35px] px-4 lg:px-4 py-2 lg:py-2 rounded-full lg:rounded-[26px] bg-[#353185] border border-[#403BA0] w-fit">
                         <p className={`font-league-spartan text-white text-[13px] lg:text-[18px] tracking-tight lg:tracking-[-0.56px]`}>
-                            {t('hero.badge')}
+                            #AltamaGueBanget
                         </p>
                     </div>
 

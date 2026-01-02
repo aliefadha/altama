@@ -1,10 +1,10 @@
 {
   "hero": {
     "badge": "WE ARE HIRING",
-    "joinBadge": "JOIN",
-    "title": "ALTAMA TODAY!",
-    "subtitle": "Be part of a dynamic team driving innovation in Indonesia's industrial, automotive, and household sectors.",
-    "cta": "View Open Positions"
+    "joinBadge": "JOIN US HERE",
+    "title": "GROW TOGETHER",
+    "subtitle": "Your partner in progress, empowering every step toward Indonesia’s success.",
+    "cta": "Find your dream career now!"
   },
   "infoCard": {
     "text": "Trusted by professionals across Indonesia for quality and reliability."
@@ -16,7 +16,7 @@
   },
   "testimonials": {
     "title": "TESTIMONIALS",
-    "subtitle": "What our team members say about working at Altama",
+    "subtitle": "What our partners say about Altama",
     "items": {
       "1": {
         "quote": "Working at Altama has been an incredible journey. The company provides great opportunities for growth and the team is very supportive.",

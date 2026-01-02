@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
@@ -73,7 +79,7 @@ export default function AwardsCertificationPage() {
                             </div>
                             {/* Rexco */}
                             <div
-                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-1 hover:shadow-lg transition-shadow relative z-10"
                             >
                                 <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
                             </div>
@@ -109,7 +115,40 @@ export default function AwardsCertificationPage() {
                 </div>
             </div>
             {/* Awards Details Section - Cards with Navigation */}
-            < div className="bg-white py-16 lg:py-[120px]" >
+            < div className="bg-white py-10" >
+                {/* Awards Grid Section */}
+                <div className="w-full mb-8 lg:mb-12 px-2 lg:px-10">
+                    <Carousel
+                        opts={{
+                            align: "start",
+                            loop: true,
+                            breakpoints: {
+                                '(min-width: 1024px)': { watchDrag: false }
+                            }
+                        }}
+                        plugins={[
+                            Autoplay({
+                                delay: 2000,
+                            }),
+                        ]}
+                        className="w-full"
+                    >
+                        <CarouselContent>
+                            {Array.from({ length: 9 }, (_, i) => i + 1).map((num) => (
+                                <CarouselItem key={num} className="basis-1/3 md:basis-1/5 lg:basis-[11.11%]">
+                                    <div className="relative aspect-square w-full overflow-hidden group">
+                                        <Image
+                                            src={`/images/award_${num}.webp`}
+                                            alt={`Award ${num}`}
+                                            fill
+                                            className="object-contain p-2"
+                                        />
+                                    </div>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                    </Carousel>
+                </div>
                 <div className="max-w-[1440px] mx-auto px-5 lg:px-[80px]">
                     <div className="relative">
                         {/* Cards Container */}

@@ -10,6 +10,19 @@ import { usePathname } from "next/navigation";
 
 type Locale = 'en' | 'id';
 
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel"
+
+type CarouselApi = {
+    selectedScrollSnap: () => number
+    scrollTo: (index: number) => void
+    on: (event: string, callback: () => void) => void
+    off: (event: string, callback: () => void) => void
+}
+
 const backgroundImages = [
     "/images/overview1.webp",
     "/images/overview2.webp",
@@ -28,6 +41,10 @@ export default function CompanyOverviewPage() {
     }, [pathname]);
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+    const [currentMilestoneIndex, setCurrentMilestoneIndex] = useState(0);
+
+    const milestoneYears = [2011, 2015, 2018, 2020, 2023];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -75,7 +92,7 @@ export default function CompanyOverviewPage() {
                             </div>
                             {/* Rexco */}
                             <div
-                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
+                                className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-1 hover:shadow-lg transition-shadow relative z-10"
                             >
                                 <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
                             </div>
@@ -209,76 +226,79 @@ export default function CompanyOverviewPage() {
             </div>
 
             <div>
-                <div className="flex items-center justify-center min-h-screen p-6">
-                    <div className="relative w-full max-w-5xl bg-[url('/images/bg-milestone.webp')] bg-cover bg-top rounded-[40px] p-12 text-white overflow-hidden">
+                <div className="flex items-center justify-center min-h-[400px] p-6">
+                    <div className="relative w-full max-w-7xl bg-[url('/images/bg-milestone.webp')] bg-cover bg-top rounded-[40px] p-8 lg:p-12 text-white overflow-hidden">
 
-                        <h2 className="text-4xl font-bold text-center mb-16 tracking-widest uppercase">{t('milestone.title')}</h2>
+                        <h2 className="text-4xl font-bold text-center mb-8 lg:mb-16 tracking-widest uppercase">{t('milestone.title')}</h2>
 
-                        <div className="relative">
-                            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-white/20"></div>
+                        <div className="relative px-2 md:px-8 lg:px-12">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                }}
+                                className="w-full flex justify-center items-center"
+                                setApi={(api) => {
+                                    if (api) {
+                                        setCarouselApi(api as unknown as CarouselApi);
+                                        api.on("select", () => {
+                                            setCurrentMilestoneIndex(api.selectedScrollSnap());
+                                        });
+                                        // Set initial index
+                                        setCurrentMilestoneIndex(api.selectedScrollSnap());
+                                    }
+                                }}
+                            >
+                                <CarouselContent className="-ml-4">
+                                    {milestoneYears.map((year, index) => (
+                                        <CarouselItem key={year} className="relative pl-4  md:basis-1/2 lg:basis-1/3">
+                                            {index !== milestoneYears.length - 1 && (
+                                                <div className="absolute top-1/2 left-[3.25rem] w-full h-[2px] bg-white/20 -z-10" />
+                                            )}
+                                            <div className="p-1">
+                                                <div className="bg-[#483d8b]/80 backdrop-blur-sm rounded-xl p-2 md:p-4 h-[200px] md:h-[180px] border border-white/10 hover:border-white/30 transition-all duration-300 flex items-center relative overflow-hidden">
+                                                    {/* Line from Left Edge to Dot */}
+                                                    {index !== 0 && (
+                                                        <div className="absolute top-1/2 left-0 w-[2rem] h-[2px] bg-white/20" />
+                                                    )}
+                                                    <div className="flex gap-2 items-center justify-start relative z-10">
+                                                        <div className="flex flex-col items-center justify-center">
+                                                            <div className="relative flex items-center justify-center size-8">
+                                                                <div className="w-3 h-3 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.8)] z-10"></div>
+                                                            </div>
+                                                            {index === 0 && (
+                                                                <div className="w-[2px] bg-white/20 h-[100px]"></div>
+                                                            )}
+                                                        </div>
+                                                        <div className="space-y-2 md:space-y-3">
+                                                            <h3 className="text-base md:text-2xl font-bold">{t(`milestone.${year}.title`)}</h3>
+                                                            <p className="text-white/90 text-xs md:text-base leading-relaxed" dangerouslySetInnerHTML={{ __html: t.raw(`milestone.${year}.description`) }}>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
 
-                            <div className="space-y-12">
-
-                                <div className="flex items-center justify-center w-full group">
-                                    <div className="w-1/2"></div>
-                                    <div className="relative flex items-center justify-center w-10">
-                                        <div className="w-4 h-4 bg-white/50 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] z-10"></div>
-                                    </div>
-                                    <div className="w-1/2 pl-8">
-                                        <h3 className="text-2xl font-bold">{t('milestone.2011.title')}</h3>
-                                        <p className="text-white/80 text-lg leading-relaxed max-w-xs" dangerouslySetInnerHTML={{ __html: t('milestone.2011.description') }}>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-center justify-center w-full">
-                                    <div className="w-1/2 pr-8 text-right">
-                                        <h3 className="text-2xl font-bold">{t('milestone.2015.title')}</h3>
-                                        <p className="text-white/80 text-lg leading-relaxed ml-auto max-w-xs" dangerouslySetInnerHTML={{ __html: t('milestone.2015.description') }}>
-                                        </p>
-                                    </div>
-                                    <div className="relative flex items-center justify-center w-10">
-                                        <div className="w-4 h-4 bg-white/50 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] z-10"></div>
-                                    </div>
-                                    <div className="w-1/2"></div>
-                                </div>
-
-                                <div className="flex items-center justify-center w-full">
-                                    <div className="w-1/2"></div>
-                                    <div className="relative flex items-center justify-center w-10">
-                                        <div className="w-4 h-4 bg-white/50 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] z-10"></div>
-                                    </div>
-                                    <div className="w-1/2 pl-8">
-                                        <h3 className="text-2xl font-bold">{t('milestone.2018.title')}</h3>
-                                        <p className="text-white/80 text-lg leading-relaxed max-w-xs" dangerouslySetInnerHTML={{ __html: t.raw('milestone.2018.description') }}>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-center justify-center w-full">
-                                    <div className="w-1/2 pr-8 text-right">
-                                        <h3 className="text-2xl font-bold">{t('milestone.2020.title')}</h3>
-                                        <p className="text-white/80 text-lg leading-relaxed ml-auto max-w-xs" dangerouslySetInnerHTML={{ __html: t('milestone.2020.description') }}>
-                                        </p>
-                                    </div>
-                                    <div className="relative flex items-center justify-center w-10">
-                                        <div className="w-4 h-4 bg-white/50 rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] z-10"></div>
-                                    </div>
-                                    <div className="w-1/2"></div>
-                                </div>
-
-                                <div className="flex items-center justify-center w-full">
-                                    <div className="w-1/2"></div>
-                                    <div className="relative flex items-center justify-center w-10">
-                                        <div className="w-4 h-4 bg-white/50 rounded-full shadow-[0_0_20px_rgba(255,255,255,0.8)] z-10"></div>
-                                    </div>
-                                    <div className="w-1/2 pl-8">
-                                        <h3 className="text-2xl font-bold">{t('milestone.2023.title')}</h3>
-                                        <p className="text-white/80 text-lg leading-relaxed max-w-xs" dangerouslySetInnerHTML={{ __html: t('milestone.2023.description') }}>
-                                        </p>
-                                    </div>
-                                </div>
-
+                            {/* Dots Navigation */}
+                            <div className="flex justify-center gap-3 mt-6">
+                                {milestoneYears.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => {
+                                            if (carouselApi) {
+                                                carouselApi.scrollTo(index);
+                                            }
+                                        }}
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${currentMilestoneIndex === index
+                                            ? "bg-white scale-110"
+                                            : "bg-white/40 hover:bg-white/60"
+                                            }`}
+                                        aria-label={`Go to slide ${index + 1}`}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
