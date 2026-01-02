@@ -8,21 +8,19 @@ export default function ApplyJobsPage() {
     const jobs = [
         {
             title: "Modern Market Coordinator Staff",
+            description: "Bertanggung jawab mengembangkan relasi modern market",
         },
         {
             title: "Mechanic Staff",
+            description: "Melakukan perawatan, pemeriksaan, serta perbaikan alat",
         },
         {
             title: "Modern Market Coordinator Staff",
+            description: "Mengelola penjualan dan display produk di jaringan modern",
         },
         {
             title: "Distribution Supervisor",
-        },
-        {
-            title: "Creative Director",
-        },
-        {
-            title: "Content Creator",
+            description: "Mengawasi proses distribusi, mengelola tim logistik",
         },
     ];
 
@@ -74,10 +72,15 @@ export default function ApplyJobsPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-8 lg:mb-12 max-w-full  mx-auto">
                         {jobs.map((job, index) => (
                             <div key={index} className="bg-white rounded-2xl lg:rounded-[20px] p-4 flex flex-col lg:justify-between">
-                                <div className="flex flex-col justify-between gap-6">
-                                    <h3 className="text-[#121212] text-[16px] lg:text-[20px] font-inter font-semibold leading-tight tracking-tight">
-                                        {job.title}
-                                    </h3>
+                                <div className="flex flex-col justify-between gap-4">
+                                    <div className="space-y-2">
+                                        <h3 className="text-[#121212] text-[16px] lg:text-[20px] font-inter font-semibold leading-tight tracking-tight">
+                                            {job.title}
+                                        </h3>
+                                        <p className="text-[#414141] text-[13px] lg:text-[13px] font-inter leading-relaxed tracking-tight opacity-75">
+                                            {job.description}
+                                        </p>
+                                    </div>
                                     <button
                                         onClick={() => router.push('/career/job-detail')}
                                         className="w-full lg:w-auto flex items-center justify-center gap-2 bg-[#353185] rounded-full px-5 py-2.5 self-start hover:bg-[#2d2870] transition-colors"
