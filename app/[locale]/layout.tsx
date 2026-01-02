@@ -6,8 +6,8 @@ import { locales } from '@/i18n';
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AlvaChat from "@/components/Alvachat";
 import { inter } from "../font";
+import LocaleLayoutClient from "./layout-client";
 
 export const metadata: Metadata = {
   title: "Altama",
@@ -42,9 +42,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <div className="w-full h-full">
-            {children}
+            <LocaleLayoutClient>
+              {children}
+            </LocaleLayoutClient>
           </div>
-          <AlvaChat />
           <Footer />
         </NextIntlClientProvider>
       </body>

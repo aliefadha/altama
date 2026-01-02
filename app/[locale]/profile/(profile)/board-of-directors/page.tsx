@@ -17,7 +17,7 @@ export default function BoardOfDirectorsPage() {
                         alt="foto61"
                         fill
                         className="w-full h-full object-cover"
-                        style={{ transform: "translateX(3%)", objectPosition: "center" }}
+                        style={{ transform: "translateX(60px)", objectPosition: "center" }}
                         src="/images/bodimage.webp"
                     />
                     {/* Gradient overlay - darker on mobile for better text readability */}

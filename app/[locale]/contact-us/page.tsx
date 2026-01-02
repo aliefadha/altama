@@ -185,7 +185,7 @@ export default function ContactUsPage() {
                                     {/* Form Fields */}
                                     <div className="flex flex-col gap-4 lg:gap-6">
                                         {/* Row 1: Name & Email */}
-                                        <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
+                                        <div className="flex flex-col xl:flex-row gap-4 lg:gap-5">
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className="font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
                                                     {t('form.nameLabel')}
@@ -209,7 +209,7 @@ export default function ContactUsPage() {
                                         </div>
 
                                         {/* Row 2: Phone & Location */}
-                                        <div className="flex flex-col lg:flex-row gap-4 lg:gap-5">
+                                        <div className="flex flex-col xl:flex-row gap-4 lg:gap-5">
                                             <div className="flex flex-col gap-2 flex-1">
                                                 <label className=" font-medium text-[13px] lg:text-[14px] leading-relaxed tracking-tight text-[#121212]">
                                                     {t('form.phoneLabel')}
