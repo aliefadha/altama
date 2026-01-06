@@ -140,7 +140,7 @@ export default function ArticleDetailClient({
                         </div>
 
                         {/* Right Column - Latest News Sidebar */}
-                        <div className="flex flex-col gap-[24px] lg:col-span-2 ">
+                        <div className="flex flex-col gap-[24px] col-span-3 lg:col-span-2">
                             <h2 className="font-league-spartan font-medium text-[#121212] text-[28px] leading-[1.2] tracking-[-1.12px]">
                                 Latest News
                             </h2>

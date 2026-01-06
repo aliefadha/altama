@@ -14,10 +14,9 @@ export default function Header() {
     const pathname = usePathname();
     const t = useTranslations('navigation');
 
-    // Extract locale from URL - works with client-side navigation
     const locale = useMemo(() => {
         const segments = pathname.split('/');
-        const localeCode = segments[1] as Locale;
+        const localeCode = segments[2] as Locale;
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
 
@@ -67,25 +66,25 @@ export default function Header() {
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                     <Link
-                                        href={`/${locale}/profile/company-overview`}
+                                        href={`/new2025/${locale}/profile/company-overview`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('companyOverview')}
                                     </Link>
                                     <Link
-                                        href={`/${locale}/profile/awards-certification`}
+                                        href={`/new2025/${locale}/profile/awards-certification`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('awardsAndCertification')}
                                     </Link>
                                     <Link
-                                        href={`/${locale}/profile/board-of-directors`}
+                                        href={`/new2025/${locale}/profile/board-of-directors`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('boardOfDirectors')}
                                     </Link>
                                     <Link
-                                        href={`/${locale}/profile/gallery`}
+                                        href={`/new2025/${locale}/profile/gallery`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('gallery')}
@@ -143,7 +142,7 @@ export default function Header() {
 
                             {/* Media Center */}
                             <Link
-                                href={`/${locale}/media-center`}
+                                href={`/new2025/${locale}/media-center`}
                                 className="relative  flex"
                             >
                                 <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
@@ -173,13 +172,13 @@ export default function Header() {
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                     <Link
-                                        href={`/${locale}/career/apply-jobs`}
+                                        href={`/new2025/${locale}/career/apply-jobs`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('applyJobs')}
                                     </Link>
                                     <Link
-                                        href={`/${locale}/career/life-at-altama`}
+                                        href={`/new2025/${locale}/career/life-at-altama`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('lifeAtAltama')}
@@ -189,7 +188,7 @@ export default function Header() {
 
                             {/* Contact Us */}
                             <Link
-                                href={`/${locale}/contact-us`}
+                                href={`/new2025/${locale}/contact-us`}
                                 className="relative  inline-block"
                             >
                                 <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
@@ -206,7 +205,7 @@ export default function Header() {
 
                     {/* Logo Altama - DI DEPAN SHAPE */}
                     <Link
-                        href={`/${locale}`}
+                        href={`/new2025/${locale}`}
                         className="absolute left-0 top-0 h-[60px] w-[225px] pointer-events-auto z-10 cursor-pointer inline-block"
                     >
                         <Image
@@ -224,7 +223,7 @@ export default function Header() {
                 <div className="flex items-center justify-between px-4 h-[60px]">
                     {/* Logo */}
                     <Link
-                        href={`/${locale}`}
+                        href={`/new2025/${locale}`}
                         onClick={() => setShowMobileMenu(false)}
                         className="h-[45px] w-1/3  inline-block relative"
                     >
@@ -265,28 +264,28 @@ export default function Header() {
                                 {showMobileProfileSubmenu && (
                                     <div className="bg-gray-50">
                                         <Link
-                                            href={`/${locale}/profile/company-overview`}
+                                            href={`/new2025/${locale}/profile/company-overview`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
                                             {t('companyOverview')}
                                         </Link>
                                         <Link
-                                            href={`/${locale}/profile/awards-certification`}
+                                            href={`/new2025/${locale}/profile/awards-certification`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
                                             {t('awardsAndCertification')}
                                         </Link>
                                         <Link
-                                            href={`/${locale}/profile/board-of-directors`}
+                                            href={`/new2025/${locale}/profile/board-of-directors`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
                                             {t('boardOfDirectors')}
                                         </Link>
                                         <Link
-                                            href={`/${locale}/profile/gallery`}
+                                            href={`/new2025/${locale}/profile/gallery`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
@@ -340,7 +339,7 @@ export default function Header() {
 
                             {/* Media Center */}
                             <Link
-                                href={`/${locale}/media-center`}
+                                href={`/new2025/${locale}/media-center`}
                                 onClick={() => setShowMobileMenu(false)}
                                 className="block w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors font-['Inter'] text-[16px] text-[#353185]"
                             >
@@ -359,14 +358,14 @@ export default function Header() {
                                 {showMobileCareerSubmenu && (
                                     <div className="bg-gray-50">
                                         <Link
-                                            href={`/${locale}/career/apply-jobs`}
+                                            href={`/new2025/${locale}/career/apply-jobs`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
                                             {t('applyJobs')}
                                         </Link>
                                         <Link
-                                            href={`/${locale}/career/life-at-altama`}
+                                            href={`/new2025/${locale}/career/life-at-altama`}
                                             onClick={() => setShowMobileMenu(false)}
                                             className="block w-full text-left px-8 py-2.5 hover:bg-gray-200 transition-colors font-['Inter'] text-[14px] text-gray-700"
                                         >
@@ -378,7 +377,7 @@ export default function Header() {
 
                             {/* Contact Us */}
                             <Link
-                                href={`/${locale}/contact-us`}
+                                href={`/new2025/${locale}/contact-us`}
                                 onClick={() => setShowMobileMenu(false)}
                                 className="block w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors font-['Inter'] text-[16px] text-[#353185]"
                             >

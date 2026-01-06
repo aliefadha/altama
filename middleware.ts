@@ -1,26 +1,43 @@
 import createMiddleware from 'next-intl/middleware';
 import { locales, defaultLocale } from './i18n';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware({
-  // A list of all locales that are supported
+const intlMiddleware = createMiddleware({
   locales,
-
-  // Used when no locale matches
   defaultLocale,
-
-  // Always use a locale prefix for the pathname (e.g., /en/about)
   localePrefix: 'always',
-
-  // Don't use the Accept-Language header to detect the locale
   localeDetection: true,
 });
 
+export default function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+  const url = request.nextUrl.clone();
+
+  if (pathname.startsWith('/new2025')) {
+    const pathWithoutPrefix = pathname.replace('/new2025', '') || '/';
+
+    const urlWithoutPrefix = request.nextUrl.clone();
+    urlWithoutPrefix.pathname = pathWithoutPrefix;
+
+    const modifiedRequest = new Request(urlWithoutPrefix, request);
+
+    const response = intlMiddleware(modifiedRequest);
+
+    if (response.headers.get('location')) {
+      const location = response.headers.get('location')!;
+      url.pathname = '/new2025' + location;
+      return NextResponse.redirect(url);
+    }
+
+    return response;
+  }
+
+  url.pathname = `/new2025/${defaultLocale}${pathname}`;
+  return NextResponse.redirect(url);
+}
+
 export const config = {
-  // Match only internationalized pathnames
   matcher: [
-    // Match all pathnames except for
-    // - … if they start with `/api`, `/_next` or `/_vercel`
-    // - … the ones containing a dot (e.g. `favicon.ico`)
     '/((?!api|_next|_vercel|.*\\..*).*)'
   ],
 };

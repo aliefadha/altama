@@ -14,7 +14,7 @@ export default function CareerSection() {
 
     const locale = useMemo(() => {
         const segments = pathname.split('/');
-        const localeCode = segments[1] as Locale;
+        const localeCode = segments[2] as Locale;
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
 
@@ -94,7 +94,7 @@ export default function CareerSection() {
                             </div>
 
                             <button
-                                onClick={() => router.push('/career/apply-jobs')}
+                                onClick={() => router.push(`/new2025/${locale}/career/apply-jobs`)}
                                 className="flex items-center justify-center gap-2 bg-[#353185] rounded-full px-4 py-2 self-start hover:bg-[#2d2870] transition-colors"
                             >
                                 <span className="text-white text-[14px] lg:text-[16px] font-['Inter'] font-semibold tracking-tight">
@@ -113,7 +113,7 @@ export default function CareerSection() {
                 {/* View All Jobs Button */}
                 <div className="flex justify-center">
                     <button
-                        onClick={() => router.push('/career/apply-jobs')}
+                        onClick={() => router.push(`/new2025/${locale}/career/apply-jobs`)}
                         className="w-full lg:w-auto bg-white text-[#353185] rounded-full px-6 lg:px-6 py-3 lg:py-3 text-[15px] lg:text-[16px] font-['Inter'] font-semibold tracking-tight hover:bg-[#f0f0f0] transition-colors"
                     >
                         {t('viewAllJobs')}

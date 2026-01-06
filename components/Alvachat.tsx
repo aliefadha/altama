@@ -29,7 +29,7 @@ export default function AlvaChat() {
             {/* Chat Button - Sticky di kanan bawah */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[150px] h-[250px] transition-transform duration-300 ${isScrolling ? 'scale-105' : 'hover:scale-105'}`}
+                className={`fixed right-4 bottom-4 md:right-8 md:bottom-8 z-40 w-[120px] md:w-[150px] h-[250px] transition-transform duration-300 ${isScrolling ? 'scale-105' : 'hover:scale-105'}`}
             >
                 <Image
                     fill

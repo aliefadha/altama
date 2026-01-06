@@ -14,7 +14,7 @@ export default function CompanySection() {
 
     const locale = useMemo(() => {
         const segments = pathname.split('/');
-        const localeCode = segments[1] as Locale;
+        const localeCode = segments[2] as Locale;
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
 
@@ -92,7 +92,7 @@ export default function CompanySection() {
                         </div>
 
                         {/* Read More Button */}
-                        <Link href={`/${locale}/profile/company-overview`} className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
+                        <Link href={`/new2025/${locale}/profile/company-overview`} className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 lg:px-5 py-3 lg:py-2.5 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
                             <p className="text-white text-[15px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
                                 {t('readMore')}
                             </p>

@@ -26,7 +26,7 @@ export default function HeroSection() {
 
     const locale = useMemo(() => {
         const segments = pathname.split('/');
-        const localeCode = segments[1] as Locale;
+        const localeCode = segments[2] as Locale;
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
 
