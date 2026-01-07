@@ -1,62 +1,47 @@
 {
-  "hero": {
-    "badge": "WE ARE HIRING",
-    "joinBadge": "JOIN US HERE",
-    "title": "GROW TOGETHER",
-    "subtitle": "Your partner in progress, empowering every step toward Indonesia’s success.",
-    "cta": "Find your dream career now!"
-  },
-  "infoCard": {
-    "text": "Trusted by professionals across Indonesia for quality and reliability."
-  },
-  "jobRoles": {
-    "mechanicStaff": "Mechanic Staff",
-    "coordinatorStaff": "Coordinator Staff",
-    "distributionSupervisor": "Distribution Supervisor"
-  },
-  "testimonials": {
-    "title": "TESTIMONIALS",
-    "subtitle": "What our partners say about Altama",
-    "items": {
-      "1": {
-        "quote": "Working at Altama has been an incredible journey. The company provides great opportunities for growth and the team is very supportive.",
-        "name": "Andi Pratama",
-        "position": "Marketing Manager"
+   "hero": {
+      "badge": "#AltamaGueBanget",
+      "joinBadge": "JOIN US HERE!",
+      "title": "GROW TOGETHER",
+      "subtitle": "Your partner in progress, empowering every step toward Indonesia's success.",
+      "cta": "Express your potential and contribute meaningfully in driving shared succes"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "subtitle": "What our partners say about Altama",
+      "items": {
+       "1": {
+          "quote": "During my time working at PT Altama Surya Anugerah, I have gained many valuable new experiences. I started my career as a Mechanical Staff assigned to a branch Service Center, and now I have been promoted and given the opportunity to participate in the ALeAP program. Through ALeAP, I have gained even more experience and faced various challenges that have trained me to adapt and grow. This journey has prepared me well and made me more confident and ready to take on my new position in the future.",
+          "name": "Wilman Dwi Maulana",
+          "position": "Staff Mekanik"
+        },
+        "2": {
+          "name": "Marvin McKinney",
+          "position": "Louis Vuitton"
+        },
+        "3": {
+          "quote": "For 24 years, I have been part of this company and have witnessed so many journeys, challenges, changes, and achievements. A comfortable work environment, warm and family-oriented colleagues, and a solid team have created many meaningful moments for me. Thank you, Altama.",
+          "name": "Sri Wahyuni",
+          "position": "Supervisor Comben"
+        },
+        "4": {
+          "quote": "Five meaningful years. From the beginning of my career as a Product Development Supervisor to my current role as Section Manager of After Sales Service, I have gained many valuable experiences at Altama. Thank you, Altama, for welcoming me with such a warm sense of family from day one. This is where I learned about professionalism, a strong sense of ownership, integration, and continuous improvement.”",
+          "name": "Risky Fajar Ryanto",
+          "position": "Section Manager After Sales Service"
+        }
       },
-      "2": {
-        "name": "Budi Santoso",
-        "position": "Operations Supervisor"
-      },
-      "3": {
-        "quote": "I've been with Altama for 3 years now. The company culture encourages innovation and values every employee's contribution.",
-        "name": "Dewi Kartika",
-        "position": "HR Manager"
-      },
-      "4": {
-        "quote": "The work-life balance here is excellent. Management truly cares about employee well-being while driving for excellence.",
-        "name": "Eko Prasetyo",
-        "position": "Sales Executive"
-      },
-      "5": {
-        "quote": "Altama has helped me develop my skills and advance my career. The training programs are comprehensive and practical.",
-        "name": "Fitriani Putri",
-        "position": "Finance Staff"
-      },
-      "6": {
-        "quote": "Being part of the Tekiro, RYU, and Rexco distribution network gives us a sense of pride and responsibility.",
-        "name": "Gunawan Wijaya",
-        "position": "Warehouse Manager"
-      },
-      "7": {
-        "quote": "The collaborative environment at Altama makes every workday enjoyable. Teamwork is at the heart of everything we do.",
-        "name": "Hesti Utami",
-        "position": "Customer Service"
-      },
-      "8": {
-        "quote": "I appreciate how the company invests in its people. There are always new challenges and learning opportunities.",
-        "name": "Irwan Kusuma",
-        "position": "Technical Support"
+      "jobRoles": {
+        "mechanicStaff": "Mechanic Staff",
+        "coordinatorStaff": "Coordinator Staff",
+        "distributionSupervisor": "Distribution Supervisor"
       }
-    }
+    },
+    "infoCard": {
+      "text": "Where people grow, collaborate, and make an impact."
+    },
+    "jobRoles": {
+      "mechanicStaff": "Mechanic Staff",
+      "coordinatorStaff": "Coordinator Staff",
+      "distributionSupervisor": "Distribution Supervisor"
   }
 }

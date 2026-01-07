@@ -1,62 +1,34 @@
 {
   "hero": {
-    "badge": "KAMI SEDANG MENCARI",
-    "joinBadge": "GABUNG",
-    "title": "ALTAMA HARI INI!",
-    "subtitle": "Mitra kemajuan Anda, memberdayakan setiap langkah menuju kesuksesan Indonesia.",
-    "cta": "Cari karir impian mu sekarang!"
-  },
-  "infoCard": {
-    "text": "Dipercaya oleh para profesional di seluruh Indonesia karena kualitas dan keandalan."
-  },
-  "jobRoles": {
-    "mechanicStaff": "Staff Mekanik",
-    "coordinatorStaff": "Staff Koordinator",
-    "distributionSupervisor": "Supervisor Distribusi"
-  },
-  "testimonials": {
-    "title": "TESTIMONI",
-    "subtitle": "Apa kata mitra kami tentang bekerja di Altama",
-    "items": {
-      "1": {
-        "quote": "Bekerja di Altama telah menjadi perjalanan yang luar biasa. Perusahaan memberikan peluang besar untuk berkembang dan tim sangat mendukung.",
-        "name": "Andi Pratama",
-        "position": "Manajer Pemasaran"
-      },
-      "2": {
-        "name": "Budi Santoso",
-        "position": "Supervisor Operasional"
-      },
-      "3": {
-        "quote": "Sudah 3 tahun saya bersama Altama. Budaya perusahaan mendorong inovasi dan menghargai kontribusi setiap karyawan.",
-        "name": "Dewi Kartika",
-        "position": "Manajer HR"
-      },
-      "4": {
-        "quote": "Keseimbangan kerja-hidup di sini sangat baik. Manajemen benar-benar peduli dengan kesejahteraan karyawan sambil mendorong keunggulan.",
-        "name": "Eko Prasetyo",
-        "position": "Eksekutif Penjualan"
-      },
-      "5": {
-        "quote": "Altama telah membantu saya mengembangkan keterampilan dan memajukan karir saya. Program pelatihan sangat komprehensif dan praktis.",
-        "name": "Fitriani Putri",
-        "position": "Staf Keuangan"
-      },
-      "6": {
-        "quote": "Menjadi bagian dari jaringan distribusi Tekiro, RYU, dan Rexco memberi kami rasa bangga dan tanggung jawab.",
-        "name": "Gunawan Wijaya",
-        "position": "Manajer Gudang"
-      },
-      "7": {
-        "quote": "Lingkungan kolaboratif di Altama membuat setiap hari kerja menyenangkan. Kerja tim adalah inti dari segala yang kami lakukan.",
-        "name": "Hesti Utami",
-        "position": "Layanan Pelanggan"
-      },
-      "8": {
-        "quote": "Saya menghargai bagaimana perusahaan berinvestasi pada orang-orangnya. Selalu ada tantangan dan peluang pembelajaran baru.",
-        "name": "Irwan Kusuma",
-        "position": "Dukungan Teknis"
+      "badge": "#AltamaGueBanget",
+      "joinBadge": "JOIN US HERE!",
+      "title": "GROW TOGETHER",
+      "subtitle": "Aktualisasikan potensi dirimu dan berikan kontribusi bermakna dalam mendorong keberhasilan bersama.",
+      "cta": "Temukan karir impianmu sekarang!"
+    },
+    "testimonials": {
+      "title": "Testimoni",
+      "subtitle": "Apa yang dikatakan mitra kami tentang Altama",
+      "items": {
+        "1": {
+          "quote": "Selama bekerja di PT. Altama Surya Anugerah banyak pengalaman baru yang saya terima, bermula dari posisi staff mekanik yang ditempatkan di Service Center cabang, hingga saat ini saya mendapat promosi saat ini dan mengikuti kegiatan ALeAP. Semakin banyak lagi pengalaman dan tantangan selama mengikuti kegiatan ALeAP sehingga saya terlatih dan terbiasa mendapat tantangan baru. Jadi saya semakin siap untuk melaksanakan pekerjaan di posisi baru nanti.",
+          "name": "Wilman Dwi Maulana",
+          "position": "Staff Mekanik"
+        },
+        "2": {
+          "name": "Marvin McKinney",
+          "position": "Louis Vuitton"
+        },
+        "3": {
+          "quote": "Selama 24 tahun saya menjadi bagian dari perusahaan ini, saya telah menyaksikan begitu banyak perjalanan, tantangan, perubahan, hingga pencapaian. Lingkungan yang nyaman, rekan kerja yang hangat dan kekeluargaan, serta tim yang solid memberikan momen berharga untuk saya. Terima Kasih Altama.",
+          "name": "Sri Wahyuni",
+          "position": "Supervisor Comben"
+        },
+        "4": {
+          "quote": "5 tahun yang penuh makna. Dari awal karir saya di posisi Supervisor Product Development hingga sekarang sebagai Section Manager After Sales Service banyak sekali pengalaman-pengalaman berharga yang saya dapatkan di Altama. Terima kasih Altama telah menyambut saya dengan rasa kekeluargaan yang begitu hangat sejak hari pertama. Di sinilah saya belajar tentang Profesional, Rasa memiliki, integrasi, dan perbaikan terus menerus",
+          "name": "Risky Fajar Ryanto",
+          "position": "Section Manager After Sales Service"
+        }
       }
-    }
   }
 }
