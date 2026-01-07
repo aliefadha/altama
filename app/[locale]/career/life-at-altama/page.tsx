@@ -192,7 +192,7 @@ export default function LifeAtAltamaPage() {
                     {/* Testimonials Carousel */}
                     <div className="flex gap-[16px] md:gap-[20px] lg:gap-[40px] overflow-x-auto pb-[20px] snap-x snap-mandatory" style={{ scrollbarWidth: 'none', WebkitScrollbar: 'none' } as React.CSSProperties} ref={scrollContainerRef}>
                         {/* Testimonial 1 - Card */}
-                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] snap-start">
+                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[500px] h-[280px] md:h-[320px] snap-start">
                             <div className="flex flex-col gap-[16px]">
                                 {/* Stars */}
                                 <div className="flex gap-[6px] items-center">
@@ -206,7 +206,7 @@ export default function LifeAtAltamaPage() {
                                 </div>
 
                                 {/* Quote */}
-                                <p className="font-inter text-[18px] leading-[1.4] text-[#414141] tracking-[-0.72px]">
+                                <p className="font-inter text-[16px] leading-[1.4] text-[#414141] tracking-[-0.64px]">
                                     {t('testimonials.items.1.quote')}
                                 </p>
 
@@ -250,7 +250,7 @@ export default function LifeAtAltamaPage() {
                         </div>
 
                         {/* Testimonial 3 - Card */}
-                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] snap-start">
+                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] h-[280px] md:h-[320px] snap-start">
                             <div className="flex flex-col gap-[16px]">
                                 {/* Stars */}
                                 <div className="flex gap-[6px] items-center">
@@ -264,7 +264,7 @@ export default function LifeAtAltamaPage() {
                                 </div>
 
                                 {/* Quote */}
-                                <p className="font-inter text-[18px] leading-[1.4] text-[#414141] tracking-[-0.72px]">
+                                <p className="font-inter text-[16px] leading-[1.4] text-[#414141] tracking-[-0.64px]">
                                     {t('testimonials.items.3.quote')}
                                 </p>
 
@@ -283,7 +283,7 @@ export default function LifeAtAltamaPage() {
                         </div>
 
                         {/* Testimonial 4 - Card */}
-                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] snap-start">
+                        <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] h-[280px] md:h-[320px] snap-start">
                             <div className="flex flex-col gap-[16px]">
                                 {/* Stars */}
                                 <div className="flex gap-[6px] items-center">
@@ -297,7 +297,7 @@ export default function LifeAtAltamaPage() {
                                 </div>
 
                                 {/* Quote */}
-                                <p className="font-inter text-[18px] leading-[1.4] text-[#414141] tracking-[-0.72px]">
+                                <p className="font-inter text-[16px] leading-[1.4] text-[#414141] tracking-[-0.64px]">
                                     {t('testimonials.items.4.quote')}
                                 </p>
 
