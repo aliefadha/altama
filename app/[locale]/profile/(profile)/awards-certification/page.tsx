@@ -154,7 +154,7 @@ export default function AwardsCertificationPage() {
                         {/* Cards Container */}
                         <div className="flex lg:flex-row flex-col gap-4 lg:gap-6 items-stretch justify-center w-full mb-8 lg:mb-12">
                             {/* Card 1 - Award Recognition */}
-                            <div className="h-[260px] lg:h-[280px] overflow-clip rounded-2xl lg:rounded-[24px] w-full lg:w-[532px]" style={{ backgroundImage: "linear-gradient(46.1211deg, rgb(53, 49, 133) 0%, rgb(96, 91, 195) 99.91%)" }}>
+                            <div className=" overflow-clip rounded-2xl lg:rounded-[24px] w-full lg:w-[532px]" style={{ backgroundImage: "linear-gradient(46.1211deg, rgb(53, 49, 133) 0%, rgb(96, 91, 195) 99.91%)" }}>
                                 <div className="relative h-full w-full px-6 lg:px-8 py-6 lg:py-6 flex flex-col">
                                     {/* Icon */}
                                     <div className="relative w-10 h-10 mb-4 flex-shrink-0">
@@ -179,7 +179,7 @@ export default function AwardsCertificationPage() {
                             </div>
 
                             {/* Card 2 - International Standard */}
-                            <div className="bg-[rgba(53,49,133,0.12)] h-[260px] lg:h-[280px] overflow-clip rounded-2xl lg:rounded-[24px] w-full lg:w-[532px]">
+                            <div className="bg-[rgba(53,49,133,0.12)] overflow-clip rounded-2xl lg:rounded-[24px] w-full lg:w-[532px]">
                                 <div className="relative h-full w-full px-6 lg:px-8 py-6 lg:py-6 flex flex-col">
                                     {/* Icon */}
                                     <div className="relative w-10 h-10 mb-4 flex-shrink-0">

@@ -44,7 +44,7 @@ export default function CompanyOverviewPage() {
     const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
     const [currentMilestoneIndex, setCurrentMilestoneIndex] = useState(0);
 
-    const milestoneYears = [2011, 2015, 2018, 2020, 2023];
+    const milestoneYears = [1997, 1998, 2001, 2006, 2011, 2013, 2018, 2019, 2021];
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -178,47 +178,61 @@ export default function CompanyOverviewPage() {
                             </div>
                             <p className={`font-inter text-[#353185] text-[20px] leading-[125%] tracking-[-4%]`} dangerouslySetInnerHTML={{ __html: t.raw('mission.items.3') }}></p>
                         </div>
+                        <div className="flex gap-6">
+                            <div className="">
+                                <TrendingUp color="white" size={32} className="bg-[#353185] p-1 rounded-md" />
+                            </div>
+                            <p className={`font-inter text-[#353185] text-[20px] leading-[125%] tracking-[-4%]`} dangerouslySetInnerHTML={{ __html: t.raw('mission.items.4') }}></p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="py-10 lg:py-24 w-full">
-                <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-10">
+                <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-10">
                     <div>
                         <h1 className={`font-league-spartan text-[#121212] text-[50px] font-bold`}>{t('coreValues.core')} <span className="text-[#353185]">{t('coreValues.values')}</span></h1>
                     </div>
-                    <div className="flex flex-col lg:flex-row gap-[24px] px-2">
+                    <div className="flex flex-col lg:flex-row gap-[24px] ">
                         {/* Integrity Card */}
                         <div className=" flex-1 bg-white rounded-[12px] border border-[rgba(96,91,195,0.24)] px-4 py-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-gradient-to-b hover:from-[#353185] hover:to-[#605BC3] hover:border-transparent group">
-                            <h3 className={`font-inter font-semibold text-[30px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
+                            <h3 className={`font-inter font-semibold text-[24px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
                                 {t('coreValues.integrity.title')}
                             </h3>
-                            <p className={`font-inter font-normal text-[20px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
+                            <p className={`font-inter font-normal text-[18px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
                                 {t('coreValues.integrity.description')}
                             </p>
                         </div>
                         <div className=" flex-1 bg-white rounded-[12px] border border-[rgba(96,91,195,0.24)] px-4 py-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-gradient-to-b hover:from-[#353185] hover:to-[#605BC3] hover:border-transparent group">
-                            <h3 className={`font-inter font-semibold text-[30px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
+                            <h3 className={`font-inter font-semibold text-[24px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
                                 {t('coreValues.innovation.title')}
                             </h3>
-                            <p className={`font-inter font-normal text-[20px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
+                            <p className={`font-inter font-normal text-[18px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
                                 {t('coreValues.innovation.description')}
                             </p>
                         </div>
                         <div className=" flex-1 bg-white rounded-[12px] border border-[rgba(96,91,195,0.24)] px-4 py-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-gradient-to-b hover:from-[#353185] hover:to-[#605BC3] hover:border-transparent group">
-                            <h3 className={`font-inter font-semibold text-[30px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
+                            <h3 className={`font-inter font-semibold text-[24px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
                                 {t('coreValues.collaboration.title')}
                             </h3>
-                            <p className={`font-inter font-normal text-[20px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
+                            <p className={`font-inter font-normal text-[18px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
                                 {t('coreValues.collaboration.description')}
                             </p>
                         </div>
                         <div className=" flex-1 bg-white rounded-[12px] border border-[rgba(96,91,195,0.24)] px-4 py-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-gradient-to-b hover:from-[#353185] hover:to-[#605BC3] hover:border-transparent group">
-                            <h3 className={`font-inter font-semibold text-[30px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
+                            <h3 className={`font-inter font-semibold text-[24px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
                                 {t('coreValues.customerFocus.title')}
                             </h3>
-                            <p className={`font-inter font-normal text-[20px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
+                            <p className={`font-inter font-normal text-[18px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
                                 {t('coreValues.customerFocus.description')}
+                            </p>
+                        </div>
+                         <div className=" flex-1 bg-white rounded-[12px] border border-[rgba(96,91,195,0.24)] px-4 py-6 flex flex-col items-center text-center transition-all duration-300 hover:bg-gradient-to-b hover:from-[#353185] hover:to-[#605BC3] hover:border-transparent group">
+                            <h3 className={`font-inter font-semibold text-[24px] leading-[1.251] tracking-[-1.28px] text-[#353185] mb-[16px] group-hover:text-white transition-colors duration-300`}>
+                                {t('coreValues.continousImprovement.title')}
+                            </h3>
+                            <p className={`font-inter font-normal text-[18px] leading-[103.33%] tracking-[-0.96px] text-[#414141] group-hover:text-white/70 transition-colors duration-300`}>
+                                {t('coreValues.continousImprovement.description')}
                             </p>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ export default function LanguageSelector() {
 
   const locale = useMemo(() => {
     const segments = pathname.split('/');
-    const localeCode = segments[2] as Locale;
+    const localeCode = segments[1] as Locale;
     return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
   }, [pathname]);
 
@@ -30,7 +30,7 @@ export default function LanguageSelector() {
   const switchLocale = (newLocale: Locale) => {
     startTransition(() => {
       const segments = pathname.split('/');
-      segments[2] = newLocale;
+      segments[1] = newLocale;
       const newPathname = segments.join('/');
       router.push(newPathname);
     });

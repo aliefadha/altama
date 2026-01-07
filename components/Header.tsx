@@ -207,13 +207,13 @@ export default function Header() {
                     {/* Logo Altama - DI DEPAN SHAPE */}
                     <Link
                         href={`/${locale}`}
-                        className="absolute left-0 top-0 h-[60px] w-[210px] pointer-events-auto z-10 cursor-pointer inline-block"
+                        className="absolute left-0 top-0 h-[60px] w-[225px] pointer-events-auto z-10 cursor-pointer inline-block"
                     >
                         <Image
                             alt="PT Altama Surya Anugerah"
                             fill
                             className="object-cover drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
-                            src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.webp"
+                            src="/images/navbar_bg.webp"
                         />
                     </Link>
                 </div>

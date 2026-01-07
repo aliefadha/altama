@@ -3,10 +3,10 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
-import "@/app/globals.css";
+import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { inter } from "@/app/font";
+import { inter } from "../font";
 import LocaleLayoutClient from "./layout-client";
 
 export const metadata: Metadata = {
