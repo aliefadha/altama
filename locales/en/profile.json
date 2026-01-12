@@ -150,7 +150,8 @@
       "title": "Insights, Innovation, and Progress",
       "subtitle": "Find the best solutions for your technical, automotive, and industrial needs."
     },
-    "exploreNews": "Explore News"
+    "exploreNews": "Explore News",
+    "noGalleryItems": "No gallery items available"
   },
   "lifeAtAltama": {
     "hero": {
@@ -251,4 +252,5 @@
     "readMore": "Read More",
     "noArticles": "No articles found"
   }
+}
 }

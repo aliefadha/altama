@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { inter } from "../font";
 import LocaleLayoutClient from "./layout-client";
+import QueryProvider from "@/components/QueryProvider";
 
 export const metadata: Metadata = {
   title: "Altama Surya Anugerah",
@@ -40,13 +41,15 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${inter.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <div className="w-full h-full">
-            <LocaleLayoutClient>
-              {children}
-            </LocaleLayoutClient>
-          </div>
-          <Footer />
+          <QueryProvider>
+            <Header />
+            <div className="w-full h-full">
+              <LocaleLayoutClient>
+                {children}
+              </LocaleLayoutClient>
+            </div>
+            <Footer />
+          </QueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>
