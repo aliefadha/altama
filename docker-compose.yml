@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: altama-app
+    ports:
+      - "3003:3003"
+    environment:
+      - NODE_ENV=production
+      - PORT=3003
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - altama-network
+
+networks:
+  altama-network:
+    driver: bridge
