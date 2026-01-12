@@ -1,28 +1,32 @@
 "use client"
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
+type Job = {
+    id: string;
+    title: string;
+    overview: string;
+    link: string;
+};
 
 export default function ApplyJobsPage() {
-    const router = useRouter();
-    const jobs = [
-        {
-            title: "Modern Market Coordinator Staff",
-            description: "Bertanggung jawab mengembangkan relasi modern market",
-        },
-        {
-            title: "Mechanic Staff",
-            description: "Melakukan perawatan, pemeriksaan, serta perbaikan alat",
-        },
-        {
-            title: "Modern Market Coordinator Staff",
-            description: "Mengelola penjualan dan display produk di jaringan modern",
-        },
-        {
-            title: "Distribution Supervisor",
-            description: "Mengawasi proses distribusi, mengelola tim logistik",
-        },
-    ];
+    const [jobs, setJobs] = useState<Job[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3055"}/career`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.success) {
+                    setJobs(data.data);
+                } else {
+                    setError(data.message || "Failed to load jobs");
+                }
+            })
+            .catch(() => setError("Failed to load jobs"))
+            .finally(() => setLoading(false));
+    }, []);
 
     return (
         <>
@@ -70,7 +74,13 @@ export default function ApplyJobsPage() {
 
                     {/* Job Cards Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-8 lg:mb-12 max-w-full  mx-auto">
-                        {jobs.map((job, index) => (
+                        {loading ? (
+                            <p className="col-span-3 text-white text-center">Loading...</p>
+                        ) : error ? (
+                            <p className="col-span-3 text-white text-center">{error}</p>
+                        ) : jobs.length === 0 ? (
+                            <p className="col-span-3 text-white text-center">No jobs available</p>
+                        ) : jobs.map((job, index) => (
                             <div key={index} className="bg-white rounded-2xl lg:rounded-[20px] p-4 flex flex-col lg:justify-between">
                                 <div className="flex flex-col justify-between gap-4">
                                     <div className="space-y-2">
@@ -78,11 +88,13 @@ export default function ApplyJobsPage() {
                                             {job.title}
                                         </h3>
                                         <p className="text-[#414141] text-[13px] lg:text-[13px] font-inter leading-relaxed tracking-tight opacity-75">
-                                            {job.description}
+                                            {job.overview}
                                         </p>
                                     </div>
-                                    <button
-                                        onClick={() => router.push('/career/job-detail')}
+                                    <a
+                                        href={job.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="w-full lg:w-auto flex items-center justify-center gap-2 bg-[#353185] rounded-full px-5 py-2.5 self-start hover:bg-[#2d2870] transition-colors"
                                     >
                                         <span className="text-white text-[14px] lg:text-[16px] font-inter font-semibold tracking-tight">
@@ -93,10 +105,10 @@ export default function ApplyJobsPage() {
                                                 <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                             </svg>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
-                            </div>
-                        ))}
+                             </div>
+                         ))}
                     </div>
 
                     {/* View All Jobs Button */}
