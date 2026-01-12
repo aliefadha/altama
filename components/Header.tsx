@@ -173,16 +173,16 @@ export default function Header() {
                                 {/* Dropdown Menu */}
                                 <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                                     <Link
-                                        href={`/${locale}/career/apply-jobs`}
-                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
-                                    >
-                                        {t('applyJobs')}
-                                    </Link>
-                                    <Link
                                         href={`/${locale}/career/life-at-altama`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('lifeAtAltama')}
+                                    </Link>
+                                    <Link
+                                        href={`/${locale}/career/apply-jobs`}
+                                        className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
+                                    >
+                                        {t('applyJobs')}
                                     </Link>
                                 </div>
                             </div>
