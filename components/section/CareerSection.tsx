@@ -4,6 +4,8 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from 'next-intl';
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { fetchJobs, JobItem } from "@/lib/career";
 
 type Locale = 'en' | 'id';
 
@@ -18,24 +20,10 @@ export default function CareerSection() {
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
 
-    const jobs = [
-        {
-            title: "Modern Market Coordinator Staff",
-            description: "Bertanggung jawab mengembangkan relasi modern market",
-        },
-        {
-            title: "Mechanic Staff",
-            description: "Melakukan perawatan, pemeriksaan, serta perbaikan alat",
-        },
-        {
-            title: "Modern Market Coordinator Staff",
-            description: "Mengelola penjualan dan display produk di jaringan modern",
-        },
-        {
-            title: "Distribution Supervisor",
-            description: "Mengawasi proses distribusi, mengelola tim logistik",
-        },
-    ];
+    const { data: jobs = [], isLoading, error } = useQuery({
+        queryKey: ['jobs'],
+        queryFn: fetchJobs,
+    });
 
     return (
         <div className="relative w-full bg-gradient-to-b from-[#353185] via-[#605bc3] via-[52.404%] to-[#353185] py-10 lg:py-16 overflow-hidden">
@@ -82,19 +70,27 @@ export default function CareerSection() {
 
                 {/* Job Cards Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-x-[40px] lg:gap-y-[16px] mb-6 lg:mb-12 max-w-full lg:max-w-[900px] mx-auto">
-                    {jobs.map((job, index) => (
+                    {isLoading ? (
+                        <p className="col-span-2 text-white text-center">Loading...</p>
+                    ) : error ? (
+                        <p className="col-span-2 text-white text-center">Failed to load jobs</p>
+                    ) : jobs.length === 0 ? (
+                        <p className="col-span-2 text-white text-center">No jobs available</p>
+                    ) : jobs.map((job, index) => (
                         <div key={index} className="bg-white rounded-2xl lg:rounded-[20px] p-4 lg:p-4 flex flex-col gap-3 lg:h-[140px] lg:justify-between">
                             <div>
                                 <h3 className="text-[#121212] text-[15px] lg:text-[16px] font-['Inter'] font-semibold leading-tight tracking-tight mb-1.5 lg:mb-2">
                                     {job.title}
                                 </h3>
                                 <p className="text-[#414141] text-[13px] lg:text-[13px] font-['Inter'] leading-relaxed tracking-tight opacity-75">
-                                    {job.description}
+                                    {job.overview}
                                 </p>
                             </div>
 
-                            <button
-                                onClick={() => router.push(`/new2025/${locale}/career/apply-jobs`)}
+                            <a
+                                href={job.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 bg-[#353185] rounded-full px-4 py-2 self-start hover:bg-[#2d2870] transition-colors"
                             >
                                 <span className="text-white text-[14px] lg:text-[16px] font-['Inter'] font-semibold tracking-tight">
@@ -105,7 +101,7 @@ export default function CareerSection() {
                                         <path d="M17 14L12 9L7 14" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                                     </svg>
                                 </div>
-                            </button>
+                            </a>
                         </div>
                     ))}
                 </div>
@@ -113,7 +109,7 @@ export default function CareerSection() {
                 {/* View All Jobs Button */}
                 <div className="flex justify-center">
                     <button
-                        onClick={() => router.push(`/new2025/${locale}/career/apply-jobs`)}
+                        onClick={() => router.push(`/${locale}/career/apply-jobs`)}
                         className="w-full lg:w-auto bg-white text-[#353185] rounded-full px-6 lg:px-6 py-3 lg:py-3 text-[15px] lg:text-[16px] font-['Inter'] font-semibold tracking-tight hover:bg-[#f0f0f0] transition-colors"
                     >
                         {t('viewAllJobs')}

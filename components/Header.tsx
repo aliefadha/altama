@@ -25,6 +25,9 @@ export default function Header() {
     const [showMobileProfileSubmenu, setShowMobileProfileSubmenu] = useState(false);
     const [showMobileBrandSubmenu, setShowMobileBrandSubmenu] = useState(false);
     const [showMobileCareerSubmenu, setShowMobileCareerSubmenu] = useState(false);
+    const [showProfileDropdown, setShowProfileDropdown] = useState(false);
+    const [showBrandDropdown, setShowBrandDropdown] = useState(false);
+    const [showCareerDropdown, setShowCareerDropdown] = useState(false);
 
     return (
         <>
@@ -47,8 +50,13 @@ export default function Header() {
                         <div className="relative h-full flex items-center justify-start gap-12 pl-[115px]">
                             {/* Profile with dropdown */}
                             <div className="relative group">
-                                <div
-                                    className="relative  flex items-center gap-2"
+                                <button
+                                    onClick={() => {
+                                        setShowProfileDropdown(!showProfileDropdown);
+                                        setShowBrandDropdown(false);
+                                        setShowCareerDropdown(false);
+                                    }}
+                                    className="relative flex items-center gap-2 cursor-pointer"
                                 >
                                     <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         {t('profile')}
@@ -62,10 +70,10 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </div>
+                                </button>
 
                                 {/* Dropdown Menu */}
-                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <div className={`absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${showProfileDropdown || 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
                                     <Link
                                         href={`/${locale}/profile/company-overview`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
@@ -95,8 +103,13 @@ export default function Header() {
 
                             {/* Brand with dropdown */}
                             <div className="relative group">
-                                <div
-                                    className="relative  flex items-center gap-2"
+                                <button
+                                    onClick={() => {
+                                        setShowBrandDropdown(!showBrandDropdown);
+                                        setShowProfileDropdown(false);
+                                        setShowCareerDropdown(false);
+                                    }}
+                                    className="relative flex items-center gap-2 cursor-pointer"
                                 >
                                     <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         {t('brand')}
@@ -110,10 +123,10 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </div>
+                                </button>
 
                                 {/* Dropdown Menu */}
-                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <div className={`absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${showBrandDropdown || 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
                                     <a
                                         href="https://tekiro.com/"
                                         target="_blank"
@@ -153,8 +166,13 @@ export default function Header() {
 
                             {/* Career with dropdown */}
                             <div className="relative group">
-                                <div
-                                    className="relative  flex items-center gap-2"
+                                <button
+                                    onClick={() => {
+                                        setShowCareerDropdown(!showCareerDropdown);
+                                        setShowProfileDropdown(false);
+                                        setShowBrandDropdown(false);
+                                    }}
+                                    className="relative flex items-center gap-2 cursor-pointer"
                                 >
                                     <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
                                         {t('career')}
@@ -168,10 +186,10 @@ export default function Header() {
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
                                     </div>
-                                </div>
+                                </button>
 
                                 {/* Dropdown Menu */}
-                                <div className="absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <div className={`absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${showCareerDropdown || 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
                                     <Link
                                         href={`/${locale}/career/life-at-altama`}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"

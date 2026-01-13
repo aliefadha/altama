@@ -1,12 +1,16 @@
 "use client"
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
+import { useRouter } from "next/navigation";
+
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 
 type Locale = 'en' | 'id';
 
 export default function BrandSection() {
+    const router = useRouter();
+
     const pathname = usePathname();
     const t = useTranslations('brandSection');
 
@@ -15,6 +19,8 @@ export default function BrandSection() {
         const localeCode = segments[2] as Locale;
         return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
     }, [pathname]);
+
+
     return (
         <div className="relative w-full bg-white py-10 pb-24 lg:py-12 lg:pb-32 overflow-hidden">
             {/* Top Section: Our Brand */}
@@ -118,7 +124,10 @@ export default function BrandSection() {
                         </div>
 
                         {/* Read More Button */}
-                        <button className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
+
+                        <button                       
+              onClick={() => router.push(`/${locale}/profile/awards-certification`)}
+              className="w-full lg:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-[#353185] rounded-full hover:bg-[#2a2667] transition-colors">
                             <p className="text-white text-[15px] lg:text-[18px] font-['Inter'] font-semibold tracking-tight">
                                 Read More
                             </p>

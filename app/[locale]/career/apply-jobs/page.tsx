@@ -1,32 +1,13 @@
 "use client"
 import Image from "next/image";
-import { useEffect, useState } from "react";
-
-type Job = {
-    id: string;
-    title: string;
-    overview: string;
-    link: string;
-};
+import { useQuery } from "@tanstack/react-query";
+import { fetchJobs, JobItem } from "@/lib/career";
 
 export default function ApplyJobsPage() {
-    const [jobs, setJobs] = useState<Job[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3055"}/career`)
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.success) {
-                    setJobs(data.data);
-                } else {
-                    setError(data.message || "Failed to load jobs");
-                }
-            })
-            .catch(() => setError("Failed to load jobs"))
-            .finally(() => setLoading(false));
-    }, []);
+    const { data: jobs = [], isLoading, error } = useQuery({
+        queryKey: ['jobs'],
+        queryFn: fetchJobs,
+    });
 
     return (
         <>
@@ -74,10 +55,10 @@ export default function ApplyJobsPage() {
 
                     {/* Job Cards Grid */}
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 mb-8 lg:mb-12 max-w-full  mx-auto">
-                        {loading ? (
+                        {isLoading ? (
                             <p className="col-span-3 text-white text-center">Loading...</p>
                         ) : error ? (
-                            <p className="col-span-3 text-white text-center">{error}</p>
+                            <p className="col-span-3 text-white text-center">Failed to load jobs</p>
                         ) : jobs.length === 0 ? (
                             <p className="col-span-3 text-white text-center">No jobs available</p>
                         ) : jobs.map((job, index) => (
