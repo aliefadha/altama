@@ -14,6 +14,8 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
+    CarouselPrevious,
+    CarouselNext,
 } from "@/components/ui/carousel"
 
 type CarouselApi = {
@@ -294,11 +296,13 @@ export default function CompanyOverviewPage() {
                                         </CarouselItem>
                                     ))}
                                 </CarouselContent>
+                                <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-white/10 hover:bg-white/20 border-white/30 text-white size-12" />
+                                <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-white/10 hover:bg-white/20 border-white/30 text-white size-12" />
                             </Carousel>
 
                             {/* Dots Navigation */}
                             <div className="flex justify-center gap-3 mt-6">
-                                {milestoneYears.map((_, index) => (
+                                {Array.from({ length: milestoneYears.length - 2 }).map((_, index) => (
                                     <button
                                         key={index}
                                         onClick={() => {
