@@ -339,7 +339,7 @@ export default function CompanyOverviewPage() {
                     </button>
 
                     {/* Next Button */}
-                    <Link href={`/new2025/${locale}/profile/awards-certification`} className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
+                    <Link href={`/${locale}/profile/awards-certification`} className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
                         <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
                             {t('navigation.next')}
                         </p>
