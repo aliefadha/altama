@@ -32,6 +32,7 @@ export default function CompanySection() {
                                 alt="PT Altama Surya Anugerah"
                                 className="w-full h-full object-cover"
                                 fill
+                                sizes="100vw"
                                 src="/images/65a062ebe15f383953d6a1988ebb49073df36349.webp"
                             />
                         </div>

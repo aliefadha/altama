@@ -4,10 +4,21 @@ import { inter } from "@/app/font";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from 'next-intl';
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
+
+type Locale = 'en' | 'id';
 
 export default function BoardOfDirectorsPage() {
+  const pathname = usePathname();
   const t = useTranslations('boardOfDirectors');
   const tNav = useTranslations('companyOverview.navigation');
+
+  const locale = useMemo(() => {
+    const segments = pathname.split('/');
+    const localeCode = segments[2] as Locale;
+    return (localeCode === 'en' || localeCode === 'id') ? localeCode : 'en';
+  }, [pathname]);
   return (
     <>
       <div className="relative w-full h-screen overflow-hidden">
@@ -242,9 +253,9 @@ export default function BoardOfDirectorsPage() {
         <div className="relative max-w-[1440px] mx-auto px-5 lg:px-[80px] pb-12 lg:pb-[80px] z-10">
           <div className="flex gap-3 lg:gap-6 items-center justify-center">
             {/* Back Button */}
-            <Link href="/profile/awards-certification" className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full border-2 border-[#353185] bg-transparent hover:bg-[#353185] transition-all duration-300 group">
-              <div className="relative w-4 h-4">
-                <svg className="block size-full rotate-[90deg] scale-y-[-100%]" fill="none" viewBox="0 0 24 24">
+            <Link href={`/${locale}/profile/awards-certification`} className="flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full border-2 border-[#353185] bg-transparent hover:bg-[#353185] transition-all duration-300 group">
+              <div className="size-4 lg:size-5 flex items-center justify-center rotate-[90deg] scale-y-[-100%]">
+                <svg className="block size-full" fill="none" viewBox="0 0 24 24">
                   <path d="M17 14L12 9L7 14" className="stroke-[#353185] group-hover:stroke-white transition-colors duration-300" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
                 </svg>
               </div>
@@ -253,7 +264,8 @@ export default function BoardOfDirectorsPage() {
               </p>
             </Link>
 
-            <Link href="/profile/gallery" className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-3 rounded-full hover:bg-[#605bc3] transition-colors">
+            {/* Next Button */}
+            <Link href={`/${locale}/profile/gallery`} className="bg-[#353185] flex gap-2 items-center justify-center px-5 lg:px-6 py-2.5 lg:py-2.5 rounded-full hover:bg-[#605bc3] transition-colors">
               <p className="font-inter font-semibold text-[14px] lg:text-[16px] text-white tracking-tight">
                 {tNav('next')}
               </p>

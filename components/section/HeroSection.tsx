@@ -10,7 +10,8 @@ type Locale = 'en' | 'id';
 
 const leagueSpartan = League_Spartan({
     variable: "--font-league_spartan",
-    subsets: ["latin"]
+    subsets: ["latin"],
+    display: "swap",
 })
 
 const backgroundImages = [
@@ -53,6 +54,7 @@ export default function HeroSection() {
                         <Image
                             alt={`hero-bg-${index}`}
                             fill
+                            sizes="100vw"
                             className="w-full h-full object-cover"
                             src={src}
                             priority={index === 0}
@@ -81,7 +83,7 @@ export default function HeroSection() {
                             rel="noopener noreferrer"
                             className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
                         >
-                            <Image width={150} height={40} alt="Tekiro" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
+                            <Image width={150} height={40} alt="Tekiro" sizes="100px" className="max-w-full max-h-full object-cover" src="/images/tekiroo.webp" />
                         </a>
                         {/* Rexco */}
                         <a
@@ -90,7 +92,7 @@ export default function HeroSection() {
                             rel="noopener noreferrer"
                             className="w-full max-w-[70px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-1 hover:shadow-lg transition-shadow relative z-10"
                         >
-                            <Image width={150} height={40} alt="Rexco" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
+                            <Image width={150} height={40} alt="Rexco" sizes="100px" className="max-w-full max-h-full object-cover" src="/images/rexco-white.webp" />
                         </a>
 
                         {/* RYU */}
@@ -100,7 +102,7 @@ export default function HeroSection() {
                             rel="noopener noreferrer"
                             className="w-full max-w-[90px] sm:max-w-[100px] h-[40px] sm:h-[50px] bg-gradient-to-b from-[#9795BD] to-[#5E5AA8] rounded-md flex items-center justify-center px-2 py-2 hover:shadow-lg transition-shadow relative z-10"
                         >
-                            <Image width={250} height={40} alt="RYU" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
+                            <Image width={250} height={40} alt="RYU" sizes="100px" className="max-w-full max-h-full object-cover" src="/images/ryu.webp" />
                         </a>
                     </div>
                 </div>

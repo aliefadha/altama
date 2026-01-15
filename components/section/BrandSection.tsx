@@ -42,6 +42,7 @@ export default function BrandSection() {
                         <Image
                             fill
                             alt="left decoration"
+                            sizes="220px"
                             className="w-full h-full object-contain"
                             src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.webp"
                         />
@@ -54,7 +55,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center px-6 py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={250} height={80} alt="Rexco" className="max-w-full max-h-full object-contain" src="/images/tekiroo.webp" />
+                        <Image width={250} height={80} alt="Rexco" sizes="250px" className="max-w-full max-h-full object-contain" src="/images/tekiroo.webp" />
                     </a>
 
                     {/* RYU */}
@@ -64,7 +65,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={240} height={80} alt="RYU" className="max-w-full max-h-full object-contain" src="/images/ryu.webp" />
+                        <Image width={240} height={80} alt="RYU" sizes="250px" className="max-w-full max-h-full object-contain" src="/images/ryu.webp" />
                     </a>
 
                     {/* Rexco */}
@@ -74,7 +75,7 @@ export default function BrandSection() {
                         rel="noopener noreferrer"
                         className="w-full max-w-[150px] lg:max-w-[250px] h-[60px] lg:h-[80px] bg-[#f1f0fa] border border-[rgba(53,49,133,0.42)] rounded-2xl flex items-center justify-center py-3 hover:shadow-lg transition-shadow relative z-10"
                     >
-                        <Image width={450} height={85} alt="Tekiro" className="max-w-full max-h-full object-contain" src="/images/rexcoo.webp" />
+                        <Image width={450} height={85} alt="Tekiro" sizes="450px" className="max-w-full max-h-full object-contain" src="/images/rexcoo.webp" />
                     </a>
 
                     {/* Right Decorative Element */}
@@ -82,6 +83,7 @@ export default function BrandSection() {
                         <Image
                             fill
                             alt=""
+                            sizes="220px"
                             className="w-full h-full object-contain"
                             src="/images/e7afaee15ca51803cd3113d30286e40abfdf9c69.webp"
                         />
@@ -145,6 +147,7 @@ export default function BrandSection() {
                             <Image
                                 fill
                                 alt="Awards"
+                                sizes="480px"
                                 className="w-full h-full object-cover"
                                 src="/images/1db5c4c5bdf0a4ba8223ceec75456d821b779bb7.webp"
                             />
@@ -156,12 +159,13 @@ export default function BrandSection() {
 
             {/* Bottom Yellow Wave */}
             <div className="absolute bottom-0 left-0 right-0 h-[10px] lg:h-[20px] xl:h-[40px] overflow-hidden">
-                <Image
-                    fill
-                    alt=""
-                    className="w-full object-top object-cover"
-                    src="/images/yellow-gif.gif"
-                />
+                    <Image
+                        fill
+                        alt=""
+                        sizes="100vw"
+                        className="w-full object-top object-cover"
+                        src="/images/yellow-gif.gif"
+                    />
             </div>
         </div>
     );

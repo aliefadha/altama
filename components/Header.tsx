@@ -7,6 +7,8 @@ import { helvetica } from "@/app/font";
 import { usePathname } from "next/navigation";
 import { useTranslations } from 'next-intl';
 import LanguageSelector from "./LanguageSelector";
+import { prefetchJobs } from "@/lib/career";
+import { prefetchArticles } from "@/lib/media-center";
 
 type Locale = 'en' | 'id';
 
@@ -41,6 +43,7 @@ export default function Header() {
                             <Image
                                 alt=""
                                 fill
+                                sizes="920px"
                                 className="object-cover drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
                                 src="/images/51ec67f38194adafbc5f7e34488fce14dd2fa9d6.webp"
                             />
@@ -66,6 +69,7 @@ export default function Header() {
                                             alt=""
                                             width={10}
                                             height={14}
+                                            sizes="10px"
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -119,6 +123,7 @@ export default function Header() {
                                             alt=""
                                             width={10}
                                             height={14}
+                                            sizes="10px"
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -157,6 +162,7 @@ export default function Header() {
                             {/* Media Center */}
                             <Link
                                 href={`/${locale}/media-center`}
+                                onMouseEnter={() => prefetchArticles()}
                                 className="relative  flex"
                             >
                                 <h1 className="font-helvetica text-[#353183] text-[20px] font-extrabold">
@@ -182,6 +188,7 @@ export default function Header() {
                                             alt=""
                                             width={10}
                                             height={14}
+                                            sizes="10px"
                                             className="object-contain"
                                             src="/images/fb81f43cff3df970de258b28cf282e68648f0d44.webp"
                                         />
@@ -192,12 +199,14 @@ export default function Header() {
                                 <div className={`absolute top-[35px] left-0 w-[240px] bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50 transition-all duration-200 ${showCareerDropdown || 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
                                     <Link
                                         href={`/${locale}/career/life-at-altama`}
+                                        onMouseEnter={() => prefetchJobs()}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('lifeAtAltama')}
                                     </Link>
                                     <Link
                                         href={`/${locale}/career/apply-jobs`}
+                                        onMouseEnter={() => prefetchJobs()}
                                         className="block w-full text-left px-4 py-2.5 hover:bg-[#353185] hover:text-white transition-colors duration-200 font-inter text-[14px]"
                                     >
                                         {t('applyJobs')}
@@ -230,6 +239,7 @@ export default function Header() {
                         <Image
                             alt="PT Altama Surya Anugerah"
                             fill
+                            sizes="225px"
                             className="object-cover drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
                             src="/images/navbar_bg.webp"
                         />
@@ -249,6 +259,7 @@ export default function Header() {
                         <Image
                             alt="PT Altama Surya Anugerah"
                             fill
+                            sizes="33vw"
                             className="object-cover"
                             src="/images/df98c0733f131bef24430fb6d83a6343d0a7a9d6.webp"
                         />

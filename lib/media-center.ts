@@ -1,3 +1,4 @@
+import { queryClient } from "@/lib/query-client";
 import { apiClient } from "@/lib/api-client";
 
 export interface CategoryArticleItem {
@@ -85,4 +86,12 @@ export async function fetchArticleBySlug(slug: string): Promise<ArticleItem> {
 export async function fetchArticlesSearch(query: string): Promise<ArticleItem[]> {
   const response = await apiClient.get<ArticleItem[]>(`/article/search/${encodeURIComponent(query)}`);
   return response.data;
+}
+
+export async function prefetchArticles() {
+  await queryClient.prefetchQuery({
+    queryKey: ['articles'],
+    queryFn: () => fetchArticles(),
+    staleTime: 5 * 60 * 1000,
+  });
 }
