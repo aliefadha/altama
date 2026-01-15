@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ArticleDetailClient from "./article-detail-client";
 import { fetchArticleBySlug, fetchArticles, ArticleItem } from "@/lib/media-center";
+import { getImageUrl } from "@/lib/utils";
 
 // Interface for client component (mapped from API response)
 interface ArticleForClient {
@@ -25,7 +26,7 @@ function mapArticleToClient(article: ArticleItem): ArticleForClient {
     category: "Article",
     date: article.publishedAt,
     tags: article.metaTags?.keywords ? article.metaTags.keywords.split(",").map(t => t.trim()) : [],
-    image: article.primaryImage,
+    image: getImageUrl(article.primaryImage || ""),
     author: article.author,
   };
 }

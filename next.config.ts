@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
       {
+        protocol: "https",
+        hostname: "api.altamasuryaanugerah.com/**",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
         port: "3003",
