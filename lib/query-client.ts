@@ -5,6 +5,7 @@ export function createQueryClient() {
         defaultOptions: {
             queries: {
                 staleTime: 5 * 60 * 1000,
+                gcTime: 30 * 60 * 1000,
                 refetchOnWindowFocus: false,
                 retry: (failureCount, error) => {
                     const status = (error as { statusCode?: number }).statusCode;
