@@ -19,6 +19,86 @@
   .font-league-spartan {
     font-family: var(--font-league-spartan, sans-serif);
   }
+
+  .prose {
+    @apply font-inter text-[#414141] text-[16px] lg:text-[18px] leading-[1.6];
+  }
+
+  .prose h1 {
+    @apply font-league-spartan font-semibold text-[#121212] text-[28px] lg:text-[36px] leading-[1.2] mt-[32px] mb-[16px];
+  }
+
+  .prose h2 {
+    @apply font-league-spartan font-semibold text-[#121212] text-[24px] lg:text-[30px] leading-[1.2] mt-[24px] mb-[12px];
+  }
+
+  .prose h3 {
+    @apply font-league-spartan font-semibold text-[#121212] text-[20px] lg:text-[24px] leading-[1.2] mt-[20px] mb-[12px];
+  }
+
+  .prose p {
+    @apply mb-[16px];
+  }
+
+  .prose strong {
+    @apply font-semibold text-[#121212];
+  }
+
+  .prose a {
+    @apply text-[#353185] font-medium hover:text-[#605bc3] underline;
+  }
+
+  .prose ul, .prose ol {
+    @apply ml-[24px] mb-[16px];
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-[8px] pl-[8px];
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-[#353185] pl-[16px] italic text-[#898989] my-[20px];
+  }
+
+  .prose code {
+    @apply bg-[#f3f3f3] text-[#353185] px-[4px] py-[2px] rounded-[4px] text-[14px];
+  }
+
+  .prose pre {
+    @apply bg-[#1e1e1e] text-[#f3f3f3] p-[16px] rounded-[8px] overflow-x-auto mb-[20px];
+  }
+
+  .prose pre code {
+    @apply bg-transparent text-[#f3f3f3] px-0 py-0;
+  }
+
+  .prose img {
+    @apply w-full rounded-[16px] my-[20px];
+  }
+
+  .prose table {
+    @apply w-full border-collapse my-[20px];
+  }
+
+  .prose th, .prose td {
+    @apply border border-[#e5e5e5] px-[12px] py-[8px] text-left;
+  }
+
+  .prose th {
+    @apply font-semibold bg-[#f9f9f9];
+  }
+
+  .prose hr {
+    @apply border-[#e5e5e5] my-[24px];
+  }
 }
 
 @theme inline {

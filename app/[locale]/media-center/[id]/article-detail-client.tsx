@@ -106,7 +106,7 @@ export default function ArticleDetailClient({
 
               {/* Content Sections */}
               <div
-                className="flex flex-col gap-[32px] prose prose-lg max-w-none"
+                className="flex flex-col gap-[32px] prose max-w-none"
                 dangerouslySetInnerHTML={{ __html: article.contentHtml }}
               />
             </div>
