@@ -1,9 +1,9 @@
 "use client"
 import { ImageWithFallback } from "@/components/ImageWithFallback";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import { fetchCategoryArticles, fetchArticles, fetchArticlesSearch, ArticleItem, CategoryArticleItem } from "@/lib/media-center";
+import { fetchCategoryArticles, fetchArticles, fetchArticlesSearch, CategoryArticleItem } from "@/lib/media-center";
 import { useTranslations } from 'next-intl';
 
   export default function MediaCenterPage() {
@@ -11,7 +11,12 @@ import { useTranslations } from 'next-intl';
       const router = useRouter();
       const [selectedCategory, setSelectedCategory] = useState("All");
       const [searchQuery, setSearchQuery] = useState("");
-  
+
+      const { data: categoriesData, isLoading: categoriesLoading } = useQuery({
+          queryKey: ['category-articles'],
+          queryFn: fetchCategoryArticles,
+      });
+
       // Category Filter Skeleton
       function CategoryFilterSkeleton() {
           return (
@@ -52,21 +57,16 @@ import { useTranslations } from 'next-intl';
   }
 
       // Category Filter Content Component
-      function CategoryFilterContent() {
-          const { data: categoriesData, isLoading } = useQuery({
-              queryKey: ['category-articles'],
-              queryFn: fetchCategoryArticles,
-          });
-
+      function CategoryFilterContent({ categories, isLoading }: { categories?: CategoryArticleItem[], isLoading: boolean }) {
           if (isLoading) {
               return <CategoryFilterSkeleton />;
           }
 
-          if (!categoriesData || categoriesData.length === 0) {
+          if (!categories || categories.length === 0) {
               return <CategoryEmptyState />;
           }
 
-          const categoryNames = categoriesData.map(cat => cat.name);
+          const categoryNames = categories.map(cat => cat.name);
           const allCategories = ["All", ...categoryNames];
 
           return (
@@ -156,13 +156,8 @@ import { useTranslations } from 'next-intl';
        }
 
        // Articles Grid Content
-       function ArticlesGridContent() {
-           const { data: categoriesData } = useQuery({
-               queryKey: ['category-articles'],
-               queryFn: fetchCategoryArticles,
-           });
-
-           const categoryId = getCategoryIdByName(selectedCategory, categoriesData);
+       function ArticlesGridContent({ categories }: { categories?: CategoryArticleItem[] }) {
+           const categoryId = getCategoryIdByName(selectedCategory, categories);
 
           const { data: articles, isLoading } = useQuery({
             queryKey: ['articles', categoryId, searchQuery],
@@ -279,11 +274,11 @@ import { useTranslations } from 'next-intl';
                 </div>
             </div>
 
-            {/* Category Filter */}
-            <CategoryFilterContent />
+             {/* Category Filter */}
+             <CategoryFilterContent categories={categoriesData} isLoading={categoriesLoading} />
 
-            {/* Articles Grid */}
-            <ArticlesGridContent />
-        </div>
-    );
+             {/* Articles Grid */}
+             <ArticlesGridContent categories={categoriesData} />
+         </div>
+     );
 }

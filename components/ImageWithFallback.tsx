@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import {getImageUrl} from '@/lib/utils'
 import React, { useState } from 'react'
 
 const ERROR_IMG_SRC =
@@ -50,7 +51,7 @@ export function ImageWithFallback({
     return (
         <Image
             key={src} // Key ensures component resets when src changes
-            src={src}
+            src={getImageUrl(src)}
             alt={alt}
             className={className}
             style={style}

@@ -21,6 +21,15 @@ interface ArticleDetailClientProps {
   relatedArticles: Article[];
 }
 
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('id-ID', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+};
+
 export default function ArticleDetailClient({
   article,
   relatedArticles,
@@ -78,7 +87,7 @@ export default function ArticleDetailClient({
               <div className="flex gap-[16px] items-center flex-wrap">
                 <div className="bg-[rgba(53,49,133,0.08)] px-[12px] py-[6px] rounded-[8px]">
                   <p className="font-inter text-[#29266e] text-[14px] lg:text-[16px] leading-[1.3] tracking-[-0.64px]">
-                    {article.date}
+                    {formatDate(article.date)}
                   </p>
                 </div>
                 <div className="bg-[rgba(53,49,133,0.08)] px-[12px] py-[6px] rounded-[8px]">
