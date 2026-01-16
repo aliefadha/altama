@@ -42,9 +42,9 @@ export default function CompanySection() {
                             <div className="w-6 lg:w-[28px] h-6 lg:h-[28px] bg-[#353185] rounded-full flex items-center justify-center">
                                 <ImageIcon className="w-3 lg:w-[14px] h-3 lg:h-[14px] text-white" />
                             </div>
-                            <p className="text-[#353185] text-[13px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
+                             <Link href={`/${locale}/profile/gallery`} className="text-[#353185] text-[13px] lg:text-[15px] font-['Inter'] font-medium tracking-tight">
                                 {t('seeOurGallery')}
-                            </p>
+                            </Link>
                         </div>
                     </div>
 
