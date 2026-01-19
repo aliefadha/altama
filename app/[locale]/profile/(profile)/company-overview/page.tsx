@@ -243,11 +243,19 @@ export default function CompanyOverviewPage() {
         </div>
       </div>
 
-      <div>
+      <div className="relative py-10 lg:py-24 w-full">
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-10">
+          <h2 className="text-4xl font-bold text-center mb-8 lg:mb-16 tracking-widest uppercase">{t('milestone.title')}</h2>
+          <div className="relative w-full max-w-[90%] aspect-[4/3] md:aspect-[16/9]">
+            <Image src="/images/milestone-graph.webp" alt="graph" fill className="object-contain" />
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden">
         <div className="flex items-center justify-center min-h-[400px] p-6">
           <div className="relative w-full max-w-7xl bg-[url('/images/bg-milestone.webp')] bg-cover bg-top rounded-[40px] p-8 lg:p-12 text-white overflow-hidden">
 
-            <h2 className="text-4xl font-bold text-center mb-8 lg:mb-16 tracking-widest uppercase">{t('milestone.title')}</h2>
 
             <div className="relative px-2 md:px-8 lg:px-12">
               <Carousel
