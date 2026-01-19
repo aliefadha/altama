@@ -116,7 +116,7 @@ export default function CompanyOverviewPage() {
               {t('hero.title')}
               <br />
               <span className="relative inline-block my-1 lg:my-0.5">
-                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] -left-[4px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
+                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] -left-[4px] -right-[4px] -top-[2px] bottom-[1px]"></span>
                 <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('hero.highlight')}</span>
               </span>
             </h1>

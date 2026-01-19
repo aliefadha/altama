@@ -111,8 +111,8 @@ export default function AwardsCertificationPage() {
             <h1 className={`text-white font-league-spartan font-bold text-[34px] lg:text-[54px] leading-[1.15] lg:leading-[1.2] tracking-tight lg:tracking-[-1.68px] max-w-full lg:max-w-[580px] mb-4 lg:mb-4`}>
               {t('hero.title')}
               <span className="relative inline-block my-1 lg:my-0.5">
-                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] left-[5px] -right-[4px] -top-[2px] lg:-top-[4px] bottom-[4px] lg:bottom-[5px]"></span>
-                <span className="relative z-10 text-white px-1 lg:px-[4px]">{t('hero.highlight')}</span>
+                <span className="absolute inset-0 bg-[#f4c41c] rounded-lg lg:rounded-[8px] border-[2px] lg:border-[3px] border-[#f4c41c] left-[2px] -right-[4px] -top-[2px] bottom-[5px]"></span>
+                <span className="relative z-10 text-white px-1 lg:px-[4px] ">{t('hero.highlight')}</span>
               </span>
             </h1>
 
