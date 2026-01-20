@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      images: article.image ? [{ url: getImageUrl(article.image) }] : [],
+      images: article.image ? [{ url: article.image }] : [],
       type: "article",
       authors: [article.author],
     },
@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
-      images: article.image ? [getImageUrl(article.image)] : [],
+      images: article.image ? [article.image] : [],
     },
   };
 }
