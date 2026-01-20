@@ -6,7 +6,7 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL ? new URL(process.env.NEXT_PUBLIC_API_BASE_URL) : null;
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: 'standalone',
   images: {
     unoptimized: true,
     remotePatterns: [
