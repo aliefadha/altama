@@ -2,7 +2,6 @@
 
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import { useRouter } from "next/navigation";
-import { getImageUrl } from "@/lib/utils";
 
 interface Article {
   id: string;
@@ -60,7 +59,7 @@ export default function ArticleDetailClient({
           <div className="w-full h-[150px] md:h-[450px] rounded-[32px] overflow-hidden bg-[#cacaca] mb-[48px]">
             {article.image ? (
               <ImageWithFallback
-                src={getImageUrl(article.image)}
+                src={article.image}
                 alt={article.title}
                 className="w-full h-full object-cover"
               />

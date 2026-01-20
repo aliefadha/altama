@@ -54,6 +54,13 @@ async function getRelatedArticles(currentSlug: string): Promise<ArticleForClient
   }
 }
 
+export async function generateStaticParams() {
+  const articles = await fetchArticles();
+  return articles.map((article) => ({
+    id: article.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const article = await getArticle(id);
