@@ -12,7 +12,7 @@ interface Article {
   date: string;
   tags: string[];
   image: string | null;
-  author: string;
+  author: string | null;
 }
 
 interface ArticleDetailClientProps {

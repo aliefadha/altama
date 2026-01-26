@@ -147,14 +147,6 @@ import { useTranslations } from 'next-intl';
               </div>
           );
       }
-
-       // Get category name by ID
-       function getCategoryNameById(id: string | undefined, categories: CategoryArticleItem[] | undefined): string {
-           if (!id || !categories) return "";
-           const category = categories.find(cat => cat.id === id);
-           return category?.name || "";
-       }
-
        // Articles Grid Content
        function ArticlesGridContent({ categories }: { categories?: CategoryArticleItem[] }) {
            const categoryId = getCategoryIdByName(selectedCategory, categories);
@@ -199,7 +191,7 @@ import { useTranslations } from 'next-intl';
                                   )}
                                     <div className="absolute top-[16px] left-[16px] px-[16px] py-[6px] rounded-[64px] bg-[#353185] bg-opacity-90">
                                         <p className="font-inter font-medium text-white text-[14px] tracking-[-0.56px]">
-                                            {getCategoryNameById(article.categoryId, categoriesData)}
+                                            {article.category.name}
                                         </p>
                                     </div>
                               </div>
@@ -212,9 +204,9 @@ import { useTranslations } from 'next-intl';
                                           {formatDate(article.publishedAt)}
                                       </p>
                                       <div className="size-[4px] rounded-full bg-[#898989]" />
-                                      <p className="font-inter text-[#898989] text-[14px] tracking-[-0.56px]">
-                                          {article.author}
-                                      </p>
+                                       <p className="font-inter text-[#898989] text-[14px] tracking-[-0.56px]">
+                                           {article.author || ""}
+                                       </p>
                                   </div>
 
                                   {/* Title */}

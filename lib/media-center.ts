@@ -18,27 +18,30 @@ export async function fetchCategoryArticles(): Promise<CategoryArticleItem[]> {
 }
 
 export interface ArticleMetaTags {
-  title: string;
-  keywords: string;
-  description: string;
+  title: string | null;
+  keywords: string | null;
+  description: string | null;
+}
+
+export interface CategoryItem {
+  id: string;
+  name: string;
 }
 
 export interface ArticleItem {
   id: string;
-  categoryId: string;
   title: string;
+  category: CategoryItem;
   slug: string;
   excerpt: string;
   contentHtml: string;
   primaryImage: string | null;
-  seoTitle: string;
-  seoDescription: string;
-  seoKeywords: string;
-  metaTags: ArticleMetaTags;
-  author: string;
+  seoTitle: string | null;
+  seoDescription: string | null;
+  seoKeywords: string | null;
+  metaTags: ArticleMetaTags | null;
+  author: string | null;
   publishedAt: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
 export interface ArticleResponse {

@@ -13,19 +13,20 @@ interface ArticleForClient {
   date: string;
   tags: string[];
   image: string | null;
-  author: string;
+  author: string | null;
 }
 
 // Map API response to client component format
 function mapArticleToClient(article: ArticleItem): ArticleForClient {
+  const tags = article.seoKeywords ? article.seoKeywords.split(",").map((t: string) => t.trim()) : [];
   return {
     id: article.id,
     title: article.title,
     excerpt: article.excerpt,
     contentHtml: article.contentHtml,
-    category: "Article",
+    category: article.category?.name || "Article",
     date: article.publishedAt,
-    tags: article.metaTags?.keywords ? article.metaTags.keywords.split(",").map(t => t.trim()) : [],
+    tags,
     image: getImageUrl(article.primaryImage || ""),
     author: article.author,
   };
@@ -79,7 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       description: article.excerpt,
       images: article.image ? [{ url: article.image }] : [],
       type: "article",
-      authors: [article.author],
+      authors: article.author ? [article.author] : undefined,
     },
     twitter: {
       card: "summary_large_image",
