@@ -6,7 +6,6 @@ import { useRouter, usePathname } from "next/navigation";
 
 const imgEllipse10 = "/images/06310d6ac34bfdf5c99689acd61ade1908915105.webp";
 const imgEllipse11 = "/images/2303138e4da6b79f3eca4b9933422fef6df4f944.webp";
-const imgVideoTestimoni = "/images/7b9b36ec87a12134b5a4c54ecdb3838bbb6d5193.webp";
 const imgEllipse12 = "/images/541419ea83f81e18686ce66b82646ed7ff8c9485.webp";
 
 const backgroundImages = [
@@ -39,7 +38,7 @@ export default function LifeAtAltamaPage() {
   };
 
   const handleNext = () => {
-    if (currentIndex < 7) {
+    if (currentIndex < 2) {
       setCurrentIndex(currentIndex + 1);
       scrollToIndex(currentIndex + 1);
     }
@@ -203,7 +202,7 @@ export default function LifeAtAltamaPage() {
           {/* Testimonials Carousel */}
           <div className="flex gap-[16px] md:gap-[20px] lg:gap-[40px] overflow-x-auto pb-[20px] snap-x snap-mandatory" style={{ scrollbarWidth: 'none', WebkitScrollbar: 'none' } as React.CSSProperties} ref={scrollContainerRef}>
             {/* Testimonial 1 - Card */}
-            <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[500px] h-[280px] md:h-[320px] snap-start">
+            <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[460px] h-[340px] md:h-[400px] snap-start">
               <div className="flex flex-col gap-[16px]">
                 {/* Stars */}
                 <div className="flex gap-[6px] items-center">
@@ -235,34 +234,9 @@ export default function LifeAtAltamaPage() {
               </div>
             </div>
 
-            {/* Testimonial 2 - Video */}
-            <div className="relative h-[280px] md:h-[320px] overflow-hidden rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[400px] lg:min-w-[560px] snap-start">
-              {imgVideoTestimoni && (
-                <Image alt={`Video testimonial from ${t('testimonials.items.2.name')}`} className="absolute inset-0 w-full h-full object-cover" src={imgVideoTestimoni} fill />
-              )}
-              <div className="absolute bg-gradient-to-t from-[#121212] to-transparent bottom-0 left-0 right-0 h-[180px]" />
-
-              {/* Play Button */}
-              <div className="absolute left-1/2 size-[40px] top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:scale-110 transition-transform">
-                <svg className="block size-full" fill="none" viewBox="0 0 40 40">
-                  <rect fill="white" fillOpacity="0.24" height="40" rx="20" width="40" />
-                  <path d='M27.2664 21.5159C27.4979 21.3367 27.6853 21.1069 27.8142 20.8442C27.9431 20.5814 28.0101 20.2926 28.0101 19.9999C28.0101 19.7072 27.9431 19.4183 27.8142 19.1556C27.6853 18.8928 27.4979 18.663 27.2664 18.4839C24.2686 16.165 20.9216 14.3369 17.3504 13.0679L16.6974 12.8359C15.4494 12.3929 14.1304 13.2369 13.9614 14.5259C13.4894 18.1599 13.4894 21.8398 13.9614 25.4739C14.1314 26.7629 15.4494 27.6069 16.6974 27.1639L17.3504 26.9319C20.9216 25.6628 24.2686 23.8347 27.2664 21.5159Z' fill="white" />
-                </svg>
-              </div>
-
-              {/* Author Overlay */}
-              <div className="absolute bottom-[28px] left-[32px] flex gap-[16px] items-center">
-                <Image alt={`Photo of ${t('testimonials.items.2.name')}, ${t('testimonials.items.2.position')}`} className="rounded-full size-[52px]" src={imgEllipse11} width={52} height={52} />
-                <div className="flex flex-col gap-[4px]">
-                  <p className="font-inter text-[20px] text-white tracking-[-0.8px]">{t('testimonials.items.2.name')}</p>
-                  <p className="font-inter text-[14px] text-white opacity-60 tracking-[-0.56px]">{t('testimonials.items.2.position')}</p>
-                </div>
-              </div>
-            </div>
-
             {/* Testimonial 3 - Card */}
-            <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] h-[280px] md:h-[320px] snap-start">
-              <div className="flex flex-col gap-[16px]">
+            <div className="bg-[#f8f7f7] flex flex-col justify-center gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[460px] h-[340px] md:h-[400px] snap-start">
+              <div className="flex flex-col gap-[16px] ">
                 {/* Stars */}
                 <div className="flex gap-[6px] items-center">
                   {[...Array(5)].map((_, i) => (
@@ -294,7 +268,7 @@ export default function LifeAtAltamaPage() {
             </div>
 
             {/* Testimonial 4 - Card */}
-            <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[300px] lg:min-w-[460px] h-[280px] md:h-[320px] snap-start">
+            <div className="bg-[#f8f7f7] flex flex-col gap-[20px] md:gap-[24px] px-[20px] md:px-[24px] py-[20px] md:py-[24px] rounded-[20px] min-w-[calc(100vw-32px)] md:min-w-[460px] h-[340px] md:h-[400px] snap-start">
               <div className="flex flex-col gap-[16px]">
                 {/* Stars */}
                 <div className="flex gap-[6px] items-center">

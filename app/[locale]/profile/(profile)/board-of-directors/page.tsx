@@ -28,8 +28,8 @@ export default function BoardOfDirectorsPage() {
             alt="foto61"
             fill
             className="w-full h-full object-cover"
-            style={{ transform: "translateX(-100px) scale(1.5)", objectPosition: "center" }}
-            src="/images/bodimage1.webp"
+            style={{ transform: "translateX(100px)", objectPosition: "center" }}
+            src="/images/bodimage2.webp"
           />
           {/* Gradient overlay - darker on mobile for better text readability */}
           <div className="absolute inset-0 w-full bg-gradient-to-r from-[#353185] to-[#353185]/20" />

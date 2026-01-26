@@ -17,7 +17,7 @@ function GalleryItem({ image, views, instagramUrl }: GalleryItemProps) {
 
   return (
     <div
-      className="h-[400px] lg:h-[480px] overflow clip relative rounded-2xl lg:rounded-[20px] w-full lg:w-[405px] group"
+      className="h-[400px] lg:h-[480px] overflow-hidden relative rounded-2xl lg:rounded-[20px] w-full group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -156,15 +156,14 @@ function WebGallerySkeleton() {
         {[...Array(7)].map((_, index) => (
           <div
             key={index}
-            className={`overflow-hidden rounded-[24px] relative bg-gray-200 animate-pulse ${
-              index === 0
+            className={`overflow-hidden rounded-[24px] relative bg-gray-200 animate-pulse ${index === 0
                 ? "lg:row-span-2"
                 : index === 1
                   ? "lg:col-span-2"
                   : index === 5 || index === 6
                     ? "lg:row-span-2"
                     : ""
-            }`}
+              }`}
           />
         ))}
       </div>
@@ -208,15 +207,14 @@ function WebGalleryContent() {
         {webGallery.map((item, index) => (
           <div
             key={item.id}
-            className={`overflow-hidden rounded-[24px] relative group ${
-              index === 0
+            className={`overflow-hidden rounded-[24px] relative group ${index === 0
                 ? "lg:row-span-2"
                 : index === 1
                   ? "lg:col-span-2"
                   : index === 5 || index === 6
                     ? "lg:row-span-2"
                     : ""
-            }`}
+              }`}
           >
             <Image
               alt={item.title}

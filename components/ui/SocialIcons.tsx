@@ -5,7 +5,7 @@ import { WhatsApp, Facebook, YouTube, LinkedIn, Instagram } from "./Icon";
 const socialMediaConfig = [
     {
         name: "WhatsApp",
-        url: "https://wa.me/6281268184861",
+        url: "https://wa.me/6287777000966",
         icon: WhatsApp,
     },
     {
