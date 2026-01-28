@@ -1,8 +1,27 @@
+"use client";
+
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { useMemo } from "react";
 import { SocialIcons } from "@/components/ui/SocialIcons";
 
+type Locale = "en" | "id";
+
 export default function Footer() {
-  const companyLinks = ["About", "Career", "News"];
+  const pathname = usePathname();
+
+  // Extract locale from URL
+  const locale = useMemo(() => {
+    const segments = pathname.split("/");
+    const localeCode = segments[1] as Locale;
+    return localeCode === "en" || localeCode === "id" ? localeCode : "en";
+  }, [pathname]);
+
+  const companyLinks = [
+    { name: "About", url: `/${locale}/profile/company-overview` },
+    { name: "Career", url: `/${locale}/career/life-at-altama` },
+    { name: "News", url: `/${locale}/media-center` },
+  ];
   const productLinks = [
     { name: "Tekiro", url: "https://tekiro.com/" },
     { name: "Rexco", url: "https://rexco-solution.com/" },
@@ -13,7 +32,12 @@ export default function Footer() {
     { name: "Help", url: "mailto:customercare@altama.co.id" },
     { name: "Alva", url: "https://wa.me/6287777000966" },
   ];
-  const overviewLinks = ["Media Center", "Gallery", "Career"];
+  const overviewLinks = [
+    { name: "Media Center", url: `/${locale}/media-center` },
+    { name: "Gallery", url: `/${locale}/profile/gallery` },
+    { name: "Career", url: `/${locale}/career/life-at-altama` },
+    { name: "Privacy Policy", url: `/${locale}/privacy` },
+  ];
 
   return (
     <div className="relative w-full bg-[#353185] py-12 lg:py-20 overflow-hidden h-screen">
@@ -35,12 +59,22 @@ export default function Footer() {
             <filter id="blur1" x="0" y="0" width="665.142" height="690.277">
               <feGaussianBlur stdDeviation="50" />
             </filter>
-            <linearGradient id="grad1" x1="574.164" y1="16.9522" x2="127.672" y2="367.74">
+            <linearGradient
+              id="grad1"
+              x1="574.164"
+              y1="16.9522"
+              x2="127.672"
+              y2="367.74"
+            >
               <stop stopColor="#413CA4" />
               <stop offset="1" stopColor="#433EA8" stopOpacity="0" />
             </linearGradient>
           </defs>
-          <path d="M511.239 100L100 406.764L110.296 590.277L565.142 100H511.239Z" fill="url(#grad1)" filter="url(#blur1)" />
+          <path
+            d="M511.239 100L100 406.764L110.296 590.277L565.142 100H511.239Z"
+            fill="url(#grad1)"
+            filter="url(#blur1)"
+          />
         </svg>
       </div>
 
@@ -69,11 +103,11 @@ export default function Footer() {
               <div className="flex flex-col gap-2 lg:gap-3">
                 {companyLinks.map((link) => (
                   <a
-                    key={link}
-                    href="#"
+                    key={link.name}
+                    href={link.url}
                     className="text-white text-[14px] lg:text-[18px] font-['Inter'] font-medium lg:font-semibold tracking-tight lg:tracking-[-0.72px] hover:underline transition-all"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 ))}
               </div>
@@ -127,11 +161,11 @@ export default function Footer() {
               <div className="flex flex-col gap-2 lg:gap-3">
                 {overviewLinks.map((link) => (
                   <a
-                    key={link}
-                    href="#"
+                    key={link.name}
+                    href={link.url}
                     className="text-white text-[14px] lg:text-[18px] font-['Inter'] font-medium lg:font-semibold tracking-tight lg:tracking-[-0.72px] hover:underline transition-all"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 ))}
               </div>
@@ -154,7 +188,7 @@ export default function Footer() {
       <div className="hidden lg:block absolute left-1/2 top-[400px] -translate-x-1/2 pointer-events-none w-full">
         <p
           className="text-[160px] font-['League_Spartan'] font-bold line-clamp-1 text-center bg-gradient-to-b from-[#413ca4] to-[#353185] to-[80%] bg-clip-text blur-[1px] select-none "
-          style={{ WebkitTextFillColor: 'transparent' }}
+          style={{ WebkitTextFillColor: "transparent" }}
         >
           SPIRIT OF ALTAMA
         </p>

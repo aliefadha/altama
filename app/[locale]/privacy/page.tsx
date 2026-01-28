@@ -8,7 +8,7 @@ export default function PrivacyPage() {
 
   return (
     <>
-      <div className="relative w-full h-[150px] lg:h-[350px] bg-[#F9F9F9]">
+      <div className="relative w-full h-[150px] lg:h-[350px] bg-[#F9F9F9] mt-10 lg:mt-0">
         <Image
           src="/images/banner_altama.webp"
           alt="Banner Altama"
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             />
           </div>
 
-          <div className="w-full lg:w-1/3 bg-[#2B5797] flex items-center justify-center py-10 lg:py-0 px-6">
+          <div className="w-full lg:w-1/3 bg-[#353185] flex items-center justify-center py-10 lg:py-0 px-6">
             <div className="text-center text-white">
               <h3 className="text-xl lg:text-2xl font-bold mb-6 text-[#FFC300]">
                 PT. ALTAMA SURYA ANUGERAH
