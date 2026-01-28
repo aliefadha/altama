@@ -1,0 +1,19 @@
+{
+  "privacy": {
+    "title": "Kebijakan Privasi untuk altamasuryaanugerah.com",
+    "introduction": "Privasi anda sebagai pengunjung altamasuryaanugerah.com adalah hal yang sangat penting bagi kami. Di website altamasuryaanugerah.com ini kami menganggap bahwa informasi pribadi anda adalah hal yang perlu dilindungi. Berikut ini adalah data yang akan kami simpan dan lindungi:",
+    "dataUser": "Data User",
+    "content": "Konten",
+    "closing": "Dan inilah data - data mengenai informasi apa saja yang akan kami terima dan simpan pada saat anda mengunjungi website altamasuryaanugerah.com dan bagaimana kami menyimpan serta menjaga informasi tersebut. Kami tegaskan bahwa kami tidak akan pernah memberikan informasi tersebut kepada pihak ketiga. ISP (Internet Service Provider), browser yang kamu gunakan, waktu pada saat Kamu berkunjung dan halaman mana saja yang anda buka selama berkunjung di altamasuryaanugerah.com.",
+    "dataItems": {
+      "cvAndApplication": "Data berupa CV dan Surat Lamaran Karyawan",
+      "email": "Email pengunjung",
+      "phone": "No Telepon"
+    },
+    "contentItems": {
+      "brand": "Brand",
+      "career": "Career",
+      "contactUs": "Contact Us"
+    }
+  }
+}

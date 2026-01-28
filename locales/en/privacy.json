@@ -1,0 +1,19 @@
+{
+  "privacy": {
+    "title": "Privacy Policy for altamasuryaanugerah.com",
+    "introduction": "Your privacy as a visitor to altamasuryaanugerah.com is very important to us. On this website altamasuryaanugerah.com, we consider your personal information to be something that needs to be protected. The following is the data that we will store and protect:",
+    "dataUser": "User Data",
+    "content": "Content",
+    "closing": "And this is the data regarding what information we will receive and store when you visit the website altamasuryaanugerah.com and how we store and protect that information. We emphasize that we will never provide such information to third parties. ISP (Internet Service Provider), the browser you use, the time when you visit, and which pages you open during your visit to altamasuryaanugerah.com.",
+    "dataItems": {
+      "cvAndApplication": "Data in the form of CV and Job Application Letters",
+      "email": "Visitor's Email",
+      "phone": "Phone Number"
+    },
+    "contentItems": {
+      "brand": "Brand",
+      "career": "Career",
+      "contactUs": "Contact Us"
+    }
+  }
+}
